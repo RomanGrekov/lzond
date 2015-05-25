@@ -1,0 +1,2758 @@
+Archive member included because of file (symbol)
+
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
+                              ./src/configurator/configurator.o (__aeabi_f2d)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
+                              ./src/string_lib/string_lib.o (__aeabi_fsub)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivsf3.o)
+                              ./src/string_lib/string_lib.o (__aeabi_fmul)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_cmpsf2.o)
+                              ./src/string_lib/string_lib.o (__aeabi_fcmpeq)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_aeabi_ldivmod.o)
+                              ./src/string_lib/string_lib.o (__aeabi_ldivmod)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_fixsfdi.o)
+                              ./src/string_lib/string_lib.o (__aeabi_f2lz)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_fixunssfdi.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_fixsfdi.o) (__aeabi_f2ulz)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(bpabi.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_aeabi_ldivmod.o) (__gnu_ldivmod_helper)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_dvmd_tls.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_aeabi_ldivmod.o) (__aeabi_ldiv0)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivdf3.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_fixunssfdi.o) (__aeabi_dmul)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_fixunsdfsi.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_fixunssfdi.o) (__aeabi_d2uiz)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_divdi3.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(bpabi.o) (__divdi3)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_udivdi3.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(bpabi.o) (__udivdi3)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-atoi.o)
+                              ./src/configurator/configurator.o (atoi)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-exit.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o (exit)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-impure.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-exit.o) (_global_impure_ptr)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-init.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o (__libc_init_array)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-itoa.o)
+                              ./src/configurator/configurator.o (itoa)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-memcpy.o)
+                              ./libs/freertos/queue.o (memcpy)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-memset.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o (memset)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strcpy.o)
+                              ./src/configurator/configurator.o (strcpy)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strlen.o)
+                              ./src/main.o (strlen)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strtol.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-atoi.o) (_strtol_r)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-utoa.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-itoa.o) (__utoa)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-__call_atexit.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-exit.o) (__call_exitprocs)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-atexit.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-__call_atexit.o) (atexit)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-ctype_.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strtol.o) (__ctype_ptr__)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-fini.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-__call_atexit.o) (__libc_fini_array)
+/usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-__atexit.o)
+                              /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-atexit.o) (__register_exitproc)
+
+Allocating common symbols
+Common symbol       size              file
+
+xUsart1TxMutex      0x4               ./src/usart/usart.o
+xQueueUsart1Rx      0x4               ./src/usart/usart.o
+xQueueLCD           0x4               ./src/hd44780/hd44780.o
+xQueueUsart1Tx      0x4               ./src/usart/usart.o
+lcd_mem_changed     0x1               ./src/hd44780/hd44780.o
+lcd_mem             0x40              ./src/hd44780/hd44780.o
+xLcdMutex           0x4               ./src/hd44780/hd44780.o
+xQueueUsartCommands
+                    0x4               ./src/configurator/configurator.o
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+ .data          0x0000000000000000        0x4 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .text          0x0000000000000000       0x74 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .ARM.extab     0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .ARM.exidx     0x0000000000000000        0x8 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .ARM.attributes
+                0x0000000000000000       0x1b /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+ .text          0x0000000000000000       0x14 ./startup/startup_stm32f10x_md.o
+ .data          0x0000000000000000        0x0 ./startup/startup_stm32f10x_md.o
+ .bss           0x0000000000000000        0x0 ./startup/startup_stm32f10x_md.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/usart/usart.o
+ .text          0x0000000000000000        0x0 ./src/usart/usart.o
+ .data          0x0000000000000000        0x0 ./src/usart/usart.o
+ .bss           0x0000000000000000        0x0 ./src/usart/usart.o
+ .text.USART1SendString
+                0x0000000000000000       0x28 ./src/usart/usart.o
+ .group         0x0000000000000000        0x8 ./src/string_lib/string_lib.o
+ .text          0x0000000000000000        0x0 ./src/string_lib/string_lib.o
+ .data          0x0000000000000000        0x0 ./src/string_lib/string_lib.o
+ .bss           0x0000000000000000        0x0 ./src/string_lib/string_lib.o
+ .debug_macro   0x0000000000000000      0x862 ./src/string_lib/string_lib.o
+ .group         0x0000000000000000        0x8 ./src/led/led.o
+ .group         0x0000000000000000        0x8 ./src/led/led.o
+ .group         0x0000000000000000        0x8 ./src/led/led.o
+ .group         0x0000000000000000        0x8 ./src/led/led.o
+ .group         0x0000000000000000        0x8 ./src/led/led.o
+ .group         0x0000000000000000        0x8 ./src/led/led.o
+ .group         0x0000000000000000        0x8 ./src/led/led.o
+ .group         0x0000000000000000        0x8 ./src/led/led.o
+ .group         0x0000000000000000        0x8 ./src/led/led.o
+ .group         0x0000000000000000        0x8 ./src/led/led.o
+ .group         0x0000000000000000        0x8 ./src/led/led.o
+ .group         0x0000000000000000        0x8 ./src/led/led.o
+ .group         0x0000000000000000        0x8 ./src/led/led.o
+ .text          0x0000000000000000        0x0 ./src/led/led.o
+ .data          0x0000000000000000        0x0 ./src/led/led.o
+ .bss           0x0000000000000000        0x0 ./src/led/led.o
+ .debug_macro   0x0000000000000000      0x862 ./src/led/led.o
+ .debug_macro   0x0000000000000000       0x62 ./src/led/led.o
+ .debug_macro   0x0000000000000000       0x22 ./src/led/led.o
+ .debug_macro   0x0000000000000000       0x22 ./src/led/led.o
+ .debug_macro   0x0000000000000000       0x44 ./src/led/led.o
+ .debug_macro   0x0000000000000000       0x1c ./src/led/led.o
+ .debug_macro   0x0000000000000000      0x1f7 ./src/led/led.o
+ .debug_macro   0x0000000000000000      0x69f ./src/led/led.o
+ .debug_macro   0x0000000000000000     0x7dbe ./src/led/led.o
+ .debug_macro   0x0000000000000000      0x2a6 ./src/led/led.o
+ .debug_macro   0x0000000000000000      0x3e2 ./src/led/led.o
+ .debug_macro   0x0000000000000000       0x8b ./src/led/led.o
+ .debug_macro   0x0000000000000000       0x35 ./src/led/led.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/hd44780/hd44780.o
+ .text          0x0000000000000000        0x0 ./src/hd44780/hd44780.o
+ .data          0x0000000000000000        0x0 ./src/hd44780/hd44780.o
+ .bss           0x0000000000000000        0x0 ./src/hd44780/hd44780.o
+ .rodata.symbols
+                0x0000000000000000        0xc ./src/hd44780/hd44780.o
+ .text.lcd_return
+                0x0000000000000000        0xc ./src/hd44780/hd44780.o
+ .text.lcd_prints
+                0x0000000000000000       0x44 ./src/hd44780/hd44780.o
+ .text.lcd_load
+                0x0000000000000000       0x40 ./src/hd44780/hd44780.o
+ .text.lcd_drawchar
+                0x0000000000000000       0x40 ./src/hd44780/hd44780.o
+ .text.lcd_backspace
+                0x0000000000000000       0x18 ./src/hd44780/hd44780.o
+ .text.lcd_scroll
+                0x0000000000000000       0x2c ./src/hd44780/hd44780.o
+ .text.cursor_shift
+                0x0000000000000000       0x2c ./src/hd44780/hd44780.o
+ .text.lcd_itostr
+                0x0000000000000000       0xa8 ./src/hd44780/hd44780.o
+ .text.lcd_numTOstr
+                0x0000000000000000       0xd4 ./src/hd44780/hd44780.o
+ .text.turn_on_cursor
+                0x0000000000000000        0xc ./src/hd44780/hd44780.o
+ .text.turn_off_cursor
+                0x0000000000000000        0xc ./src/hd44780/hd44780.o
+ .text.lcd_putcc
+                0x0000000000000000       0x58 ./src/hd44780/hd44780.o
+ .text.LCDPrintS
+                0x0000000000000000       0x28 ./src/hd44780/hd44780.o
+ .text.LCDLine  0x0000000000000000       0x34 ./src/hd44780/hd44780.o
+ .text.GetSymb  0x0000000000000000       0x20 ./src/hd44780/hd44780.o
+ .text.shift_display
+                0x0000000000000000       0x28 ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000      0x862 ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000      0x16d ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000       0x22 ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000       0x44 ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000       0x1c ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000      0x1f7 ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000       0x40 ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000       0xbb ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000       0xaf ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000       0x12 ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000       0x1f ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000      0x3a0 ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000       0xb0 ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000       0x79 ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000       0x69 ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000       0x7e ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000       0x49 ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000       0x62 ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000     0x7dbe ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000      0x2a6 ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000      0x3e2 ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000       0x8b ./src/hd44780/hd44780.o
+ .debug_macro   0x0000000000000000       0x35 ./src/hd44780/hd44780.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/flash/flash.o
+ .text          0x0000000000000000        0x0 ./src/flash/flash.o
+ .data          0x0000000000000000        0x0 ./src/flash/flash.o
+ .bss           0x0000000000000000        0x0 ./src/flash/flash.o
+ .text.WriteDefConf
+                0x0000000000000000        0xc ./src/flash/flash.o
+ .text.flash_erase_all_pages
+                0x0000000000000000       0x3c ./src/flash/flash.o
+ .text.flash_read
+                0x0000000000000000       0x1c ./src/flash/flash.o
+ .text.flash_write
+                0x0000000000000000       0x80 ./src/flash/flash.o
+ .debug_macro   0x0000000000000000      0x862 ./src/flash/flash.o
+ .debug_macro   0x0000000000000000       0x22 ./src/flash/flash.o
+ .debug_macro   0x0000000000000000      0x16d ./src/flash/flash.o
+ .debug_macro   0x0000000000000000       0x62 ./src/flash/flash.o
+ .debug_macro   0x0000000000000000       0x22 ./src/flash/flash.o
+ .debug_macro   0x0000000000000000       0x1c ./src/flash/flash.o
+ .debug_macro   0x0000000000000000      0x1f7 ./src/flash/flash.o
+ .debug_macro   0x0000000000000000      0x69f ./src/flash/flash.o
+ .debug_macro   0x0000000000000000     0x7dbe ./src/flash/flash.o
+ .debug_macro   0x0000000000000000      0x2a6 ./src/flash/flash.o
+ .debug_macro   0x0000000000000000      0x3e2 ./src/flash/flash.o
+ .debug_macro   0x0000000000000000       0x8b ./src/flash/flash.o
+ .debug_macro   0x0000000000000000       0x35 ./src/flash/flash.o
+ .debug_macro   0x0000000000000000       0x40 ./src/flash/flash.o
+ .debug_macro   0x0000000000000000       0xbb ./src/flash/flash.o
+ .debug_macro   0x0000000000000000       0xaf ./src/flash/flash.o
+ .debug_macro   0x0000000000000000       0x12 ./src/flash/flash.o
+ .debug_macro   0x0000000000000000       0x1f ./src/flash/flash.o
+ .debug_macro   0x0000000000000000      0x3a0 ./src/flash/flash.o
+ .debug_macro   0x0000000000000000       0xb0 ./src/flash/flash.o
+ .debug_macro   0x0000000000000000       0x79 ./src/flash/flash.o
+ .debug_macro   0x0000000000000000       0x69 ./src/flash/flash.o
+ .debug_macro   0x0000000000000000       0x7e ./src/flash/flash.o
+ .debug_macro   0x0000000000000000       0x49 ./src/flash/flash.o
+ .group         0x0000000000000000        0x8 ./src/encoder/encoder.o
+ .group         0x0000000000000000        0x8 ./src/encoder/encoder.o
+ .group         0x0000000000000000        0x8 ./src/encoder/encoder.o
+ .group         0x0000000000000000        0x8 ./src/encoder/encoder.o
+ .group         0x0000000000000000        0x8 ./src/encoder/encoder.o
+ .group         0x0000000000000000        0x8 ./src/encoder/encoder.o
+ .group         0x0000000000000000        0x8 ./src/encoder/encoder.o
+ .group         0x0000000000000000        0x8 ./src/encoder/encoder.o
+ .group         0x0000000000000000        0x8 ./src/encoder/encoder.o
+ .group         0x0000000000000000        0x8 ./src/encoder/encoder.o
+ .group         0x0000000000000000        0x8 ./src/encoder/encoder.o
+ .group         0x0000000000000000        0x8 ./src/encoder/encoder.o
+ .group         0x0000000000000000        0x8 ./src/encoder/encoder.o
+ .group         0x0000000000000000        0x8 ./src/encoder/encoder.o
+ .text          0x0000000000000000        0x0 ./src/encoder/encoder.o
+ .data          0x0000000000000000        0x0 ./src/encoder/encoder.o
+ .bss           0x0000000000000000        0x0 ./src/encoder/encoder.o
+ .text.EncoderInit
+                0x0000000000000000       0x30 ./src/encoder/encoder.o
+ .text.EncoderScan
+                0x0000000000000000      0x134 ./src/encoder/encoder.o
+ .debug_info    0x0000000000000000      0x30a ./src/encoder/encoder.o
+ .debug_abbrev  0x0000000000000000      0x142 ./src/encoder/encoder.o
+ .debug_aranges
+                0x0000000000000000       0x28 ./src/encoder/encoder.o
+ .debug_ranges  0x0000000000000000       0x18 ./src/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x151 ./src/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x862 ./src/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x62 ./src/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x22 ./src/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x22 ./src/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x44 ./src/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x1c ./src/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x1f7 ./src/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x69f ./src/encoder/encoder.o
+ .debug_macro   0x0000000000000000     0x7dbe ./src/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x2a6 ./src/encoder/encoder.o
+ .debug_macro   0x0000000000000000      0x3e2 ./src/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x8b ./src/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x35 ./src/encoder/encoder.o
+ .debug_macro   0x0000000000000000       0x1c ./src/encoder/encoder.o
+ .debug_line    0x0000000000000000      0x215 ./src/encoder/encoder.o
+ .debug_str     0x0000000000000000    0x357ac ./src/encoder/encoder.o
+ .comment       0x0000000000000000       0x71 ./src/encoder/encoder.o
+ .debug_frame   0x0000000000000000       0x5c ./src/encoder/encoder.o
+ .ARM.attributes
+                0x0000000000000000       0x33 ./src/encoder/encoder.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/configurator/configurator.o
+ .text          0x0000000000000000        0x0 ./src/configurator/configurator.o
+ .data          0x0000000000000000        0x0 ./src/configurator/configurator.o
+ .bss           0x0000000000000000        0x0 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000      0x862 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x62 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x22 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x22 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x44 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x1c ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000      0x1f7 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000      0x69f ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000     0x7dbe ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000      0x2a6 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000      0x3e2 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x8b ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x35 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000      0x16d ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x40 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0xbb ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0xaf ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x12 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x1f ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000      0x3a0 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0xb0 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x79 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x69 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x7e ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x49 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x10 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x58 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x35 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x9c ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x52 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x16 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x43 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000      0x180 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000      0x27a ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x10 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x35 ./src/configurator/configurator.o
+ .debug_macro   0x0000000000000000       0x10 ./src/configurator/configurator.o
+ .group         0x0000000000000000        0x8 ./src/clock/clock.o
+ .group         0x0000000000000000        0x8 ./src/clock/clock.o
+ .group         0x0000000000000000        0x8 ./src/clock/clock.o
+ .group         0x0000000000000000        0x8 ./src/clock/clock.o
+ .group         0x0000000000000000        0x8 ./src/clock/clock.o
+ .group         0x0000000000000000        0x8 ./src/clock/clock.o
+ .group         0x0000000000000000        0x8 ./src/clock/clock.o
+ .group         0x0000000000000000        0x8 ./src/clock/clock.o
+ .group         0x0000000000000000        0x8 ./src/clock/clock.o
+ .group         0x0000000000000000        0x8 ./src/clock/clock.o
+ .group         0x0000000000000000        0x8 ./src/clock/clock.o
+ .group         0x0000000000000000        0x8 ./src/clock/clock.o
+ .group         0x0000000000000000        0x8 ./src/clock/clock.o
+ .text          0x0000000000000000        0x0 ./src/clock/clock.o
+ .data          0x0000000000000000        0x0 ./src/clock/clock.o
+ .bss           0x0000000000000000        0x0 ./src/clock/clock.o
+ .text.init_bad_clock_inter
+                0x0000000000000000       0x1c ./src/clock/clock.o
+ .debug_macro   0x0000000000000000      0x862 ./src/clock/clock.o
+ .debug_macro   0x0000000000000000       0x62 ./src/clock/clock.o
+ .debug_macro   0x0000000000000000       0x22 ./src/clock/clock.o
+ .debug_macro   0x0000000000000000       0x22 ./src/clock/clock.o
+ .debug_macro   0x0000000000000000       0x44 ./src/clock/clock.o
+ .debug_macro   0x0000000000000000       0x1c ./src/clock/clock.o
+ .debug_macro   0x0000000000000000      0x1f7 ./src/clock/clock.o
+ .debug_macro   0x0000000000000000      0x69f ./src/clock/clock.o
+ .debug_macro   0x0000000000000000     0x7dbe ./src/clock/clock.o
+ .debug_macro   0x0000000000000000      0x2a6 ./src/clock/clock.o
+ .debug_macro   0x0000000000000000      0x3e2 ./src/clock/clock.o
+ .debug_macro   0x0000000000000000       0x8b ./src/clock/clock.o
+ .debug_macro   0x0000000000000000       0x35 ./src/clock/clock.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .group         0x0000000000000000        0x8 ./src/main.o
+ .text          0x0000000000000000        0x0 ./src/main.o
+ .data          0x0000000000000000        0x0 ./src/main.o
+ .bss           0x0000000000000000        0x0 ./src/main.o
+ .text.prvGetTemp
+                0x0000000000000000       0xa8 ./src/main.o
+ .text.get_adc_value
+                0x0000000000000000       0x2c ./src/main.o
+ .debug_macro   0x0000000000000000      0x862 ./src/main.o
+ .debug_macro   0x0000000000000000       0x62 ./src/main.o
+ .debug_macro   0x0000000000000000       0x22 ./src/main.o
+ .debug_macro   0x0000000000000000       0x22 ./src/main.o
+ .debug_macro   0x0000000000000000       0x44 ./src/main.o
+ .debug_macro   0x0000000000000000       0x1c ./src/main.o
+ .debug_macro   0x0000000000000000      0x1f7 ./src/main.o
+ .debug_macro   0x0000000000000000      0x69f ./src/main.o
+ .debug_macro   0x0000000000000000     0x7dbe ./src/main.o
+ .debug_macro   0x0000000000000000      0x2a6 ./src/main.o
+ .debug_macro   0x0000000000000000      0x3e2 ./src/main.o
+ .debug_macro   0x0000000000000000       0x8b ./src/main.o
+ .debug_macro   0x0000000000000000       0x35 ./src/main.o
+ .debug_macro   0x0000000000000000      0x16d ./src/main.o
+ .debug_macro   0x0000000000000000       0x40 ./src/main.o
+ .debug_macro   0x0000000000000000       0xbb ./src/main.o
+ .debug_macro   0x0000000000000000       0xaf ./src/main.o
+ .debug_macro   0x0000000000000000       0x12 ./src/main.o
+ .debug_macro   0x0000000000000000       0x1f ./src/main.o
+ .debug_macro   0x0000000000000000      0x3a0 ./src/main.o
+ .debug_macro   0x0000000000000000       0x79 ./src/main.o
+ .debug_macro   0x0000000000000000       0x69 ./src/main.o
+ .debug_macro   0x0000000000000000       0xb0 ./src/main.o
+ .debug_macro   0x0000000000000000       0x22 ./src/main.o
+ .debug_macro   0x0000000000000000       0x7e ./src/main.o
+ .debug_macro   0x0000000000000000       0x49 ./src/main.o
+ .debug_macro   0x0000000000000000      0x102 ./src/main.o
+ .debug_macro   0x0000000000000000       0x10 ./src/main.o
+ .debug_macro   0x0000000000000000       0x58 ./src/main.o
+ .debug_macro   0x0000000000000000       0x35 ./src/main.o
+ .debug_macro   0x0000000000000000       0x9c ./src/main.o
+ .debug_macro   0x0000000000000000       0x52 ./src/main.o
+ .debug_macro   0x0000000000000000       0x16 ./src/main.o
+ .debug_macro   0x0000000000000000       0x43 ./src/main.o
+ .debug_macro   0x0000000000000000      0x180 ./src/main.o
+ .debug_macro   0x0000000000000000      0x27a ./src/main.o
+ .debug_macro   0x0000000000000000       0x10 ./src/main.o
+ .debug_macro   0x0000000000000000       0x35 ./src/main.o
+ .debug_macro   0x0000000000000000       0x10 ./src/main.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/croutine.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/croutine.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/croutine.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/croutine.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/croutine.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/croutine.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/croutine.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/croutine.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/croutine.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/croutine.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/croutine.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/croutine.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/croutine.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/croutine.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/croutine.o
+ .text          0x0000000000000000        0x0 ./libs/freertos/croutine.o
+ .data          0x0000000000000000        0x0 ./libs/freertos/croutine.o
+ .bss           0x0000000000000000        0x0 ./libs/freertos/croutine.o
+ .bss.pxReadyCoRoutineLists
+                0x0000000000000000       0x28 ./libs/freertos/croutine.o
+ .bss.xDelayedCoRoutineList1
+                0x0000000000000000       0x14 ./libs/freertos/croutine.o
+ .bss.xDelayedCoRoutineList2
+                0x0000000000000000       0x14 ./libs/freertos/croutine.o
+ .bss.pxDelayedCoRoutineList
+                0x0000000000000000        0x4 ./libs/freertos/croutine.o
+ .bss.pxOverflowDelayedCoRoutineList
+                0x0000000000000000        0x4 ./libs/freertos/croutine.o
+ .bss.xPendingReadyCoRoutineList
+                0x0000000000000000       0x14 ./libs/freertos/croutine.o
+ .bss.pxCurrentCoRoutine
+                0x0000000000000000        0x4 ./libs/freertos/croutine.o
+ .bss.uxTopCoRoutineReadyPriority
+                0x0000000000000000        0x4 ./libs/freertos/croutine.o
+ .bss.xCoRoutineTickCount
+                0x0000000000000000        0x4 ./libs/freertos/croutine.o
+ .bss.xLastTickCount
+                0x0000000000000000        0x4 ./libs/freertos/croutine.o
+ .bss.xPassedTicks
+                0x0000000000000000        0x4 ./libs/freertos/croutine.o
+ .text.xCoRoutineCreate
+                0x0000000000000000       0xcc ./libs/freertos/croutine.o
+ .text.vCoRoutineAddToDelayedList
+                0x0000000000000000       0x84 ./libs/freertos/croutine.o
+ .text.prvCheckPendingReadyList
+                0x0000000000000000       0x78 ./libs/freertos/croutine.o
+ .text.prvCheckDelayedList
+                0x0000000000000000       0xf4 ./libs/freertos/croutine.o
+ .text.vCoRoutineSchedule
+                0x0000000000000000       0xa0 ./libs/freertos/croutine.o
+ .text.prvInitialiseCoRoutineLists
+                0x0000000000000000       0x68 ./libs/freertos/croutine.o
+ .text.xCoRoutineRemoveFromEventList
+                0x0000000000000000       0x50 ./libs/freertos/croutine.o
+ .debug_info    0x0000000000000000      0x4c9 ./libs/freertos/croutine.o
+ .debug_abbrev  0x0000000000000000      0x183 ./libs/freertos/croutine.o
+ .debug_aranges
+                0x0000000000000000       0x50 ./libs/freertos/croutine.o
+ .debug_ranges  0x0000000000000000       0x40 ./libs/freertos/croutine.o
+ .debug_macro   0x0000000000000000       0xcb ./libs/freertos/croutine.o
+ .debug_macro   0x0000000000000000      0x862 ./libs/freertos/croutine.o
+ .debug_macro   0x0000000000000000      0x16d ./libs/freertos/croutine.o
+ .debug_macro   0x0000000000000000       0x22 ./libs/freertos/croutine.o
+ .debug_macro   0x0000000000000000       0x44 ./libs/freertos/croutine.o
+ .debug_macro   0x0000000000000000       0x1c ./libs/freertos/croutine.o
+ .debug_macro   0x0000000000000000      0x1f7 ./libs/freertos/croutine.o
+ .debug_macro   0x0000000000000000       0x40 ./libs/freertos/croutine.o
+ .debug_macro   0x0000000000000000       0xbb ./libs/freertos/croutine.o
+ .debug_macro   0x0000000000000000       0xaf ./libs/freertos/croutine.o
+ .debug_macro   0x0000000000000000       0x12 ./libs/freertos/croutine.o
+ .debug_macro   0x0000000000000000       0x1f ./libs/freertos/croutine.o
+ .debug_macro   0x0000000000000000      0x3a0 ./libs/freertos/croutine.o
+ .debug_macro   0x0000000000000000       0x79 ./libs/freertos/croutine.o
+ .debug_macro   0x0000000000000000       0x69 ./libs/freertos/croutine.o
+ .debug_macro   0x0000000000000000       0x49 ./libs/freertos/croutine.o
+ .debug_line    0x0000000000000000      0x2d4 ./libs/freertos/croutine.o
+ .debug_str     0x0000000000000000     0x63e2 ./libs/freertos/croutine.o
+ .comment       0x0000000000000000       0x71 ./libs/freertos/croutine.o
+ .debug_frame   0x0000000000000000      0x10c ./libs/freertos/croutine.o
+ .ARM.attributes
+                0x0000000000000000       0x33 ./libs/freertos/croutine.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/event_groups.o
+ .text          0x0000000000000000        0x0 ./libs/freertos/event_groups.o
+ .data          0x0000000000000000        0x0 ./libs/freertos/event_groups.o
+ .bss           0x0000000000000000        0x0 ./libs/freertos/event_groups.o
+ .text.xEventGroupCreate
+                0x0000000000000000       0x30 ./libs/freertos/event_groups.o
+ .text.xEventGroupSync
+                0x0000000000000000       0xe0 ./libs/freertos/event_groups.o
+ .text.xEventGroupWaitBits
+                0x0000000000000000      0x104 ./libs/freertos/event_groups.o
+ .text.xEventGroupClearBits
+                0x0000000000000000       0x34 ./libs/freertos/event_groups.o
+ .text.xEventGroupGetBitsFromISR
+                0x0000000000000000       0x28 ./libs/freertos/event_groups.o
+ .text.xEventGroupSetBits
+                0x0000000000000000       0xdc ./libs/freertos/event_groups.o
+ .text.vEventGroupDelete
+                0x0000000000000000       0x40 ./libs/freertos/event_groups.o
+ .text.vEventGroupSetBitsCallback
+                0x0000000000000000       0x18 ./libs/freertos/event_groups.o
+ .text.vEventGroupClearBitsCallback
+                0x0000000000000000       0x18 ./libs/freertos/event_groups.o
+ .text.prvTestWaitCondition
+                0x0000000000000000       0x44 ./libs/freertos/event_groups.o
+ .debug_info    0x0000000000000000      0x615 ./libs/freertos/event_groups.o
+ .debug_abbrev  0x0000000000000000      0x11e ./libs/freertos/event_groups.o
+ .debug_aranges
+                0x0000000000000000       0x68 ./libs/freertos/event_groups.o
+ .debug_ranges  0x0000000000000000       0x58 ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000      0x1b4 ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000      0x862 ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000       0x58 ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000       0x22 ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000       0x35 ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000       0x9c ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000       0x16 ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000      0x10e ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000       0x86 ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000       0x4a ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000       0x52 ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000       0x16 ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000       0x43 ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000      0x180 ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000      0x27a ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000       0x16 ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000       0x29 ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000       0x1c ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000      0x1f7 ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000       0x40 ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000       0xbb ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000       0xaf ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000       0x12 ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000       0x1f ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000      0x3a0 ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000       0x79 ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000       0x69 ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000       0x91 ./libs/freertos/event_groups.o
+ .debug_macro   0x0000000000000000       0x19 ./libs/freertos/event_groups.o
+ .debug_line    0x0000000000000000      0x38b ./libs/freertos/event_groups.o
+ .debug_str     0x0000000000000000     0x892a ./libs/freertos/event_groups.o
+ .comment       0x0000000000000000       0x71 ./libs/freertos/event_groups.o
+ .debug_frame   0x0000000000000000      0x17c ./libs/freertos/event_groups.o
+ .ARM.attributes
+                0x0000000000000000       0x33 ./libs/freertos/event_groups.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/heap_2.o
+ .text          0x0000000000000000        0x0 ./libs/freertos/heap_2.o
+ .data          0x0000000000000000        0x0 ./libs/freertos/heap_2.o
+ .bss           0x0000000000000000        0x0 ./libs/freertos/heap_2.o
+ .rodata.heapSTRUCT_SIZE
+                0x0000000000000000        0x2 ./libs/freertos/heap_2.o
+ .text.xPortGetFreeHeapSize
+                0x0000000000000000       0x18 ./libs/freertos/heap_2.o
+ .text.vPortInitialiseBlocks
+                0x0000000000000000        0xc ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000      0x862 ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000       0x58 ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000       0x22 ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000       0x35 ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000       0x9c ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000       0x16 ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000      0x10e ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000       0x86 ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000       0x4a ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000       0x52 ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000       0x16 ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000       0x43 ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000      0x180 ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000      0x27a ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000       0x16 ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000       0x29 ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000       0x1c ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000      0x1f7 ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000       0x40 ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000       0xbb ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000       0xaf ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000       0x12 ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000       0x1f ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000      0x3a0 ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000       0x79 ./libs/freertos/heap_2.o
+ .debug_macro   0x0000000000000000       0x69 ./libs/freertos/heap_2.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/list.o
+ .text          0x0000000000000000        0x0 ./libs/freertos/list.o
+ .data          0x0000000000000000        0x0 ./libs/freertos/list.o
+ .bss           0x0000000000000000        0x0 ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000      0x862 ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000       0x58 ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000       0x22 ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000       0x35 ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000       0x9c ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000       0x16 ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000      0x10e ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000       0x86 ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000       0x4a ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000       0x52 ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000       0x16 ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000       0x43 ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000      0x180 ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000      0x27a ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000       0x16 ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000       0x29 ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000       0x1c ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000      0x1f7 ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000       0x40 ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000       0xbb ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000       0xaf ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000       0x12 ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000       0x1f ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000      0x3a0 ./libs/freertos/list.o
+ .debug_macro   0x0000000000000000       0x79 ./libs/freertos/list.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/port.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/port.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/port.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/port.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/port.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/port.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/port.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/port.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/port.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/port.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/port.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/port.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/port.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/port.o
+ .text          0x0000000000000000        0x0 ./libs/freertos/port.o
+ .data          0x0000000000000000        0x0 ./libs/freertos/port.o
+ .bss           0x0000000000000000        0x0 ./libs/freertos/port.o
+ .text.vPortEndScheduler
+                0x0000000000000000        0xc ./libs/freertos/port.o
+ .debug_macro   0x0000000000000000      0x862 ./libs/freertos/port.o
+ .debug_macro   0x0000000000000000      0x16d ./libs/freertos/port.o
+ .debug_macro   0x0000000000000000       0x22 ./libs/freertos/port.o
+ .debug_macro   0x0000000000000000       0x44 ./libs/freertos/port.o
+ .debug_macro   0x0000000000000000       0x1c ./libs/freertos/port.o
+ .debug_macro   0x0000000000000000      0x1f7 ./libs/freertos/port.o
+ .debug_macro   0x0000000000000000       0x40 ./libs/freertos/port.o
+ .debug_macro   0x0000000000000000       0xbb ./libs/freertos/port.o
+ .debug_macro   0x0000000000000000       0xaf ./libs/freertos/port.o
+ .debug_macro   0x0000000000000000       0x12 ./libs/freertos/port.o
+ .debug_macro   0x0000000000000000       0x1f ./libs/freertos/port.o
+ .debug_macro   0x0000000000000000      0x3a0 ./libs/freertos/port.o
+ .debug_macro   0x0000000000000000       0x79 ./libs/freertos/port.o
+ .debug_macro   0x0000000000000000       0x69 ./libs/freertos/port.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/queue.o
+ .text          0x0000000000000000        0x0 ./libs/freertos/queue.o
+ .data          0x0000000000000000        0x0 ./libs/freertos/queue.o
+ .bss           0x0000000000000000        0x0 ./libs/freertos/queue.o
+ .text.xQueueReceiveFromISR
+                0x0000000000000000       0x84 ./libs/freertos/queue.o
+ .text.xQueuePeekFromISR
+                0x0000000000000000       0x4c ./libs/freertos/queue.o
+ .text.uxQueueMessagesWaiting
+                0x0000000000000000       0x20 ./libs/freertos/queue.o
+ .text.uxQueueSpacesAvailable
+                0x0000000000000000       0x2c ./libs/freertos/queue.o
+ .text.uxQueueMessagesWaitingFromISR
+                0x0000000000000000       0x1c ./libs/freertos/queue.o
+ .text.vQueueDelete
+                0x0000000000000000       0x2c ./libs/freertos/queue.o
+ .text.xQueueIsQueueEmptyFromISR
+                0x0000000000000000       0x28 ./libs/freertos/queue.o
+ .text.xQueueIsQueueFullFromISR
+                0x0000000000000000       0x2c ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000      0x862 ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000       0x58 ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000       0x22 ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000       0x35 ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000       0x9c ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000       0x16 ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000      0x10e ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000       0x86 ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000       0x4a ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000       0x52 ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000       0x16 ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000       0x43 ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000      0x180 ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000      0x27a ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000       0x16 ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000       0x29 ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000       0x35 ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000       0x1c ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000      0x1f7 ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000       0x40 ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000       0xbb ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000       0xaf ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000       0x12 ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000       0x1f ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000      0x3a0 ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000       0x79 ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000       0x69 ./libs/freertos/queue.o
+ .debug_macro   0x0000000000000000       0xb0 ./libs/freertos/queue.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/tasks.o
+ .text          0x0000000000000000        0x0 ./libs/freertos/tasks.o
+ .data          0x0000000000000000        0x0 ./libs/freertos/tasks.o
+ .bss           0x0000000000000000        0x0 ./libs/freertos/tasks.o
+ .text.vTaskDelete
+                0x0000000000000000       0x9c ./libs/freertos/tasks.o
+ .text.vTaskDelayUntil
+                0x0000000000000000       0x98 ./libs/freertos/tasks.o
+ .text.uxTaskPriorityGet
+                0x0000000000000000       0x34 ./libs/freertos/tasks.o
+ .text.vTaskPrioritySet
+                0x0000000000000000      0x118 ./libs/freertos/tasks.o
+ .text.vTaskSuspend
+                0x0000000000000000       0xa4 ./libs/freertos/tasks.o
+ .text.prvTaskIsTaskSuspended
+                0x0000000000000000       0x5c ./libs/freertos/tasks.o
+ .text.vTaskResume
+                0x0000000000000000       0x90 ./libs/freertos/tasks.o
+ .text.xTaskResumeFromISR
+                0x0000000000000000       0xa8 ./libs/freertos/tasks.o
+ .text.vTaskEndScheduler
+                0x0000000000000000       0x18 ./libs/freertos/tasks.o
+ .text.xTaskGetTickCount
+                0x0000000000000000       0x24 ./libs/freertos/tasks.o
+ .text.xTaskGetTickCountFromISR
+                0x0000000000000000       0x28 ./libs/freertos/tasks.o
+ .text.uxTaskGetNumberOfTasks
+                0x0000000000000000       0x18 ./libs/freertos/tasks.o
+ .text.vTaskPlaceOnUnorderedEventList
+                0x0000000000000000       0x6c ./libs/freertos/tasks.o
+ .text.xTaskRemoveFromUnorderedEventList
+                0x0000000000000000       0x94 ./libs/freertos/tasks.o
+ .text.uxTaskResetEventItemValue
+                0x0000000000000000       0x30 ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000      0x862 ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0x58 ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0x22 ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0x35 ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0x9c ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0x16 ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000      0x10e ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0x86 ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0x4a ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0x52 ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0x16 ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0x43 ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000      0x180 ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000      0x27a ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0x16 ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0x29 ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0x16 ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0x35 ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0x1c ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000      0x1f7 ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0x40 ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0xbb ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0xaf ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0x12 ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0x1f ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000      0x3a0 ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0x79 ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0x69 ./libs/freertos/tasks.o
+ .debug_macro   0x0000000000000000       0x91 ./libs/freertos/tasks.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/freertos/timers.o
+ .text          0x0000000000000000        0x0 ./libs/freertos/timers.o
+ .data          0x0000000000000000        0x0 ./libs/freertos/timers.o
+ .bss           0x0000000000000000        0x0 ./libs/freertos/timers.o
+ .debug_info    0x0000000000000000       0x7d ./libs/freertos/timers.o
+ .debug_abbrev  0x0000000000000000       0x29 ./libs/freertos/timers.o
+ .debug_aranges
+                0x0000000000000000       0x18 ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000      0x192 ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000      0x862 ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000       0x58 ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000       0x22 ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000       0x35 ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000       0x9c ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000       0x16 ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000      0x10e ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000       0x86 ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000       0x4a ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000       0x52 ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000       0x16 ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000       0x43 ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000      0x180 ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000      0x27a ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000       0x16 ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000       0x29 ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000       0x1c ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000      0x1f7 ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000       0x40 ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000       0xbb ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000       0xaf ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000       0x12 ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000       0x1f ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000      0x3a0 ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000       0x79 ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000       0x69 ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000       0xb0 ./libs/freertos/timers.o
+ .debug_macro   0x0000000000000000       0x91 ./libs/freertos/timers.o
+ .debug_line    0x0000000000000000      0x244 ./libs/freertos/timers.o
+ .debug_str     0x0000000000000000     0x8d4e ./libs/freertos/timers.o
+ .comment       0x0000000000000000       0x71 ./libs/freertos/timers.o
+ .ARM.attributes
+                0x0000000000000000       0x33 ./libs/freertos/timers.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/core_cm3.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/core_cm3.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/core_cm3.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/core_cm3.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/core_cm3.o
+ .text          0x0000000000000000        0x0 ./libs/CMSIS/core_cm3.o
+ .data          0x0000000000000000        0x0 ./libs/CMSIS/core_cm3.o
+ .bss           0x0000000000000000        0x0 ./libs/CMSIS/core_cm3.o
+ .text.__get_PSP
+                0x0000000000000000       0x10 ./libs/CMSIS/core_cm3.o
+ .text.__set_PSP
+                0x0000000000000000        0x8 ./libs/CMSIS/core_cm3.o
+ .text.__get_MSP
+                0x0000000000000000       0x10 ./libs/CMSIS/core_cm3.o
+ .text.__set_MSP
+                0x0000000000000000        0x8 ./libs/CMSIS/core_cm3.o
+ .text.__get_BASEPRI
+                0x0000000000000000       0x20 ./libs/CMSIS/core_cm3.o
+ .text.__set_BASEPRI
+                0x0000000000000000       0x18 ./libs/CMSIS/core_cm3.o
+ .text.__get_PRIMASK
+                0x0000000000000000       0x20 ./libs/CMSIS/core_cm3.o
+ .text.__set_PRIMASK
+                0x0000000000000000       0x18 ./libs/CMSIS/core_cm3.o
+ .text.__get_FAULTMASK
+                0x0000000000000000       0x20 ./libs/CMSIS/core_cm3.o
+ .text.__set_FAULTMASK
+                0x0000000000000000       0x18 ./libs/CMSIS/core_cm3.o
+ .text.__get_CONTROL
+                0x0000000000000000       0x20 ./libs/CMSIS/core_cm3.o
+ .text.__set_CONTROL
+                0x0000000000000000       0x18 ./libs/CMSIS/core_cm3.o
+ .text.__REV    0x0000000000000000       0x20 ./libs/CMSIS/core_cm3.o
+ .text.__REV16  0x0000000000000000       0x24 ./libs/CMSIS/core_cm3.o
+ .text.__REVSH  0x0000000000000000       0x24 ./libs/CMSIS/core_cm3.o
+ .text.__RBIT   0x0000000000000000       0x24 ./libs/CMSIS/core_cm3.o
+ .text.__LDREXB
+                0x0000000000000000       0x24 ./libs/CMSIS/core_cm3.o
+ .text.__LDREXH
+                0x0000000000000000       0x24 ./libs/CMSIS/core_cm3.o
+ .text.__LDREXW
+                0x0000000000000000       0x24 ./libs/CMSIS/core_cm3.o
+ .text.__STREXB
+                0x0000000000000000       0x28 ./libs/CMSIS/core_cm3.o
+ .text.__STREXH
+                0x0000000000000000       0x28 ./libs/CMSIS/core_cm3.o
+ .text.__STREXW
+                0x0000000000000000       0x28 ./libs/CMSIS/core_cm3.o
+ .debug_info    0x0000000000000000      0x52f ./libs/CMSIS/core_cm3.o
+ .debug_abbrev  0x0000000000000000       0xb1 ./libs/CMSIS/core_cm3.o
+ .debug_aranges
+                0x0000000000000000       0xc8 ./libs/CMSIS/core_cm3.o
+ .debug_ranges  0x0000000000000000       0xb8 ./libs/CMSIS/core_cm3.o
+ .debug_macro   0x0000000000000000       0x57 ./libs/CMSIS/core_cm3.o
+ .debug_macro   0x0000000000000000      0x862 ./libs/CMSIS/core_cm3.o
+ .debug_macro   0x0000000000000000       0x22 ./libs/CMSIS/core_cm3.o
+ .debug_macro   0x0000000000000000       0x44 ./libs/CMSIS/core_cm3.o
+ .debug_macro   0x0000000000000000       0x1c ./libs/CMSIS/core_cm3.o
+ .debug_macro   0x0000000000000000      0x1f7 ./libs/CMSIS/core_cm3.o
+ .debug_line    0x0000000000000000      0x2b6 ./libs/CMSIS/core_cm3.o
+ .debug_str     0x0000000000000000     0x3125 ./libs/CMSIS/core_cm3.o
+ .comment       0x0000000000000000       0x71 ./libs/CMSIS/core_cm3.o
+ .debug_frame   0x0000000000000000      0x320 ./libs/CMSIS/core_cm3.o
+ .ARM.attributes
+                0x0000000000000000       0x33 ./libs/CMSIS/core_cm3.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/misc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/misc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/misc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/misc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/misc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/misc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/misc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/misc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/misc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/misc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/misc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/misc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/misc.o
+ .text          0x0000000000000000        0x0 ./libs/CMSIS/misc.o
+ .data          0x0000000000000000        0x0 ./libs/CMSIS/misc.o
+ .bss           0x0000000000000000        0x0 ./libs/CMSIS/misc.o
+ .text.NVIC_PriorityGroupConfig
+                0x0000000000000000       0x24 ./libs/CMSIS/misc.o
+ .text.NVIC_Init
+                0x0000000000000000       0xc4 ./libs/CMSIS/misc.o
+ .text.NVIC_SetVectorTable
+                0x0000000000000000       0x2c ./libs/CMSIS/misc.o
+ .text.NVIC_SystemLPConfig
+                0x0000000000000000       0x40 ./libs/CMSIS/misc.o
+ .text.SysTick_CLKSourceConfig
+                0x0000000000000000       0x38 ./libs/CMSIS/misc.o
+ .debug_info    0x0000000000000000      0x4f1 ./libs/CMSIS/misc.o
+ .debug_abbrev  0x0000000000000000      0x159 ./libs/CMSIS/misc.o
+ .debug_aranges
+                0x0000000000000000       0x40 ./libs/CMSIS/misc.o
+ .debug_ranges  0x0000000000000000       0x30 ./libs/CMSIS/misc.o
+ .debug_macro   0x0000000000000000       0xbe ./libs/CMSIS/misc.o
+ .debug_macro   0x0000000000000000      0x862 ./libs/CMSIS/misc.o
+ .debug_macro   0x0000000000000000       0x62 ./libs/CMSIS/misc.o
+ .debug_macro   0x0000000000000000       0x22 ./libs/CMSIS/misc.o
+ .debug_macro   0x0000000000000000       0x22 ./libs/CMSIS/misc.o
+ .debug_macro   0x0000000000000000       0x44 ./libs/CMSIS/misc.o
+ .debug_macro   0x0000000000000000       0x1c ./libs/CMSIS/misc.o
+ .debug_macro   0x0000000000000000      0x1f7 ./libs/CMSIS/misc.o
+ .debug_macro   0x0000000000000000      0x69f ./libs/CMSIS/misc.o
+ .debug_macro   0x0000000000000000     0x7dbe ./libs/CMSIS/misc.o
+ .debug_macro   0x0000000000000000      0x2a6 ./libs/CMSIS/misc.o
+ .debug_macro   0x0000000000000000      0x3e2 ./libs/CMSIS/misc.o
+ .debug_macro   0x0000000000000000       0x35 ./libs/CMSIS/misc.o
+ .debug_macro   0x0000000000000000       0x85 ./libs/CMSIS/misc.o
+ .debug_line    0x0000000000000000      0x1f8 ./libs/CMSIS/misc.o
+ .debug_str     0x0000000000000000    0x35479 ./libs/CMSIS/misc.o
+ .comment       0x0000000000000000       0x71 ./libs/CMSIS/misc.o
+ .debug_frame   0x0000000000000000       0xd8 ./libs/CMSIS/misc.o
+ .ARM.attributes
+                0x0000000000000000       0x33 ./libs/CMSIS/misc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_adc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_adc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_adc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_adc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_adc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_adc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_adc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_adc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_adc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_adc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_adc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_adc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_adc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_adc.o
+ .text          0x0000000000000000        0x0 ./libs/CMSIS/stm32f10x_adc.o
+ .data          0x0000000000000000        0x0 ./libs/CMSIS/stm32f10x_adc.o
+ .bss           0x0000000000000000        0x0 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_DeInit
+                0x0000000000000000       0x74 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_DMACmd
+                0x0000000000000000       0x38 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_ITConfig
+                0x0000000000000000       0x44 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_SoftwareStartConvCmd
+                0x0000000000000000       0x38 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_GetSoftwareStartConvStatus
+                0x0000000000000000       0x30 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_DiscModeChannelCountConfig
+                0x0000000000000000       0x44 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_DiscModeCmd
+                0x0000000000000000       0x38 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_ExternalTrigConvCmd
+                0x0000000000000000       0x38 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_GetConversionValue
+                0x0000000000000000       0x1c ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_GetDualModeConversionValue
+                0x0000000000000000       0x18 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_AutoInjectedConvCmd
+                0x0000000000000000       0x38 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_InjectedDiscModeCmd
+                0x0000000000000000       0x38 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_ExternalTrigInjectedConvConfig
+                0x0000000000000000       0x34 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_ExternalTrigInjectedConvCmd
+                0x0000000000000000       0x38 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_SoftwareStartInjectedConvCmd
+                0x0000000000000000       0x38 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_GetSoftwareStartInjectedConvCmdStatus
+                0x0000000000000000       0x30 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_InjectedChannelConfig
+                0x0000000000000000      0x120 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_InjectedSequencerLengthConfig
+                0x0000000000000000       0x44 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_SetInjectedOffset
+                0x0000000000000000       0x34 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_GetInjectedConversionValue
+                0x0000000000000000       0x30 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_AnalogWatchdogCmd
+                0x0000000000000000       0x38 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_AnalogWatchdogThresholdsConfig
+                0x0000000000000000       0x28 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_AnalogWatchdogSingleChannelConfig
+                0x0000000000000000       0x38 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_TempSensorVrefintCmd
+                0x0000000000000000       0x38 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_GetFlagStatus
+                0x0000000000000000       0x34 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_ClearFlag
+                0x0000000000000000       0x20 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_GetITStatus
+                0x0000000000000000       0x58 ./libs/CMSIS/stm32f10x_adc.o
+ .text.ADC_ClearITPendingBit
+                0x0000000000000000       0x2c ./libs/CMSIS/stm32f10x_adc.o
+ .debug_macro   0x0000000000000000      0x862 ./libs/CMSIS/stm32f10x_adc.o
+ .debug_macro   0x0000000000000000       0x62 ./libs/CMSIS/stm32f10x_adc.o
+ .debug_macro   0x0000000000000000       0x22 ./libs/CMSIS/stm32f10x_adc.o
+ .debug_macro   0x0000000000000000       0x22 ./libs/CMSIS/stm32f10x_adc.o
+ .debug_macro   0x0000000000000000       0x44 ./libs/CMSIS/stm32f10x_adc.o
+ .debug_macro   0x0000000000000000       0x1c ./libs/CMSIS/stm32f10x_adc.o
+ .debug_macro   0x0000000000000000      0x1f7 ./libs/CMSIS/stm32f10x_adc.o
+ .debug_macro   0x0000000000000000      0x69f ./libs/CMSIS/stm32f10x_adc.o
+ .debug_macro   0x0000000000000000     0x7dbe ./libs/CMSIS/stm32f10x_adc.o
+ .debug_macro   0x0000000000000000      0x2a6 ./libs/CMSIS/stm32f10x_adc.o
+ .debug_macro   0x0000000000000000      0x3e2 ./libs/CMSIS/stm32f10x_adc.o
+ .debug_macro   0x0000000000000000       0x8b ./libs/CMSIS/stm32f10x_adc.o
+ .debug_macro   0x0000000000000000       0x35 ./libs/CMSIS/stm32f10x_adc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_gpio.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_gpio.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_gpio.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_gpio.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_gpio.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_gpio.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_gpio.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_gpio.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_gpio.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_gpio.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_gpio.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_gpio.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_gpio.o
+ .text          0x0000000000000000        0x0 ./libs/CMSIS/stm32f10x_gpio.o
+ .data          0x0000000000000000        0x0 ./libs/CMSIS/stm32f10x_gpio.o
+ .bss           0x0000000000000000        0x0 ./libs/CMSIS/stm32f10x_gpio.o
+ .text.GPIO_DeInit
+                0x0000000000000000       0xe4 ./libs/CMSIS/stm32f10x_gpio.o
+ .text.GPIO_AFIODeInit
+                0x0000000000000000       0x18 ./libs/CMSIS/stm32f10x_gpio.o
+ .text.GPIO_StructInit
+                0x0000000000000000       0x28 ./libs/CMSIS/stm32f10x_gpio.o
+ .text.GPIO_ReadInputData
+                0x0000000000000000       0x1c ./libs/CMSIS/stm32f10x_gpio.o
+ .text.GPIO_ReadOutputDataBit
+                0x0000000000000000       0x34 ./libs/CMSIS/stm32f10x_gpio.o
+ .text.GPIO_ReadOutputData
+                0x0000000000000000       0x1c ./libs/CMSIS/stm32f10x_gpio.o
+ .text.GPIO_WriteBit
+                0x0000000000000000       0x30 ./libs/CMSIS/stm32f10x_gpio.o
+ .text.GPIO_Write
+                0x0000000000000000       0x1c ./libs/CMSIS/stm32f10x_gpio.o
+ .text.GPIO_PinLockConfig
+                0x0000000000000000       0x44 ./libs/CMSIS/stm32f10x_gpio.o
+ .text.GPIO_EventOutputConfig
+                0x0000000000000000       0x4c ./libs/CMSIS/stm32f10x_gpio.o
+ .text.GPIO_EventOutputCmd
+                0x0000000000000000       0x20 ./libs/CMSIS/stm32f10x_gpio.o
+ .text.GPIO_PinRemapConfig
+                0x0000000000000000       0xe0 ./libs/CMSIS/stm32f10x_gpio.o
+ .text.GPIO_EXTILineConfig
+                0x0000000000000000       0x84 ./libs/CMSIS/stm32f10x_gpio.o
+ .text.GPIO_ETH_MediaInterfaceConfig
+                0x0000000000000000       0x1c ./libs/CMSIS/stm32f10x_gpio.o
+ .debug_macro   0x0000000000000000      0x862 ./libs/CMSIS/stm32f10x_gpio.o
+ .debug_macro   0x0000000000000000       0x62 ./libs/CMSIS/stm32f10x_gpio.o
+ .debug_macro   0x0000000000000000       0x22 ./libs/CMSIS/stm32f10x_gpio.o
+ .debug_macro   0x0000000000000000       0x22 ./libs/CMSIS/stm32f10x_gpio.o
+ .debug_macro   0x0000000000000000       0x44 ./libs/CMSIS/stm32f10x_gpio.o
+ .debug_macro   0x0000000000000000       0x1c ./libs/CMSIS/stm32f10x_gpio.o
+ .debug_macro   0x0000000000000000      0x1f7 ./libs/CMSIS/stm32f10x_gpio.o
+ .debug_macro   0x0000000000000000      0x69f ./libs/CMSIS/stm32f10x_gpio.o
+ .debug_macro   0x0000000000000000     0x7dbe ./libs/CMSIS/stm32f10x_gpio.o
+ .debug_macro   0x0000000000000000       0x8b ./libs/CMSIS/stm32f10x_gpio.o
+ .debug_macro   0x0000000000000000       0x35 ./libs/CMSIS/stm32f10x_gpio.o
+ .debug_macro   0x0000000000000000      0x2a6 ./libs/CMSIS/stm32f10x_gpio.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_rcc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_rcc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_rcc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_rcc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_rcc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_rcc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_rcc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_rcc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_rcc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_rcc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_rcc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_rcc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/stm32f10x_rcc.o
+ .text          0x0000000000000000        0x0 ./libs/CMSIS/stm32f10x_rcc.o
+ .data          0x0000000000000000        0x0 ./libs/CMSIS/stm32f10x_rcc.o
+ .bss           0x0000000000000000        0x0 ./libs/CMSIS/stm32f10x_rcc.o
+ .data.APBAHBPrescTable
+                0x0000000000000000       0x10 ./libs/CMSIS/stm32f10x_rcc.o
+ .data.ADCPrescTable
+                0x0000000000000000        0x4 ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_DeInit
+                0x0000000000000000       0x5c ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_HSEConfig
+                0x0000000000000000       0x5c ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_WaitForHSEStartUp
+                0x0000000000000000       0x50 ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_AdjustHSICalibrationValue
+                0x0000000000000000       0x3c ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_HSICmd
+                0x0000000000000000       0x20 ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_PLLConfig
+                0x0000000000000000       0x3c ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_PLLCmd
+                0x0000000000000000       0x20 ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_SYSCLKConfig
+                0x0000000000000000       0x38 ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_GetSYSCLKSource
+                0x0000000000000000       0x20 ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_HCLKConfig
+                0x0000000000000000       0x38 ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_PCLK1Config
+                0x0000000000000000       0x38 ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_PCLK2Config
+                0x0000000000000000       0x38 ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_ITConfig
+                0x0000000000000000       0x4c ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_USBCLKConfig
+                0x0000000000000000       0x1c ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_ADCCLKConfig
+                0x0000000000000000       0x38 ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_LSEConfig
+                0x0000000000000000       0x40 ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_LSICmd
+                0x0000000000000000       0x20 ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_RTCCLKConfig
+                0x0000000000000000       0x24 ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_RTCCLKCmd
+                0x0000000000000000       0x20 ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_GetClocksFreq
+                0x0000000000000000      0x16c ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_AHBPeriphClockCmd
+                0x0000000000000000       0x3c ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_APB1PeriphClockCmd
+                0x0000000000000000       0x3c ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_APB2PeriphResetCmd
+                0x0000000000000000       0x3c ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_APB1PeriphResetCmd
+                0x0000000000000000       0x3c ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_BackupResetCmd
+                0x0000000000000000       0x20 ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_ClockSecuritySystemCmd
+                0x0000000000000000       0x20 ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_MCOConfig
+                0x0000000000000000       0x20 ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_GetFlagStatus
+                0x0000000000000000       0x74 ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_ClearFlag
+                0x0000000000000000       0x1c ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_GetITStatus
+                0x0000000000000000       0x38 ./libs/CMSIS/stm32f10x_rcc.o
+ .text.RCC_ClearITPendingBit
+                0x0000000000000000       0x20 ./libs/CMSIS/stm32f10x_rcc.o
+ .debug_macro   0x0000000000000000      0x862 ./libs/CMSIS/stm32f10x_rcc.o
+ .debug_macro   0x0000000000000000       0x62 ./libs/CMSIS/stm32f10x_rcc.o
+ .debug_macro   0x0000000000000000       0x22 ./libs/CMSIS/stm32f10x_rcc.o
+ .debug_macro   0x0000000000000000       0x22 ./libs/CMSIS/stm32f10x_rcc.o
+ .debug_macro   0x0000000000000000       0x44 ./libs/CMSIS/stm32f10x_rcc.o
+ .debug_macro   0x0000000000000000       0x1c ./libs/CMSIS/stm32f10x_rcc.o
+ .debug_macro   0x0000000000000000      0x1f7 ./libs/CMSIS/stm32f10x_rcc.o
+ .debug_macro   0x0000000000000000      0x69f ./libs/CMSIS/stm32f10x_rcc.o
+ .debug_macro   0x0000000000000000     0x7dbe ./libs/CMSIS/stm32f10x_rcc.o
+ .debug_macro   0x0000000000000000      0x2a6 ./libs/CMSIS/stm32f10x_rcc.o
+ .debug_macro   0x0000000000000000       0x8b ./libs/CMSIS/stm32f10x_rcc.o
+ .debug_macro   0x0000000000000000       0x35 ./libs/CMSIS/stm32f10x_rcc.o
+ .debug_macro   0x0000000000000000      0x3dc ./libs/CMSIS/stm32f10x_rcc.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/system_stm32f10x.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/system_stm32f10x.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/system_stm32f10x.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/system_stm32f10x.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/system_stm32f10x.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/system_stm32f10x.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/system_stm32f10x.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/system_stm32f10x.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/system_stm32f10x.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/system_stm32f10x.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/system_stm32f10x.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/system_stm32f10x.o
+ .group         0x0000000000000000        0x8 ./libs/CMSIS/system_stm32f10x.o
+ .text          0x0000000000000000        0x0 ./libs/CMSIS/system_stm32f10x.o
+ .data          0x0000000000000000        0x0 ./libs/CMSIS/system_stm32f10x.o
+ .bss           0x0000000000000000        0x0 ./libs/CMSIS/system_stm32f10x.o
+ .data.SystemCoreClock
+                0x0000000000000000        0x4 ./libs/CMSIS/system_stm32f10x.o
+ .data.AHBPrescTable
+                0x0000000000000000       0x10 ./libs/CMSIS/system_stm32f10x.o
+ .text.SystemInit
+                0x0000000000000000       0x68 ./libs/CMSIS/system_stm32f10x.o
+ .text.SystemCoreClockUpdate
+                0x0000000000000000       0xe4 ./libs/CMSIS/system_stm32f10x.o
+ .text.SetSysClock
+                0x0000000000000000        0xc ./libs/CMSIS/system_stm32f10x.o
+ .text.SetSysClockTo72
+                0x0000000000000000      0x100 ./libs/CMSIS/system_stm32f10x.o
+ .debug_info    0x0000000000000000      0x43c ./libs/CMSIS/system_stm32f10x.o
+ .debug_abbrev  0x0000000000000000      0x17c ./libs/CMSIS/system_stm32f10x.o
+ .debug_aranges
+                0x0000000000000000       0x38 ./libs/CMSIS/system_stm32f10x.o
+ .debug_ranges  0x0000000000000000       0x28 ./libs/CMSIS/system_stm32f10x.o
+ .debug_macro   0x0000000000000000       0xbb ./libs/CMSIS/system_stm32f10x.o
+ .debug_macro   0x0000000000000000      0x862 ./libs/CMSIS/system_stm32f10x.o
+ .debug_macro   0x0000000000000000       0x62 ./libs/CMSIS/system_stm32f10x.o
+ .debug_macro   0x0000000000000000       0x22 ./libs/CMSIS/system_stm32f10x.o
+ .debug_macro   0x0000000000000000       0x22 ./libs/CMSIS/system_stm32f10x.o
+ .debug_macro   0x0000000000000000       0x44 ./libs/CMSIS/system_stm32f10x.o
+ .debug_macro   0x0000000000000000       0x1c ./libs/CMSIS/system_stm32f10x.o
+ .debug_macro   0x0000000000000000      0x1f7 ./libs/CMSIS/system_stm32f10x.o
+ .debug_macro   0x0000000000000000      0x69f ./libs/CMSIS/system_stm32f10x.o
+ .debug_macro   0x0000000000000000     0x7dbe ./libs/CMSIS/system_stm32f10x.o
+ .debug_macro   0x0000000000000000      0x2a6 ./libs/CMSIS/system_stm32f10x.o
+ .debug_macro   0x0000000000000000      0x3e2 ./libs/CMSIS/system_stm32f10x.o
+ .debug_macro   0x0000000000000000       0x8b ./libs/CMSIS/system_stm32f10x.o
+ .debug_macro   0x0000000000000000       0x35 ./libs/CMSIS/system_stm32f10x.o
+ .debug_line    0x0000000000000000      0x23e ./libs/CMSIS/system_stm32f10x.o
+ .debug_str     0x0000000000000000    0x353a6 ./libs/CMSIS/system_stm32f10x.o
+ .comment       0x0000000000000000       0x71 ./libs/CMSIS/system_stm32f10x.o
+ .debug_frame   0x0000000000000000       0x98 ./libs/CMSIS/system_stm32f10x.o
+ .ARM.attributes
+                0x0000000000000000       0x33 ./libs/CMSIS/system_stm32f10x.o
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivsf3.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivsf3.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_cmpsf2.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_cmpsf2.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_aeabi_ldivmod.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_aeabi_ldivmod.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_fixsfdi.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_fixsfdi.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_fixunssfdi.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_fixunssfdi.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(bpabi.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(bpabi.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_dvmd_tls.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_dvmd_tls.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivdf3.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivdf3.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_fixunsdfsi.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_fixunsdfsi.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_divdi3.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_divdi3.o)
+ .ARM.extab     0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_divdi3.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_udivdi3.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_udivdi3.o)
+ .ARM.extab     0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_udivdi3.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-atoi.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-atoi.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-atoi.o)
+ .text._atoi_r  0x0000000000000000        0x8 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-atoi.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-exit.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-exit.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-exit.o)
+ .text.exit     0x0000000000000000       0x20 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-exit.o)
+ .debug_frame   0x0000000000000000       0x28 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-exit.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-exit.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-impure.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-impure.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-impure.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-init.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-init.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-init.o)
+ .text.__libc_init_array
+                0x0000000000000000       0x50 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-init.o)
+ .debug_frame   0x0000000000000000       0x2c /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-init.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-init.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-itoa.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-itoa.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-itoa.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-memcpy.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-memcpy.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-memset.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-memset.o)
+ .text.memset   0x0000000000000000       0x9c /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-memset.o)
+ .debug_frame   0x0000000000000000       0x34 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-memset.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-memset.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strcpy.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strcpy.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strcpy.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strlen.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strlen.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strlen.o)
+ .text.strlen   0x0000000000000000       0x5c /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strlen.o)
+ .debug_frame   0x0000000000000000       0x20 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strlen.o)
+ .ARM.attributes
+                0x0000000000000000       0x2d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strlen.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strtol.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strtol.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strtol.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-utoa.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-utoa.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-utoa.o)
+ .text.utoa     0x0000000000000000        0x4 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-utoa.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-__call_atexit.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-__call_atexit.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-__call_atexit.o)
+ .text.__call_exitprocs
+                0x0000000000000000       0xd4 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-__call_atexit.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-atexit.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-atexit.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-atexit.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-ctype_.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-ctype_.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-ctype_.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-fini.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-fini.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-fini.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-__atexit.o)
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-__atexit.o)
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-__atexit.o)
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
+ .eh_frame      0x0000000000000000        0x4 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
+ .jcr           0x0000000000000000        0x4 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
+ .ARM.attributes
+                0x0000000000000000       0x2d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
+ .text          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+ .data          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+ .bss           0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000008000000 0x0000000000010000 xr
+RAM              0x0000000020000000 0x0000000000005000 xrw
+MEMORY_B1        0x0000000060000000 0x0000000000000000 xr
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+LOAD ./startup/startup_stm32f10x_md.o
+LOAD ./src/usart/usart.o
+LOAD ./src/string_lib/string_lib.o
+LOAD ./src/led/led.o
+LOAD ./src/hd44780/hd44780.o
+LOAD ./src/flash/flash.o
+LOAD ./src/encoder/encoder.o
+LOAD ./src/configurator/configurator.o
+LOAD ./src/clock/clock.o
+LOAD ./src/main.o
+LOAD ./libs/freertos/croutine.o
+LOAD ./libs/freertos/event_groups.o
+LOAD ./libs/freertos/heap_2.o
+LOAD ./libs/freertos/list.o
+LOAD ./libs/freertos/port.o
+LOAD ./libs/freertos/queue.o
+LOAD ./libs/freertos/tasks.o
+LOAD ./libs/freertos/timers.o
+LOAD ./libs/CMSIS/core_cm3.o
+LOAD ./libs/CMSIS/misc.o
+LOAD ./libs/CMSIS/stm32f10x_adc.o
+LOAD ./libs/CMSIS/stm32f10x_gpio.o
+LOAD ./libs/CMSIS/stm32f10x_rcc.o
+LOAD ./libs/CMSIS/system_stm32f10x.o
+START GROUP
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libc.a
+END GROUP
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtend.o
+LOAD /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+                0x0000000020005000                _estack = 0x20005000
+                0x0000000000000000                _Min_Heap_Size = 0x0
+                0x0000000000000100                _Min_Stack_Size = 0x100
+
+.isr_vector     0x0000000008000000      0x10c
+                0x0000000008000000                . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x0000000008000000      0x10c ./startup/startup_stm32f10x_md.o
+                0x0000000008000000                g_pfnVectors
+                0x000000000800010c                . = ALIGN (0x4)
+
+.eh_frame       0x000000000800010c        0x0
+ .eh_frame      0x000000000800010c        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+
+.text           0x000000000800010c     0x4f54
+                0x000000000800010c                . = ALIGN (0x4)
+ *(.text)
+ .text          0x000000000800010c       0x5c /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .text          0x0000000008000168      0x370 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
+                0x0000000008000168                __aeabi_drsub
+                0x0000000008000170                __aeabi_dsub
+                0x0000000008000170                __subdf3
+                0x0000000008000174                __adddf3
+                0x0000000008000174                __aeabi_dadd
+                0x00000000080003ec                __aeabi_ui2d
+                0x00000000080003ec                __floatunsidf
+                0x000000000800040c                __floatsidf
+                0x000000000800040c                __aeabi_i2d
+                0x0000000008000430                __extendsfdf2
+                0x0000000008000430                __aeabi_f2d
+                0x000000000800046c                __aeabi_ul2d
+                0x000000000800046c                __floatundidf
+                0x000000000800047c                __floatdidf
+                0x000000000800047c                __aeabi_l2d
+ .text          0x00000000080004d8      0x21c /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
+                0x00000000080004d8                __aeabi_frsub
+                0x00000000080004e0                __subsf3
+                0x00000000080004e0                __aeabi_fsub
+                0x00000000080004e4                __aeabi_fadd
+                0x00000000080004e4                __addsf3
+                0x0000000008000644                __aeabi_ui2f
+                0x0000000008000644                __floatunsisf
+                0x000000000800064c                __aeabi_i2f
+                0x000000000800064c                __floatsisf
+                0x0000000008000668                __floatundisf
+                0x0000000008000668                __aeabi_ul2f
+                0x0000000008000678                __floatdisf
+                0x0000000008000678                __aeabi_l2f
+ .text          0x00000000080006f4      0x2a0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivsf3.o)
+                0x00000000080006f4                __mulsf3
+                0x00000000080006f4                __aeabi_fmul
+                0x000000000800085c                __divsf3
+                0x000000000800085c                __aeabi_fdiv
+ .text          0x0000000008000994       0xec /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_cmpsf2.o)
+                0x0000000008000994                __gtsf2
+                0x0000000008000994                __gesf2
+                0x000000000800099c                __lesf2
+                0x000000000800099c                __ltsf2
+                0x00000000080009a4                __nesf2
+                0x00000000080009a4                __eqsf2
+                0x00000000080009a4                __cmpsf2
+                0x0000000008000a04                __aeabi_cfrcmple
+                0x0000000008000a0c                __aeabi_cfcmple
+                0x0000000008000a0c                __aeabi_cfcmpeq
+                0x0000000008000a1c                __aeabi_fcmpeq
+                0x0000000008000a30                __aeabi_fcmplt
+                0x0000000008000a44                __aeabi_fcmple
+                0x0000000008000a58                __aeabi_fcmpge
+                0x0000000008000a6c                __aeabi_fcmpgt
+ .text          0x0000000008000a80       0x38 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_aeabi_ldivmod.o)
+                0x0000000008000a80                __aeabi_ldivmod
+ .text          0x0000000008000ab8       0x28 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_fixsfdi.o)
+                0x0000000008000ab8                __aeabi_f2lz
+                0x0000000008000ab8                __fixsfdi
+ .text          0x0000000008000ae0       0x4c /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_fixunssfdi.o)
+                0x0000000008000ae0                __aeabi_f2ulz
+                0x0000000008000ae0                __fixunssfdi
+ .text          0x0000000008000b2c       0x60 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(bpabi.o)
+                0x0000000008000b2c                __gnu_ldivmod_helper
+                0x0000000008000b5c                __gnu_uldivmod_helper
+ .text          0x0000000008000b8c        0x4 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_dvmd_tls.o)
+                0x0000000008000b8c                __aeabi_ldiv0
+                0x0000000008000b8c                __aeabi_idiv0
+ .text          0x0000000008000b90      0x424 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivdf3.o)
+                0x0000000008000b90                __aeabi_dmul
+                0x0000000008000b90                __muldf3
+                0x0000000008000de4                __aeabi_ddiv
+                0x0000000008000de4                __divdf3
+ .text          0x0000000008000fb4       0x40 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_fixunsdfsi.o)
+                0x0000000008000fb4                __fixunsdfsi
+                0x0000000008000fb4                __aeabi_d2uiz
+ .text          0x0000000008000ff4      0x2ac /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_divdi3.o)
+                0x0000000008000ff4                __divdi3
+ .text          0x00000000080012a0      0x270 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_udivdi3.o)
+                0x00000000080012a0                __udivdi3
+ .text          0x0000000008001510       0xec /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-memcpy.o)
+                0x0000000008001510                memcpy
+ *(.text*)
+ .text.Reset_Handler
+                0x00000000080015fc       0x40 ./startup/startup_stm32f10x_md.o
+                0x00000000080015fc                Reset_Handler
+ .text.Default_Handler
+                0x000000000800163c        0x2 ./startup/startup_stm32f10x_md.o
+                0x000000000800163c                EXTI2_IRQHandler
+                0x000000000800163c                DebugMon_Handler
+                0x000000000800163c                TIM1_CC_IRQHandler
+                0x000000000800163c                PVD_IRQHandler
+                0x000000000800163c                EXTI3_IRQHandler
+                0x000000000800163c                EXTI0_IRQHandler
+                0x000000000800163c                I2C2_EV_IRQHandler
+                0x000000000800163c                UsageFault_Handler
+                0x000000000800163c                ADC1_2_IRQHandler
+                0x000000000800163c                SPI1_IRQHandler
+                0x000000000800163c                TAMPER_IRQHandler
+                0x000000000800163c                DMA1_Channel4_IRQHandler
+                0x000000000800163c                USART3_IRQHandler
+                0x000000000800163c                RTC_IRQHandler
+                0x000000000800163c                DMA1_Channel7_IRQHandler
+                0x000000000800163c                CAN1_RX1_IRQHandler
+                0x000000000800163c                TIM4_IRQHandler
+                0x000000000800163c                I2C1_EV_IRQHandler
+                0x000000000800163c                DMA1_Channel6_IRQHandler
+                0x000000000800163c                TIM3_IRQHandler
+                0x000000000800163c                RCC_IRQHandler
+                0x000000000800163c                TIM1_TRG_COM_IRQHandler
+                0x000000000800163c                DMA1_Channel1_IRQHandler
+                0x000000000800163c                Default_Handler
+                0x000000000800163c                EXTI15_10_IRQHandler
+                0x000000000800163c                EXTI9_5_IRQHandler
+                0x000000000800163c                SPI2_IRQHandler
+                0x000000000800163c                MemManage_Handler
+                0x000000000800163c                DMA1_Channel5_IRQHandler
+                0x000000000800163c                EXTI4_IRQHandler
+                0x000000000800163c                USB_LP_CAN1_RX0_IRQHandler
+                0x000000000800163c                USB_HP_CAN1_TX_IRQHandler
+                0x000000000800163c                DMA1_Channel3_IRQHandler
+                0x000000000800163c                TIM1_UP_IRQHandler
+                0x000000000800163c                WWDG_IRQHandler
+                0x000000000800163c                TIM2_IRQHandler
+                0x000000000800163c                TIM1_BRK_IRQHandler
+                0x000000000800163c                EXTI1_IRQHandler
+                0x000000000800163c                RTCAlarm_IRQHandler
+                0x000000000800163c                USART2_IRQHandler
+                0x000000000800163c                I2C2_ER_IRQHandler
+                0x000000000800163c                DMA1_Channel2_IRQHandler
+                0x000000000800163c                CAN1_SCE_IRQHandler
+                0x000000000800163c                FLASH_IRQHandler
+                0x000000000800163c                BusFault_Handler
+                0x000000000800163c                I2C1_ER_IRQHandler
+                0x000000000800163c                USBWakeUp_IRQHandler
+ *fill*         0x000000000800163e        0x2 
+ .text.NVIC_EnableIRQ
+                0x0000000008001640       0x30 ./src/usart/usart.o
+ .text.NVIC_SetPriority
+                0x0000000008001670       0x54 ./src/usart/usart.o
+ .text.USART1Init
+                0x00000000080016c4       0xe0 ./src/usart/usart.o
+                0x00000000080016c4                USART1Init
+ .text.USART1WriteByte
+                0x00000000080017a4       0x30 ./src/usart/usart.o
+                0x00000000080017a4                USART1WriteByte
+ .text.USART1InterrInit
+                0x00000000080017d4       0x38 ./src/usart/usart.o
+                0x00000000080017d4                USART1InterrInit
+ .text.USART1ReadByte
+                0x000000000800180c       0x2c ./src/usart/usart.o
+                0x000000000800180c                USART1ReadByte
+ .text.USART1_IRQHandler
+                0x0000000008001838       0x94 ./src/usart/usart.o
+                0x0000000008001838                USART1_IRQHandler
+ .text.USART1QueueSendString
+                0x00000000080018cc       0x68 ./src/usart/usart.o
+                0x00000000080018cc                USART1QueueSendString
+ .text.prvUsart1Transmitter
+                0x0000000008001934       0x34 ./src/usart/usart.o
+                0x0000000008001934                prvUsart1Transmitter
+ .text.log      0x0000000008001968       0x20 ./src/usart/usart.o
+                0x0000000008001968                log
+ .text.n_tu     0x0000000008001988       0x34 ./src/string_lib/string_lib.o
+                0x0000000008001988                n_tu
+ .text.float_to_string
+                0x00000000080019bc      0x284 ./src/string_lib/string_lib.o
+                0x00000000080019bc                float_to_string
+ .text.blink_tsk
+                0x0000000008001c40       0x30 ./src/led/led.o
+                0x0000000008001c40                blink_tsk
+ .text.gpio_init
+                0x0000000008001c70       0x40 ./src/hd44780/hd44780.o
+                0x0000000008001c70                gpio_init
+ .text.DELAY    0x0000000008001cb0       0x3c ./src/hd44780/hd44780.o
+ .text.LCD_STROBE
+                0x0000000008001cec       0x38 ./src/hd44780/hd44780.o
+ .text.HIGHBITS
+                0x0000000008001d24       0xa8 ./src/hd44780/hd44780.o
+ .text.LOWBITS  0x0000000008001dcc       0xa8 ./src/hd44780/hd44780.o
+ .text.lcd_cmd  0x0000000008001e74       0x2c ./src/hd44780/hd44780.o
+                0x0000000008001e74                lcd_cmd
+ .text.lcd_clrscr
+                0x0000000008001ea0       0x1c ./src/hd44780/hd44780.o
+                0x0000000008001ea0                lcd_clrscr
+ .text.lcd_goto
+                0x0000000008001ebc       0x54 ./src/hd44780/hd44780.o
+                0x0000000008001ebc                lcd_goto
+ .text.lcd_putc
+                0x0000000008001f10       0x34 ./src/hd44780/hd44780.o
+                0x0000000008001f10                lcd_putc
+ .text.lcd_config
+                0x0000000008001f44       0x34 ./src/hd44780/hd44780.o
+                0x0000000008001f44                lcd_config
+ .text.lcd_init
+                0x0000000008001f78       0x50 ./src/hd44780/hd44780.o
+                0x0000000008001f78                lcd_init
+ .text.prvLcdShow
+                0x0000000008001fc8       0xd8 ./src/hd44780/hd44780.o
+                0x0000000008001fc8                prvLcdShow
+ .text.to_video_mem
+                0x00000000080020a0       0x84 ./src/hd44780/hd44780.o
+                0x00000000080020a0                to_video_mem
+ .text.cln_scr  0x0000000008002124       0x70 ./src/hd44780/hd44780.o
+                0x0000000008002124                cln_scr
+ .text.arr_cp   0x0000000008002194       0x34 ./src/hd44780/hd44780.o
+                0x0000000008002194                arr_cp
+ .text.flash_unlock
+                0x00000000080021c8       0x24 ./src/flash/flash.o
+                0x00000000080021c8                flash_unlock
+ .text.flash_lock
+                0x00000000080021ec       0x1c ./src/flash/flash.o
+                0x00000000080021ec                flash_lock
+ .text.flash_ready
+                0x0000000008002208       0x24 ./src/flash/flash.o
+                0x0000000008002208                flash_ready
+ .text.flash_erase_page
+                0x000000000800222c       0x50 ./src/flash/flash.o
+                0x000000000800222c                flash_erase_page
+ .text.flash_write_struct
+                0x000000000800227c       0xd8 ./src/flash/flash.o
+                0x000000000800227c                flash_write_struct
+ .text.flash_read_struct
+                0x0000000008002354       0x44 ./src/flash/flash.o
+                0x0000000008002354                flash_read_struct
+ .text.commands_init
+                0x0000000008002398       0x7c ./src/configurator/configurator.o
+                0x0000000008002398                commands_init
+ .text.is_version_inside
+                0x0000000008002414       0x4c ./src/configurator/configurator.o
+                0x0000000008002414                is_version_inside
+ .text.store_version
+                0x0000000008002460       0x18 ./src/configurator/configurator.o
+                0x0000000008002460                store_version
+ .text.store_def_params
+                0x0000000008002478       0x74 ./src/configurator/configurator.o
+                0x0000000008002478                store_def_params
+ .text.read_def_params
+                0x00000000080024ec       0x54 ./src/configurator/configurator.o
+                0x00000000080024ec                read_def_params
+ .text.store_param
+                0x0000000008002540       0x4c ./src/configurator/configurator.o
+                0x0000000008002540                store_param
+ .text.prvUsart_1_RX_Handler
+                0x000000000800258c      0x1ac ./src/configurator/configurator.o
+                0x000000000800258c                prvUsart_1_RX_Handler
+ .text.prvHandleCommands
+                0x0000000008002738      0x11c ./src/configurator/configurator.o
+                0x0000000008002738                prvHandleCommands
+ .text.InitRCC  0x0000000008002854      0x104 ./src/clock/clock.o
+                0x0000000008002854                InitRCC
+ .text.NMI_Handler
+                0x0000000008002958       0x1c ./src/clock/clock.o
+                0x0000000008002958                NMI_Handler
+ .text.main     0x0000000008002974       0x8c ./src/main.o
+                0x0000000008002974                main
+ .text.prvStart
+                0x0000000008002a00      0x1fc ./src/main.o
+ .text.prvCheckBtn1
+                0x0000000008002bfc       0x40 ./src/main.o
+ .text.HardFault_Handler
+                0x0000000008002c3c       0x14 ./src/main.o
+                0x0000000008002c3c                HardFault_Handler
+ .text.vApplicationTickHook
+                0x0000000008002c50       0x14 ./src/main.o
+                0x0000000008002c50                vApplicationTickHook
+ .text.init_gpio
+                0x0000000008002c64       0x30 ./src/main.o
+                0x0000000008002c64                init_gpio
+ .text.init_btn1
+                0x0000000008002c94       0x30 ./src/main.o
+                0x0000000008002c94                init_btn1
+ .text.adc_init
+                0x0000000008002cc4       0x84 ./src/main.o
+                0x0000000008002cc4                adc_init
+ .text.pvPortMalloc
+                0x0000000008002d48      0x11c ./libs/freertos/heap_2.o
+                0x0000000008002d48                pvPortMalloc
+ .text.vPortFree
+                0x0000000008002e64       0x70 ./libs/freertos/heap_2.o
+                0x0000000008002e64                vPortFree
+ .text.prvHeapInit
+                0x0000000008002ed4       0x50 ./libs/freertos/heap_2.o
+ .text.vListInitialise
+                0x0000000008002f24       0x40 ./libs/freertos/list.o
+                0x0000000008002f24                vListInitialise
+ .text.vListInitialiseItem
+                0x0000000008002f64       0x18 ./libs/freertos/list.o
+                0x0000000008002f64                vListInitialiseItem
+ .text.vListInsertEnd
+                0x0000000008002f7c       0x48 ./libs/freertos/list.o
+                0x0000000008002f7c                vListInsertEnd
+ .text.vListInsert
+                0x0000000008002fc4       0x70 ./libs/freertos/list.o
+                0x0000000008002fc4                vListInsert
+ .text.uxListRemove
+                0x0000000008003034       0x54 ./libs/freertos/list.o
+                0x0000000008003034                uxListRemove
+ .text.pxPortInitialiseStack
+                0x0000000008003088       0x58 ./libs/freertos/port.o
+                0x0000000008003088                pxPortInitialiseStack
+ .text.prvTaskExitError
+                0x00000000080030e0        0xc ./libs/freertos/port.o
+ .text.SVC_Handler
+                0x00000000080030ec       0x24 ./libs/freertos/port.o
+                0x00000000080030ec                SVC_Handler
+ .text.prvPortStartFirstTask
+                0x0000000008003110       0x1c ./libs/freertos/port.o
+ .text.xPortStartScheduler
+                0x000000000800312c       0x3c ./libs/freertos/port.o
+                0x000000000800312c                xPortStartScheduler
+ .text.vPortYield
+                0x0000000008003168       0x20 ./libs/freertos/port.o
+                0x0000000008003168                vPortYield
+ .text.vPortEnterCritical
+                0x0000000008003188       0x20 ./libs/freertos/port.o
+                0x0000000008003188                vPortEnterCritical
+ .text.vPortExitCritical
+                0x00000000080031a8       0x24 ./libs/freertos/port.o
+                0x00000000080031a8                vPortExitCritical
+ .text.ulPortSetInterruptMask
+                0x00000000080031cc       0x14 ./libs/freertos/port.o
+                0x00000000080031cc                ulPortSetInterruptMask
+ .text.vPortClearInterruptMask
+                0x00000000080031e0        0x8 ./libs/freertos/port.o
+                0x00000000080031e0                vPortClearInterruptMask
+ .text.PendSV_Handler
+                0x00000000080031e8       0x44 ./libs/freertos/port.o
+                0x00000000080031e8                PendSV_Handler
+ .text.SysTick_Handler
+                0x000000000800322c       0x28 ./libs/freertos/port.o
+                0x000000000800322c                SysTick_Handler
+ .text.vPortSetupTimerInterrupt
+                0x0000000008003254       0x24 ./libs/freertos/port.o
+                0x0000000008003254                vPortSetupTimerInterrupt
+ .text.xQueueGenericReset
+                0x0000000008003278       0xa4 ./libs/freertos/queue.o
+                0x0000000008003278                xQueueGenericReset
+ .text.xQueueGenericCreate
+                0x000000000800331c       0x70 ./libs/freertos/queue.o
+                0x000000000800331c                xQueueGenericCreate
+ .text.xQueueCreateMutex
+                0x000000000800338c       0x7c ./libs/freertos/queue.o
+                0x000000000800338c                xQueueCreateMutex
+ .text.xQueueGenericSend
+                0x0000000008003408      0x118 ./libs/freertos/queue.o
+                0x0000000008003408                xQueueGenericSend
+ .text.xQueueGenericSendFromISR
+                0x0000000008003520       0x88 ./libs/freertos/queue.o
+                0x0000000008003520                xQueueGenericSendFromISR
+ .text.xQueueGenericReceive
+                0x00000000080035a8      0x170 ./libs/freertos/queue.o
+                0x00000000080035a8                xQueueGenericReceive
+ .text.prvCopyDataToQueue
+                0x0000000008003718       0xd0 ./libs/freertos/queue.o
+ .text.prvCopyDataFromQueue
+                0x00000000080037e8       0x4c ./libs/freertos/queue.o
+ .text.prvUnlockQueue
+                0x0000000008003834       0x98 ./libs/freertos/queue.o
+ .text.prvIsQueueEmpty
+                0x00000000080038cc       0x2c ./libs/freertos/queue.o
+ .text.prvIsQueueFull
+                0x00000000080038f8       0x30 ./libs/freertos/queue.o
+ .text.xTaskGenericCreate
+                0x0000000008003928      0x138 ./libs/freertos/tasks.o
+                0x0000000008003928                xTaskGenericCreate
+ .text.vTaskDelay
+                0x0000000008003a60       0x50 ./libs/freertos/tasks.o
+                0x0000000008003a60                vTaskDelay
+ .text.vTaskStartScheduler
+                0x0000000008003ab0       0x54 ./libs/freertos/tasks.o
+                0x0000000008003ab0                vTaskStartScheduler
+ .text.vTaskSuspendAll
+                0x0000000008003b04       0x1c ./libs/freertos/tasks.o
+                0x0000000008003b04                vTaskSuspendAll
+ .text.xTaskResumeAll
+                0x0000000008003b20       0xfc ./libs/freertos/tasks.o
+                0x0000000008003b20                xTaskResumeAll
+ .text.xTaskIncrementTick
+                0x0000000008003c1c      0x170 ./libs/freertos/tasks.o
+                0x0000000008003c1c                xTaskIncrementTick
+ .text.vTaskSwitchContext
+                0x0000000008003d8c       0x98 ./libs/freertos/tasks.o
+                0x0000000008003d8c                vTaskSwitchContext
+ .text.vTaskPlaceOnEventList
+                0x0000000008003e24       0x60 ./libs/freertos/tasks.o
+                0x0000000008003e24                vTaskPlaceOnEventList
+ .text.xTaskRemoveFromEventList
+                0x0000000008003e84       0xac ./libs/freertos/tasks.o
+                0x0000000008003e84                xTaskRemoveFromEventList
+ .text.vTaskSetTimeOutState
+                0x0000000008003f30       0x2c ./libs/freertos/tasks.o
+                0x0000000008003f30                vTaskSetTimeOutState
+ .text.xTaskCheckForTimeOut
+                0x0000000008003f5c       0x88 ./libs/freertos/tasks.o
+                0x0000000008003f5c                xTaskCheckForTimeOut
+ .text.vTaskMissedYield
+                0x0000000008003fe4       0x18 ./libs/freertos/tasks.o
+                0x0000000008003fe4                vTaskMissedYield
+ .text.prvIdleTask
+                0x0000000008003ffc       0x20 ./libs/freertos/tasks.o
+ .text.prvInitialiseTCBVariables
+                0x000000000800401c       0x90 ./libs/freertos/tasks.o
+ .text.prvInitialiseTaskLists
+                0x00000000080040ac       0x7c ./libs/freertos/tasks.o
+ .text.prvCheckTasksWaitingTermination
+                0x0000000008004128       0x74 ./libs/freertos/tasks.o
+ .text.prvAddCurrentTaskToDelayedList
+                0x000000000800419c       0x6c ./libs/freertos/tasks.o
+ .text.prvAllocateTCBAndStack
+                0x0000000008004208       0x50 ./libs/freertos/tasks.o
+ .text.prvDeleteTCB
+                0x0000000008004258       0x20 ./libs/freertos/tasks.o
+ .text.prvResetNextTaskUnblockTime
+                0x0000000008004278       0x48 ./libs/freertos/tasks.o
+ .text.xTaskGetCurrentTaskHandle
+                0x00000000080042c0       0x20 ./libs/freertos/tasks.o
+                0x00000000080042c0                xTaskGetCurrentTaskHandle
+ .text.vTaskPriorityInherit
+                0x00000000080042e0       0xbc ./libs/freertos/tasks.o
+                0x00000000080042e0                vTaskPriorityInherit
+ .text.vTaskPriorityDisinherit
+                0x000000000800439c       0x84 ./libs/freertos/tasks.o
+                0x000000000800439c                vTaskPriorityDisinherit
+ .text.ADC_Init
+                0x0000000008004420       0xa4 ./libs/CMSIS/stm32f10x_adc.o
+                0x0000000008004420                ADC_Init
+ .text.ADC_StructInit
+                0x00000000080044c4       0x38 ./libs/CMSIS/stm32f10x_adc.o
+                0x00000000080044c4                ADC_StructInit
+ .text.ADC_Cmd  0x00000000080044fc       0x38 ./libs/CMSIS/stm32f10x_adc.o
+                0x00000000080044fc                ADC_Cmd
+ .text.ADC_ResetCalibration
+                0x0000000008004534       0x20 ./libs/CMSIS/stm32f10x_adc.o
+                0x0000000008004534                ADC_ResetCalibration
+ .text.ADC_GetResetCalibrationStatus
+                0x0000000008004554       0x30 ./libs/CMSIS/stm32f10x_adc.o
+                0x0000000008004554                ADC_GetResetCalibrationStatus
+ .text.ADC_StartCalibration
+                0x0000000008004584       0x20 ./libs/CMSIS/stm32f10x_adc.o
+                0x0000000008004584                ADC_StartCalibration
+ .text.ADC_GetCalibrationStatus
+                0x00000000080045a4       0x30 ./libs/CMSIS/stm32f10x_adc.o
+                0x00000000080045a4                ADC_GetCalibrationStatus
+ .text.ADC_RegularChannelConfig
+                0x00000000080045d4      0x194 ./libs/CMSIS/stm32f10x_adc.o
+                0x00000000080045d4                ADC_RegularChannelConfig
+ .text.GPIO_Init
+                0x0000000008004768      0x180 ./libs/CMSIS/stm32f10x_gpio.o
+                0x0000000008004768                GPIO_Init
+ .text.GPIO_ReadInputDataBit
+                0x00000000080048e8       0x34 ./libs/CMSIS/stm32f10x_gpio.o
+                0x00000000080048e8                GPIO_ReadInputDataBit
+ .text.GPIO_SetBits
+                0x000000000800491c       0x1c ./libs/CMSIS/stm32f10x_gpio.o
+                0x000000000800491c                GPIO_SetBits
+ .text.GPIO_ResetBits
+                0x0000000008004938       0x1c ./libs/CMSIS/stm32f10x_gpio.o
+                0x0000000008004938                GPIO_ResetBits
+ .text.RCC_APB2PeriphClockCmd
+                0x0000000008004954       0x3c ./libs/CMSIS/stm32f10x_rcc.o
+                0x0000000008004954                RCC_APB2PeriphClockCmd
+ .text.atoi     0x0000000008004990        0x8 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-atoi.o)
+                0x0000000008004990                atoi
+ .text.__itoa   0x0000000008004998       0x30 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-itoa.o)
+                0x0000000008004998                __itoa
+ .text.itoa     0x00000000080049c8        0x4 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-itoa.o)
+                0x00000000080049c8                itoa
+ .text.strcpy   0x00000000080049cc       0xbc /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strcpy.o)
+                0x00000000080049cc                strcpy
+ .text._strtol_r
+                0x0000000008004a88      0x11c /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strtol.o)
+                0x0000000008004a88                _strtol_r
+ .text.strtol   0x0000000008004ba4       0x18 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strtol.o)
+                0x0000000008004ba4                strtol
+ .text.__utoa   0x0000000008004bbc       0x80 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-utoa.o)
+                0x0000000008004bbc                __utoa
+ .text.startup.register_fini
+                0x0000000008004c3c       0x14 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-__call_atexit.o)
+ .text.atexit   0x0000000008004c50        0xc /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-atexit.o)
+                0x0000000008004c50                atexit
+ .text.__libc_fini_array
+                0x0000000008004c5c       0x2c /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-fini.o)
+                0x0000000008004c5c                __libc_fini_array
+ .text.__register_exitproc
+                0x0000000008004c88       0xa4 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-__atexit.o)
+                0x0000000008004c88                __register_exitproc
+ *(.rodata)
+ .rodata        0x0000000008004d2c       0x24 ./src/usart/usart.o
+ .rodata        0x0000000008004d50       0xb8 ./src/configurator/configurator.o
+ .rodata        0x0000000008004e08       0xfc ./src/main.o
+ .rodata        0x0000000008004f04        0x8 ./libs/freertos/tasks.o
+ *(.rodata*)
+ .rodata.SW_VERSION
+                0x0000000008004f0c        0x8 ./src/main.o
+                0x0000000008004f0c                SW_VERSION
+ .rodata.str1.4
+                0x0000000008004f14        0x2 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-impure.o)
+                                          0x4 (size before relaxing)
+ *fill*         0x0000000008004f16        0x2 
+ .rodata._global_impure_ptr
+                0x0000000008004f18        0x4 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-impure.o)
+                0x0000000008004f18                _global_impure_ptr
+ .rodata.str1.4
+                0x0000000008004f1c       0x28 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-utoa.o)
+ .rodata._ctype_
+                0x0000000008004f44      0x104 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-ctype_.o)
+                0x0000000008004f44                _ctype_
+ *(.glue_7)
+ .glue_7        0x0000000000000000        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x0000000000000000        0x0 linker stubs
+ *(.init)
+ .init          0x0000000008005048        0x4 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+                0x0000000008005048                _init
+ .init          0x000000000800504c        0x8 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+ *(.fini)
+ .fini          0x0000000008005054        0x4 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+                0x0000000008005054                _fini
+ .fini          0x0000000008005058        0x8 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+                0x0000000008005060                . = ALIGN (0x4)
+                0x0000000008005060                _etext = .
+
+.vfp11_veneer   0x0000000008005060        0x0
+ .vfp11_veneer  0x0000000000000000        0x0 linker stubs
+
+.v4_bx          0x0000000008005060        0x0
+ .v4_bx         0x0000000000000000        0x0 linker stubs
+
+.iplt           0x0000000008005060        0x0
+ .iplt          0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+
+.ARM            0x0000000008005060        0x8
+                0x0000000008005060                __exidx_start = .
+ *(.ARM.exidx*)
+ .ARM.exidx     0x0000000008005060        0x8 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_divdi3.o)
+ .ARM.exidx     0x0000000008005068        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_udivdi3.o)
+                                          0x8 (size before relaxing)
+                0x0000000008005068                __exidx_end = .
+
+.rel.dyn        0x0000000008005068        0x0
+ .rel.iplt      0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+
+.ARM.attributes
+                0x0000000008005068       0x29
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x0000000008005068       0x1d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crti.o
+ .ARM.attributes
+                0x0000000008005085       0x2d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ .ARM.attributes
+                0x00000000080050b2       0x21 ./startup/startup_stm32f10x_md.o
+ .ARM.attributes
+                0x00000000080050d3       0x33 ./src/usart/usart.o
+ .ARM.attributes
+                0x0000000008005106       0x33 ./src/string_lib/string_lib.o
+ .ARM.attributes
+                0x0000000008005139       0x33 ./src/led/led.o
+ .ARM.attributes
+                0x000000000800516c       0x33 ./src/hd44780/hd44780.o
+ .ARM.attributes
+                0x000000000800519f       0x33 ./src/flash/flash.o
+ .ARM.attributes
+                0x00000000080051d2       0x33 ./src/configurator/configurator.o
+ .ARM.attributes
+                0x0000000008005205       0x33 ./src/clock/clock.o
+ .ARM.attributes
+                0x0000000008005238       0x33 ./src/main.o
+ .ARM.attributes
+                0x000000000800526b       0x33 ./libs/freertos/heap_2.o
+ .ARM.attributes
+                0x000000000800529e       0x33 ./libs/freertos/list.o
+ .ARM.attributes
+                0x00000000080052d1       0x33 ./libs/freertos/port.o
+ .ARM.attributes
+                0x0000000008005304       0x33 ./libs/freertos/queue.o
+ .ARM.attributes
+                0x0000000008005337       0x33 ./libs/freertos/tasks.o
+ .ARM.attributes
+                0x000000000800536a       0x33 ./libs/CMSIS/stm32f10x_adc.o
+ .ARM.attributes
+                0x000000000800539d       0x33 ./libs/CMSIS/stm32f10x_gpio.o
+ .ARM.attributes
+                0x00000000080053d0       0x33 ./libs/CMSIS/stm32f10x_rcc.o
+ .ARM.attributes
+                0x0000000008005403       0x1d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubdf3.o)
+ .ARM.attributes
+                0x0000000008005420       0x1d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_addsubsf3.o)
+ .ARM.attributes
+                0x000000000800543d       0x1d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivsf3.o)
+ .ARM.attributes
+                0x000000000800545a       0x1d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_cmpsf2.o)
+ .ARM.attributes
+                0x0000000008005477       0x1d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_aeabi_ldivmod.o)
+ .ARM.attributes
+                0x0000000008005494       0x2d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_fixsfdi.o)
+ .ARM.attributes
+                0x00000000080054c1       0x2d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_fixunssfdi.o)
+ .ARM.attributes
+                0x00000000080054ee       0x2d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(bpabi.o)
+ .ARM.attributes
+                0x000000000800551b       0x1d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x0000000008005538       0x1d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_muldivdf3.o)
+ .ARM.attributes
+                0x0000000008005555       0x1d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_arm_fixunsdfsi.o)
+ .ARM.attributes
+                0x0000000008005572       0x2d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_divdi3.o)
+ .ARM.attributes
+                0x000000000800559f       0x2d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_udivdi3.o)
+ .ARM.attributes
+                0x00000000080055cc       0x2d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-atoi.o)
+ .ARM.attributes
+                0x00000000080055f9       0x2d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-impure.o)
+ .ARM.attributes
+                0x0000000008005626       0x2d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-itoa.o)
+ .ARM.attributes
+                0x0000000008005653       0x1b /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-memcpy.o)
+ .ARM.attributes
+                0x000000000800566e       0x2d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strcpy.o)
+ .ARM.attributes
+                0x000000000800569b       0x2d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strtol.o)
+ .ARM.attributes
+                0x00000000080056c8       0x2d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-utoa.o)
+ .ARM.attributes
+                0x00000000080056f5       0x2d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-__call_atexit.o)
+ .ARM.attributes
+                0x0000000008005722       0x2d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-atexit.o)
+ .ARM.attributes
+                0x000000000800574f       0x2d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-ctype_.o)
+ .ARM.attributes
+                0x000000000800577c       0x2d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-fini.o)
+ .ARM.attributes
+                0x00000000080057a9       0x2d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-__atexit.o)
+ .ARM.attributes
+                0x00000000080057d6       0x1d /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtn.o
+
+.preinit_array  0x0000000008005068        0x0
+                0x0000000008005068                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array*)
+                0x0000000008005068                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x0000000008005068        0x8
+                0x0000000008005068                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ .init_array.00000
+                0x0000000008005068        0x4 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-__call_atexit.o)
+ *(.init_array*)
+ .init_array    0x000000000800506c        0x4 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+                0x0000000008005070                PROVIDE (__init_array_end, .)
+
+.fini_array     0x0000000008005070        0x4
+                0x0000000008005070                PROVIDE (__fini_array_start, .)
+ *(.fini_array*)
+ .fini_array    0x0000000008005070        0x4 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ *(SORT(.fini_array.*))
+                0x0000000008005074                PROVIDE (__fini_array_end, .)
+                0x0000000008005074                _sidata = .
+
+.data           0x0000000020000000      0x440 load address 0x0000000008005074
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                _sdata = .
+ *(.data)
+ *(.data*)
+ .data.xFreeBytesRemaining
+                0x0000000020000000        0x4 ./libs/freertos/heap_2.o
+ .data.uxCriticalNesting
+                0x0000000020000004        0x4 ./libs/freertos/port.o
+ .data.xNextTaskUnblockTime
+                0x0000000020000008        0x4 ./libs/freertos/tasks.o
+ *fill*         0x000000002000000c        0x4 
+ .data.impure_data
+                0x0000000020000010      0x428 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-impure.o)
+ .data._impure_ptr
+                0x0000000020000438        0x4 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-impure.o)
+                0x0000000020000438                _impure_ptr
+ .data.__ctype_ptr__
+                0x000000002000043c        0x4 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-ctype_.o)
+                0x000000002000043c                __ctype_ptr__
+                0x0000000020000440                . = ALIGN (0x4)
+                0x0000000020000440                _edata = .
+
+.jcr            0x0000000020000440        0x0 load address 0x00000000080054b4
+ .jcr           0x0000000020000440        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+
+.igot.plt       0x0000000020000440        0x0 load address 0x00000000080054b4
+ .igot.plt      0x0000000000000000        0x0 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+                0x0000000020000440                . = ALIGN (0x4)
+
+.bss            0x0000000020000440     0x459c load address 0x00000000080054b4
+                0x0000000020000440                _sbss = .
+                0x0000000020000440                __bss_start__ = _sbss
+ *(.bss)
+ .bss           0x0000000020000440       0x1c /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/crtbegin.o
+ *(.bss*)
+ .bss.xHigherPriorityTaskWoken.5522
+                0x000000002000045c        0x4 ./src/usart/usart.o
+ .bss.xStatus.5523
+                0x0000000020000460        0x4 ./src/usart/usart.o
+ .bss.lcd_cnt   0x0000000020000464        0x1 ./src/hd44780/hd44780.o
+                0x0000000020000464                lcd_cnt
+ *fill*         0x0000000020000465        0x3 
+ .bss.number.5900
+                0x0000000020000468        0x4 ./src/configurator/configurator.o
+ .bss.state     0x000000002000046c        0x1 ./src/main.o
+                0x000000002000046c                state
+ *fill*         0x000000002000046d        0x3 
+ .bss.ucHeap    0x0000000020000470     0x4400 ./libs/freertos/heap_2.o
+ .bss.xStart    0x0000000020004870        0x8 ./libs/freertos/heap_2.o
+ .bss.xEnd      0x0000000020004878        0x8 ./libs/freertos/heap_2.o
+ .bss.xHeapHasBeenInitialised.4935
+                0x0000000020004880        0x4 ./libs/freertos/heap_2.o
+ .bss.pxCurrentTCB
+                0x0000000020004884        0x4 ./libs/freertos/tasks.o
+                0x0000000020004884                pxCurrentTCB
+ .bss.pxReadyTasksLists
+                0x0000000020004888       0x64 ./libs/freertos/tasks.o
+ .bss.xDelayedTaskList1
+                0x00000000200048ec       0x14 ./libs/freertos/tasks.o
+ .bss.xDelayedTaskList2
+                0x0000000020004900       0x14 ./libs/freertos/tasks.o
+ .bss.pxDelayedTaskList
+                0x0000000020004914        0x4 ./libs/freertos/tasks.o
+ .bss.pxOverflowDelayedTaskList
+                0x0000000020004918        0x4 ./libs/freertos/tasks.o
+ .bss.xPendingReadyList
+                0x000000002000491c       0x14 ./libs/freertos/tasks.o
+ .bss.xTasksWaitingTermination
+                0x0000000020004930       0x14 ./libs/freertos/tasks.o
+ .bss.uxTasksDeleted
+                0x0000000020004944        0x4 ./libs/freertos/tasks.o
+ .bss.xSuspendedTaskList
+                0x0000000020004948       0x14 ./libs/freertos/tasks.o
+ .bss.uxCurrentNumberOfTasks
+                0x000000002000495c        0x4 ./libs/freertos/tasks.o
+ .bss.xTickCount
+                0x0000000020004960        0x4 ./libs/freertos/tasks.o
+ .bss.uxTopReadyPriority
+                0x0000000020004964        0x4 ./libs/freertos/tasks.o
+ .bss.xSchedulerRunning
+                0x0000000020004968        0x4 ./libs/freertos/tasks.o
+ .bss.uxPendedTicks
+                0x000000002000496c        0x4 ./libs/freertos/tasks.o
+ .bss.xYieldPending
+                0x0000000020004970        0x4 ./libs/freertos/tasks.o
+ .bss.xNumOfOverflows
+                0x0000000020004974        0x4 ./libs/freertos/tasks.o
+ .bss.uxTaskNumber
+                0x0000000020004978        0x4 ./libs/freertos/tasks.o
+ .bss.uxSchedulerSuspended
+                0x000000002000497c        0x4 ./libs/freertos/tasks.o
+ *(COMMON)
+ COMMON         0x0000000020004980        0xc ./src/usart/usart.o
+                0x0000000020004980                xUsart1TxMutex
+                0x0000000020004984                xQueueUsart1Rx
+                0x0000000020004988                xQueueUsart1Tx
+ COMMON         0x000000002000498c       0x4c ./src/hd44780/hd44780.o
+                0x000000002000498c                xQueueLCD
+                0x0000000020004990                lcd_mem_changed
+                0x0000000020004994                lcd_mem
+                0x00000000200049d4                xLcdMutex
+ COMMON         0x00000000200049d8        0x4 ./src/configurator/configurator.o
+                0x00000000200049d8                xQueueUsartCommands
+                0x00000000200049dc                . = ALIGN (0x4)
+                0x00000000200049dc                _ebss = .
+                0x00000000200049dc                __bss_end__ = _ebss
+                0x00000000200049dc                PROVIDE (end, _ebss)
+                0x00000000200049dc                PROVIDE (_end, _ebss)
+
+._user_heap_stack
+                0x00000000200049dc      0x100 load address 0x0000000008009a50
+                0x00000000200049dc                . = ALIGN (0x4)
+                0x00000000200049dc                . = (. + _Min_Heap_Size)
+                0x0000000020004adc                . = (. + _Min_Stack_Size)
+ *fill*         0x00000000200049dc      0x100 
+                0x0000000020004adc                . = ALIGN (0x4)
+
+.memory_b1_text
+ *(.mb1text)
+ *(.mb1text*)
+ *(.mb1rodata)
+ *(.mb1rodata*)
+
+/DISCARD/
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+OUTPUT(lzond.elf elf32-littlearm)
+
+.debug_line     0x0000000000000000     0x3f24
+ .debug_line    0x0000000000000000       0x7c ./startup/startup_stm32f10x_md.o
+ .debug_line    0x000000000000007c      0x363 ./src/usart/usart.o
+ .debug_line    0x00000000000003df       0xd0 ./src/string_lib/string_lib.o
+ .debug_line    0x00000000000004af      0x1b9 ./src/led/led.o
+ .debug_line    0x0000000000000668      0x5d7 ./src/hd44780/hd44780.o
+ .debug_line    0x0000000000000c3f      0x41d ./src/flash/flash.o
+ .debug_line    0x000000000000105c      0x48c ./src/configurator/configurator.o
+ .debug_line    0x00000000000014e8      0x202 ./src/clock/clock.o
+ .debug_line    0x00000000000016ea      0x590 ./src/main.o
+ .debug_line    0x0000000000001c7a      0x2e8 ./libs/freertos/heap_2.o
+ .debug_line    0x0000000000001f62      0x2a5 ./libs/freertos/list.o
+ .debug_line    0x0000000000002207      0x2c0 ./libs/freertos/port.o
+ .debug_line    0x00000000000024c7      0x50f ./libs/freertos/queue.o
+ .debug_line    0x00000000000029d6      0x8a1 ./libs/freertos/tasks.o
+ .debug_line    0x0000000000003277      0x4df ./libs/CMSIS/stm32f10x_adc.o
+ .debug_line    0x0000000000003756      0x360 ./libs/CMSIS/stm32f10x_gpio.o
+ .debug_line    0x0000000000003ab6      0x46e ./libs/CMSIS/stm32f10x_rcc.o
+
+.debug_info     0x0000000000000000     0x6024
+ .debug_info    0x0000000000000000       0x70 ./startup/startup_stm32f10x_md.o
+ .debug_info    0x0000000000000070      0x8ea ./src/usart/usart.o
+ .debug_info    0x000000000000095a      0x121 ./src/string_lib/string_lib.o
+ .debug_info    0x0000000000000a7b      0x167 ./src/led/led.o
+ .debug_info    0x0000000000000be2      0x7ea ./src/hd44780/hd44780.o
+ .debug_info    0x00000000000013cc      0x304 ./src/flash/flash.o
+ .debug_info    0x00000000000016d0      0x539 ./src/configurator/configurator.o
+ .debug_info    0x0000000000001c09      0x25c ./src/clock/clock.o
+ .debug_info    0x0000000000001e65      0x7be ./src/main.o
+ .debug_info    0x0000000000002623      0x2e5 ./libs/freertos/heap_2.o
+ .debug_info    0x0000000000002908      0x2a8 ./libs/freertos/list.o
+ .debug_info    0x0000000000002bb0      0x243 ./libs/freertos/port.o
+ .debug_info    0x0000000000002df3      0x908 ./libs/freertos/queue.o
+ .debug_info    0x00000000000036fb      0xe6b ./libs/freertos/tasks.o
+ .debug_info    0x0000000000004566      0xb66 ./libs/CMSIS/stm32f10x_adc.o
+ .debug_info    0x00000000000050cc      0x6d9 ./libs/CMSIS/stm32f10x_gpio.o
+ .debug_info    0x00000000000057a5      0x87f ./libs/CMSIS/stm32f10x_rcc.o
+
+.debug_abbrev   0x0000000000000000     0x17fd
+ .debug_abbrev  0x0000000000000000       0x12 ./startup/startup_stm32f10x_md.o
+ .debug_abbrev  0x0000000000000012      0x21c ./src/usart/usart.o
+ .debug_abbrev  0x000000000000022e       0xa8 ./src/string_lib/string_lib.o
+ .debug_abbrev  0x00000000000002d6       0xd9 ./src/led/led.o
+ .debug_abbrev  0x00000000000003af      0x250 ./src/hd44780/hd44780.o
+ .debug_abbrev  0x00000000000005ff      0x15a ./src/flash/flash.o
+ .debug_abbrev  0x0000000000000759      0x18b ./src/configurator/configurator.o
+ .debug_abbrev  0x00000000000008e4       0xec ./src/clock/clock.o
+ .debug_abbrev  0x00000000000009d0      0x1f6 ./src/main.o
+ .debug_abbrev  0x0000000000000bc6      0x155 ./libs/freertos/heap_2.o
+ .debug_abbrev  0x0000000000000d1b       0xc1 ./libs/freertos/list.o
+ .debug_abbrev  0x0000000000000ddc      0x165 ./libs/freertos/port.o
+ .debug_abbrev  0x0000000000000f41      0x18b ./libs/freertos/queue.o
+ .debug_abbrev  0x00000000000010cc      0x208 ./libs/freertos/tasks.o
+ .debug_abbrev  0x00000000000012d4      0x19d ./libs/CMSIS/stm32f10x_adc.o
+ .debug_abbrev  0x0000000000001471      0x1cd ./libs/CMSIS/stm32f10x_gpio.o
+ .debug_abbrev  0x000000000000163e      0x1bf ./libs/CMSIS/stm32f10x_rcc.o
+
+.debug_aranges  0x0000000000000000      0x940
+ .debug_aranges
+                0x0000000000000000       0x28 ./startup/startup_stm32f10x_md.o
+ .debug_aranges
+                0x0000000000000028       0x70 ./src/usart/usart.o
+ .debug_aranges
+                0x0000000000000098       0x28 ./src/string_lib/string_lib.o
+ .debug_aranges
+                0x00000000000000c0       0x20 ./src/led/led.o
+ .debug_aranges
+                0x00000000000000e0      0x110 ./src/hd44780/hd44780.o
+ .debug_aranges
+                0x00000000000001f0       0x68 ./src/flash/flash.o
+ .debug_aranges
+                0x0000000000000258       0x58 ./src/configurator/configurator.o
+ .debug_aranges
+                0x00000000000002b0       0x30 ./src/clock/clock.o
+ .debug_aranges
+                0x00000000000002e0       0x68 ./src/main.o
+ .debug_aranges
+                0x0000000000000348       0x40 ./libs/freertos/heap_2.o
+ .debug_aranges
+                0x0000000000000388       0x40 ./libs/freertos/list.o
+ .debug_aranges
+                0x00000000000003c8       0x88 ./libs/freertos/port.o
+ .debug_aranges
+                0x0000000000000450       0xb0 ./libs/freertos/queue.o
+ .debug_aranges
+                0x0000000000000500      0x148 ./libs/freertos/tasks.o
+ .debug_aranges
+                0x0000000000000648      0x138 ./libs/CMSIS/stm32f10x_adc.o
+ .debug_aranges
+                0x0000000000000780       0xa8 ./libs/CMSIS/stm32f10x_gpio.o
+ .debug_aranges
+                0x0000000000000828      0x118 ./libs/CMSIS/stm32f10x_rcc.o
+
+.debug_ranges   0x0000000000000000      0x838
+ .debug_ranges  0x0000000000000000       0x20 ./startup/startup_stm32f10x_md.o
+ .debug_ranges  0x0000000000000020       0x60 ./src/usart/usart.o
+ .debug_ranges  0x0000000000000080       0x18 ./src/string_lib/string_lib.o
+ .debug_ranges  0x0000000000000098       0x10 ./src/led/led.o
+ .debug_ranges  0x00000000000000a8      0x100 ./src/hd44780/hd44780.o
+ .debug_ranges  0x00000000000001a8       0x58 ./src/flash/flash.o
+ .debug_ranges  0x0000000000000200       0x48 ./src/configurator/configurator.o
+ .debug_ranges  0x0000000000000248       0x20 ./src/clock/clock.o
+ .debug_ranges  0x0000000000000268       0x58 ./src/main.o
+ .debug_ranges  0x00000000000002c0       0x30 ./libs/freertos/heap_2.o
+ .debug_ranges  0x00000000000002f0       0x30 ./libs/freertos/list.o
+ .debug_ranges  0x0000000000000320       0x78 ./libs/freertos/port.o
+ .debug_ranges  0x0000000000000398       0xa0 ./libs/freertos/queue.o
+ .debug_ranges  0x0000000000000438      0x138 ./libs/freertos/tasks.o
+ .debug_ranges  0x0000000000000570      0x128 ./libs/CMSIS/stm32f10x_adc.o
+ .debug_ranges  0x0000000000000698       0x98 ./libs/CMSIS/stm32f10x_gpio.o
+ .debug_ranges  0x0000000000000730      0x108 ./libs/CMSIS/stm32f10x_rcc.o
+
+.debug_macro    0x0000000000000000     0xd3c0
+ .debug_macro   0x0000000000000000      0x15b ./src/usart/usart.o
+ .debug_macro   0x000000000000015b      0x862 ./src/usart/usart.o
+ .debug_macro   0x00000000000009bd       0x62 ./src/usart/usart.o
+ .debug_macro   0x0000000000000a1f       0x22 ./src/usart/usart.o
+ .debug_macro   0x0000000000000a41       0x22 ./src/usart/usart.o
+ .debug_macro   0x0000000000000a63       0x44 ./src/usart/usart.o
+ .debug_macro   0x0000000000000aa7       0x1c ./src/usart/usart.o
+ .debug_macro   0x0000000000000ac3      0x1f7 ./src/usart/usart.o
+ .debug_macro   0x0000000000000cba      0x69f ./src/usart/usart.o
+ .debug_macro   0x0000000000001359     0x7dbe ./src/usart/usart.o
+ .debug_macro   0x0000000000009117      0x2a6 ./src/usart/usart.o
+ .debug_macro   0x00000000000093bd      0x3e2 ./src/usart/usart.o
+ .debug_macro   0x000000000000979f       0x8b ./src/usart/usart.o
+ .debug_macro   0x000000000000982a       0x35 ./src/usart/usart.o
+ .debug_macro   0x000000000000985f      0x16d ./src/usart/usart.o
+ .debug_macro   0x00000000000099cc       0x40 ./src/usart/usart.o
+ .debug_macro   0x0000000000009a0c       0xbb ./src/usart/usart.o
+ .debug_macro   0x0000000000009ac7       0xaf ./src/usart/usart.o
+ .debug_macro   0x0000000000009b76       0x12 ./src/usart/usart.o
+ .debug_macro   0x0000000000009b88       0x1f ./src/usart/usart.o
+ .debug_macro   0x0000000000009ba7      0x3a0 ./src/usart/usart.o
+ .debug_macro   0x0000000000009f47       0xb0 ./src/usart/usart.o
+ .debug_macro   0x0000000000009ff7       0x79 ./src/usart/usart.o
+ .debug_macro   0x000000000000a070       0x69 ./src/usart/usart.o
+ .debug_macro   0x000000000000a0d9       0x7e ./src/usart/usart.o
+ .debug_macro   0x000000000000a157       0x49 ./src/usart/usart.o
+ .debug_macro   0x000000000000a1a0       0x10 ./src/usart/usart.o
+ .debug_macro   0x000000000000a1b0       0x1b ./src/string_lib/string_lib.o
+ .debug_macro   0x000000000000a1cb       0xb8 ./src/led/led.o
+ .debug_macro   0x000000000000a283      0x15f ./src/hd44780/hd44780.o
+ .debug_macro   0x000000000000a3e2       0x22 ./src/hd44780/hd44780.o
+ .debug_macro   0x000000000000a404      0x102 ./src/hd44780/hd44780.o
+ .debug_macro   0x000000000000a506      0x6bd ./src/hd44780/hd44780.o
+ .debug_macro   0x000000000000abc3      0x204 ./src/flash/flash.o
+ .debug_macro   0x000000000000adc7       0x58 ./src/flash/flash.o
+ .debug_macro   0x000000000000ae1f       0x35 ./src/flash/flash.o
+ .debug_macro   0x000000000000ae54       0x9c ./src/flash/flash.o
+ .debug_macro   0x000000000000aef0       0x4a ./src/flash/flash.o
+ .debug_macro   0x000000000000af3a       0x52 ./src/flash/flash.o
+ .debug_macro   0x000000000000af8c       0x16 ./src/flash/flash.o
+ .debug_macro   0x000000000000afa2       0x43 ./src/flash/flash.o
+ .debug_macro   0x000000000000afe5      0x180 ./src/flash/flash.o
+ .debug_macro   0x000000000000b165      0x27a ./src/flash/flash.o
+ .debug_macro   0x000000000000b3df       0x10 ./src/flash/flash.o
+ .debug_macro   0x000000000000b3ef       0x35 ./src/flash/flash.o
+ .debug_macro   0x000000000000b424       0x10 ./src/flash/flash.o
+ .debug_macro   0x000000000000b434      0x21c ./src/configurator/configurator.o
+ .debug_macro   0x000000000000b650       0x10 ./src/configurator/configurator.o
+ .debug_macro   0x000000000000b660       0xb2 ./src/clock/clock.o
+ .debug_macro   0x000000000000b712      0x2e6 ./src/main.o
+ .debug_macro   0x000000000000b9f8      0x2e5 ./src/main.o
+ .debug_macro   0x000000000000bcdd       0x22 ./src/main.o
+ .debug_macro   0x000000000000bcff       0x16 ./src/main.o
+ .debug_macro   0x000000000000bd15       0x1c ./src/main.o
+ .debug_macro   0x000000000000bd31       0x10 ./src/main.o
+ .debug_macro   0x000000000000bd41       0x10 ./src/main.o
+ .debug_macro   0x000000000000bd51       0x22 ./src/main.o
+ .debug_macro   0x000000000000bd73       0xbd ./src/main.o
+ .debug_macro   0x000000000000be30       0x16 ./src/main.o
+ .debug_macro   0x000000000000be46      0x196 ./src/main.o
+ .debug_macro   0x000000000000bfdc       0x16 ./src/main.o
+ .debug_macro   0x000000000000bff2       0x16 ./src/main.o
+ .debug_macro   0x000000000000c008       0x29 ./src/main.o
+ .debug_macro   0x000000000000c031      0x188 ./libs/freertos/heap_2.o
+ .debug_macro   0x000000000000c1b9      0x15b ./libs/freertos/list.o
+ .debug_macro   0x000000000000c314      0x14d ./libs/freertos/port.o
+ .debug_macro   0x000000000000c461      0x1cd ./libs/freertos/queue.o
+ .debug_macro   0x000000000000c62e       0x16 ./libs/freertos/queue.o
+ .debug_macro   0x000000000000c644      0x210 ./libs/freertos/tasks.o
+ .debug_macro   0x000000000000c854       0x16 ./libs/freertos/tasks.o
+ .debug_macro   0x000000000000c86a      0x1bd ./libs/CMSIS/stm32f10x_adc.o
+ .debug_macro   0x000000000000ca27      0x2df ./libs/CMSIS/stm32f10x_adc.o
+ .debug_macro   0x000000000000cd06      0x10a ./libs/CMSIS/stm32f10x_gpio.o
+ .debug_macro   0x000000000000ce10      0x3dc ./libs/CMSIS/stm32f10x_gpio.o
+ .debug_macro   0x000000000000d1ec      0x1d4 ./libs/CMSIS/stm32f10x_rcc.o
+
+.debug_str      0x0000000000000000    0x4317f
+ .debug_str     0x0000000000000000    0x3974f ./src/usart/usart.o
+                                      0x39982 (size before relaxing)
+ .debug_str     0x000000000003974f       0x7c ./src/string_lib/string_lib.o
+                                       0x24d8 (size before relaxing)
+ .debug_str     0x00000000000397cb       0x2e ./src/led/led.o
+                                      0x35254 (size before relaxing)
+ .debug_str     0x00000000000397f9      0x6ab ./src/hd44780/hd44780.o
+                                      0x39b09 (size before relaxing)
+ .debug_str     0x0000000000039ea4     0x2248 ./src/flash/flash.o
+                                      0x3b629 (size before relaxing)
+ .debug_str     0x000000000003c0ec      0x16a ./src/configurator/configurator.o
+                                      0x3b774 (size before relaxing)
+ .debug_str     0x000000000003c256       0x57 ./src/clock/clock.o
+                                      0x352d9 (size before relaxing)
+ .debug_str     0x000000000003c2ad     0x304c ./src/main.o
+                                      0x3ebe0 (size before relaxing)
+ .debug_str     0x000000000003f2f9      0x39d ./libs/freertos/heap_2.o
+                                       0x7f10 (size before relaxing)
+ .debug_str     0x000000000003f696      0x123 ./libs/freertos/list.o
+                                       0x78e9 (size before relaxing)
+ .debug_str     0x000000000003f7b9      0x5f6 ./libs/freertos/port.o
+                                       0x5fcb (size before relaxing)
+ .debug_str     0x000000000003fdaf      0x584 ./libs/freertos/queue.o
+                                       0x8c56 (size before relaxing)
+ .debug_str     0x0000000000040333     0x1434 ./libs/freertos/tasks.o
+                                       0x916e (size before relaxing)
+ .debug_str     0x0000000000041767      0xa9e ./libs/CMSIS/stm32f10x_adc.o
+                                      0x37e04 (size before relaxing)
+ .debug_str     0x0000000000042205      0x47d ./libs/CMSIS/stm32f10x_gpio.o
+                                      0x357f1 (size before relaxing)
+ .debug_str     0x0000000000042682      0xafd ./libs/CMSIS/stm32f10x_rcc.o
+                                      0x35dd7 (size before relaxing)
+
+.comment        0x0000000000000000       0x70
+ .comment       0x0000000000000000       0x70 ./src/usart/usart.o
+                                         0x71 (size before relaxing)
+ .comment       0x0000000000000000       0x71 ./src/string_lib/string_lib.o
+ .comment       0x0000000000000000       0x71 ./src/led/led.o
+ .comment       0x0000000000000000       0x71 ./src/hd44780/hd44780.o
+ .comment       0x0000000000000000       0x71 ./src/flash/flash.o
+ .comment       0x0000000000000000       0x71 ./src/configurator/configurator.o
+ .comment       0x0000000000000000       0x71 ./src/clock/clock.o
+ .comment       0x0000000000000000       0x71 ./src/main.o
+ .comment       0x0000000000000000       0x71 ./libs/freertos/heap_2.o
+ .comment       0x0000000000000000       0x71 ./libs/freertos/list.o
+ .comment       0x0000000000000000       0x71 ./libs/freertos/port.o
+ .comment       0x0000000000000000       0x71 ./libs/freertos/queue.o
+ .comment       0x0000000000000000       0x71 ./libs/freertos/tasks.o
+ .comment       0x0000000000000000       0x71 ./libs/CMSIS/stm32f10x_adc.o
+ .comment       0x0000000000000000       0x71 ./libs/CMSIS/stm32f10x_gpio.o
+ .comment       0x0000000000000000       0x71 ./libs/CMSIS/stm32f10x_rcc.o
+
+.debug_frame    0x0000000000000000     0x26d0
+ .debug_frame   0x0000000000000000      0x1a0 ./src/usart/usart.o
+ .debug_frame   0x00000000000001a0       0x60 ./src/string_lib/string_lib.o
+ .debug_frame   0x0000000000000200       0x30 ./src/led/led.o
+ .debug_frame   0x0000000000000230      0x44c ./src/hd44780/hd44780.o
+ .debug_frame   0x000000000000067c      0x168 ./src/flash/flash.o
+ .debug_frame   0x00000000000007e4      0x12c ./src/configurator/configurator.o
+ .debug_frame   0x0000000000000910       0x78 ./src/clock/clock.o
+ .debug_frame   0x0000000000000988      0x15c ./src/main.o
+ .debug_frame   0x0000000000000ae4       0xc0 ./libs/freertos/heap_2.o
+ .debug_frame   0x0000000000000ba4       0xd8 ./libs/freertos/list.o
+ .debug_frame   0x0000000000000c7c      0x174 ./libs/freertos/port.o
+ .debug_frame   0x0000000000000df0      0x2c8 ./libs/freertos/queue.o
+ .debug_frame   0x00000000000010b8      0x56c ./libs/freertos/tasks.o
+ .debug_frame   0x0000000000001624      0x5a4 ./libs/CMSIS/stm32f10x_adc.o
+ .debug_frame   0x0000000000001bc8      0x2d0 ./libs/CMSIS/stm32f10x_gpio.o
+ .debug_frame   0x0000000000001e98      0x4f4 ./libs/CMSIS/stm32f10x_rcc.o
+ .debug_frame   0x000000000000238c       0x28 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_aeabi_ldivmod.o)
+ .debug_frame   0x00000000000023b4       0x30 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_fixsfdi.o)
+ .debug_frame   0x00000000000023e4       0x2c /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_fixunssfdi.o)
+ .debug_frame   0x0000000000002410       0x54 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(bpabi.o)
+ .debug_frame   0x0000000000002464       0x34 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_divdi3.o)
+ .debug_frame   0x0000000000002498       0x34 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7-m/libgcc.a(_udivdi3.o)
+ .debug_frame   0x00000000000024cc       0x30 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-atoi.o)
+ .debug_frame   0x00000000000024fc       0x3c /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-itoa.o)
+ .debug_frame   0x0000000000002538       0x20 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strcpy.o)
+ .debug_frame   0x0000000000002558       0x54 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-strtol.o)
+ .debug_frame   0x00000000000025ac       0x4c /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-utoa.o)
+ .debug_frame   0x00000000000025f8       0x50 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-__call_atexit.o)
+ .debug_frame   0x0000000000002648       0x20 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-atexit.o)
+ .debug_frame   0x0000000000002668       0x34 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-fini.o)
+ .debug_frame   0x000000000000269c       0x34 /usr/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7-m/libg.a(lib_a-__atexit.o)
