@@ -58,6 +58,10 @@ uint16_t flash_read(uint32_t address){
     return *(__IO uint16_t*)address;
 }
 
+uint32_t flash_read_32(uint32_t address){
+    return *(__IO uint32_t*)address;
+}
+
 void flash_write(uint32_t address,uint32_t data) {
     flash_unlock();
     FLASH->CR |= FLASH_CR_PG; //Разрешаем программирование флеша

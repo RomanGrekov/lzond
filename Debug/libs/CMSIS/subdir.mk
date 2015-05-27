@@ -9,6 +9,7 @@ C_SRCS += \
 ../libs/CMSIS/stm32f10x_adc.c \
 ../libs/CMSIS/stm32f10x_gpio.c \
 ../libs/CMSIS/stm32f10x_rcc.c \
+../libs/CMSIS/stm32f10x_usart.c \
 ../libs/CMSIS/system_stm32f10x.c 
 
 OBJS += \
@@ -17,6 +18,7 @@ OBJS += \
 ./libs/CMSIS/stm32f10x_adc.o \
 ./libs/CMSIS/stm32f10x_gpio.o \
 ./libs/CMSIS/stm32f10x_rcc.o \
+./libs/CMSIS/stm32f10x_usart.o \
 ./libs/CMSIS/system_stm32f10x.o 
 
 C_DEPS += \
@@ -25,6 +27,7 @@ C_DEPS += \
 ./libs/CMSIS/stm32f10x_adc.d \
 ./libs/CMSIS/stm32f10x_gpio.d \
 ./libs/CMSIS/stm32f10x_rcc.d \
+./libs/CMSIS/stm32f10x_usart.d \
 ./libs/CMSIS/system_stm32f10x.d 
 
 

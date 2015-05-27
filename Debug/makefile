@@ -13,6 +13,7 @@ RM := rm -rf
 -include src/string_lib/subdir.mk
 -include src/led/subdir.mk
 -include src/hd44780/subdir.mk
+-include src/hashtable/subdir.mk
 -include src/flash/subdir.mk
 -include src/encoder/subdir.mk
 -include src/configurator/subdir.mk

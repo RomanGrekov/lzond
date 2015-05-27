@@ -26,6 +26,7 @@ xQueueHandle xQueueUsart1Rx;
 xQueueHandle xQueueUsart1Tx;
 xSemaphoreHandle xUsart1TxMutex;
 
-void log(uint8_t *data, uint8_t level);
+void ulog(uint8_t *data, uint8_t level);
+void ulog_raw(uint8_t *data, uint8_t level);
 
 #endif

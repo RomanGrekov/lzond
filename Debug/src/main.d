@@ -13,9 +13,8 @@ src/main.o: ../src/main.c ../libs/CMSIS/inc/stm32f10x.h \
  ../libs/freertos/inc/semphr.h ../libs/freertos/inc/queue.h \
  ../libs/freertos/inc/croutine.h ../libs/freertos/inc/portmacro.h \
  ../src/encoder/encoder.h ../src/configurator/configurator.h \
- ../src/configurator/../usart/usart.h ../src/led/led.h \
- ../src/usart/usart.h ../src/flash/flash.h ../src/string_lib/string_lib.h \
- ../src/globs.h
+ ../src/led/led.h ../src/usart/usart.h ../src/flash/flash.h \
+ ../src/string_lib/string_lib.h ../src/globs.h
 
 ../libs/CMSIS/inc/stm32f10x.h:
 
@@ -76,8 +75,6 @@ src/main.o: ../src/main.c ../libs/CMSIS/inc/stm32f10x.h \
 ../src/encoder/encoder.h:
 
 ../src/configurator/configurator.h:
-
-../src/configurator/../usart/usart.h:
 
 ../src/led/led.h:
 

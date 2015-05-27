@@ -7,28 +7,56 @@
 
 #ifndef CONFIGURATOR_H_
 #define CONFIGURATOR_H_
+#include "stm32f10x.h"
+#include "FreeRTOS.h"
+#include "queue.h"
+#include "globs.h"
 
-#include "../usart/usart.h"
 void prvUsart_1_RX_Handler(void *pvParameters);
 
 #define COMMAND_NAME_SIZE 20
 
+//struct command_parameter
+//{
+//	uint8_t name[COMMAND_NAME_SIZE];
+//	uint8_t name_len;
+//	float val;
+//	uint8_t param_mark[5];
+//};
+
 struct command_parameter
 {
 	uint8_t name[COMMAND_NAME_SIZE];
-	uint8_t name_len;
 	float val;
-	const uint8_t *param_mark;
 };
 typedef struct command_parameter parameter;
+
+struct configuration
+{
+	float v_def;
+	float v_outref;
+	float v_out;
+	float test;
+};
+
+typedef struct configuration conf;
+conf my_conf;
+
+struct version
+{
+	uint8_t name[8];
+};
+typedef struct version sw_version;
 
 void commands_init(void);
 void prvUsart_1_RX_Handler(void *pvParameters);
 void prvHandleCommands(void *pvParameters);
 uint8_t is_version_inside(uint8_t *version);
 void store_version(uint8_t *version);
-uint32_t store_param(uint8_t *name, float val);
-uint32_t store_def_params(void);
+void get_version(sw_version *to_store);
+void store_def_params(void);
+void read_def_params(conf *my_conf);
+void store_param(conf *my_conf);
 
 #define COMMANDS_QUEUE_SIZE 5
 xQueueHandle xQueueUsartCommands;

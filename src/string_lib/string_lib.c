@@ -7,6 +7,7 @@
  */
 
 #include "string_lib.h"
+#include "../usart/usart.h"
 
 int n_tu(int number, int count)
 {

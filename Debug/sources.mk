@@ -23,6 +23,7 @@ src/string_lib \
 src \
 src/led \
 src/hd44780 \
+src/hashtable \
 src/flash \
 src/encoder \
 src/configurator \

@@ -17,7 +17,7 @@
 #include <stdlib.h>
 #include "globs.h"
 
-const uint8_t SW_VERSION[] = "1.0.0";
+const uint8_t SW_VERSION[] = "1.0.2";
 
 static void prvStart( void *pvParameters );
 static void prvGetTemp( void *pvParameters );
@@ -41,6 +41,7 @@ int main(void)
     USART1Init(9600, configCPU_CLOCK_HZ);
     USART1InterrInit();
 
+
 	xLcdMutex = xSemaphoreCreateMutex();
 	xTaskCreate(prvStart,(signed char*)"Start tasks",configMINIMAL_STACK_SIZE,
 	            NULL, tskIDLE_PRIORITY + 1, NULL);
@@ -55,13 +56,8 @@ int main(void)
 
 void prvStart(void *pvParameters)
 {
-	uint8_t *ver = SW_VERSION;
-	parameter my_param;
-	parameter *my_param_p = &my_param;
-	sw_version ver_struct;
+	sw_version ver;
 	uint8_t symb[5];
-	struct command_parameter params[6];
-	uint32_t params_amount=0;
 
 	while(1){
 		switch(state){
@@ -89,34 +85,35 @@ void prvStart(void *pvParameters)
 
                 xQueueUsart1Rx = xQueueCreate(USART1_RX_QUEUE_SIZE, sizeof(unsigned char));
                 if (xQueueUsart1Rx == NULL) {
-                	log("Can't create Usart RX queue\n", ERROR_LEVEL);
+                	ulog("Can't create Usart RX queue\n", ERROR_LEVEL);
                 }
 
-                log("Lambds zond v", INFO_LEVEL);
-                log(SW_VERSION, INFO_LEVEL);
-                log("\n\r", INFO_LEVEL);
-				state = 2;
+                ulog_raw("Lambds zond v", INFO_LEVEL);
+                get_version(&ver);
+                ulog(ver.name, INFO_LEVEL);
+				//state = 2;
+                state = 1;
+
 				break;
 			case 1:
-                log("Good day Dmitriy Sergeevich! Please make setup\n\r", INFO_LEVEL);
-                commands_init();
-                if (is_version_inside(ver) == 0){
-                	flash_erase_page(params_addr);
-                	store_version(ver);
-                	params_amount = store_def_params();
-                }
-                read_def_params(params, 6);
+                ulog("Good day Dmitriy Sergeevich! Please make setup", INFO_LEVEL);
 				cln_scr();
 				to_video_mem(0, 0, "Setting vars...");
-                log("Current parameters:\n\r", INFO_LEVEL);
-                for (uint32_t i = 0; i<6; i++){
-                	log(params[i].name, INFO_LEVEL);
-                	log(" ", INFO_LEVEL);
-                	float_to_string(params[i].val, symb);
-                	log(symb, INFO_LEVEL);
-                	log("\n\r", INFO_LEVEL);
-
+                commands_init();
+                if (is_version_inside(&SW_VERSION) == 0){
+                	store_version(SW_VERSION);
+                	store_def_params();
+                	ulog("First time", DEBUG_LEVEL);
                 }
+                read_def_params(&my_conf);
+                ulog("Current parameters:", INFO_LEVEL);
+                ulog_raw("v_def ", INFO_LEVEL);
+                float_to_string(my_conf.v_def, symb);
+                ulog(symb, INFO_LEVEL);
+                ulog_raw("v_out ", INFO_LEVEL);
+                float_to_string(my_conf.v_out, symb);
+                ulog(symb, INFO_LEVEL);
+
 				state = 2;
 				break;
 		}
