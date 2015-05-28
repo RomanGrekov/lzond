@@ -16,5 +16,7 @@
 #include "portmacro.h"
 
 
+#define SW_VERSION_SIZE 8
+#define SW_VERSION "1.0.2"
 
 #endif /* GLOBS_H_ */

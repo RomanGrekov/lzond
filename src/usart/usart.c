@@ -82,6 +82,12 @@ void USART1QueueSendString(uint8_t *data){
 		xSemaphoreGive(xUsart1TxMutex);
 	}
 }
+void USART1QueueSendByte(uint8_t data){
+	if(xSemaphoreTake(xUsart1TxMutex, portMAX_DELAY) == pdTRUE){
+        xQueueSend(xQueueUsart1Tx, &data, 100);
+		xSemaphoreGive(xUsart1TxMutex);
+	}
+}
 
 void prvUsart1Transmitter(void *pvParameters) {
 	portBASE_TYPE xStatus;

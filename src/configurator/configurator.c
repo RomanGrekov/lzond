@@ -21,23 +21,30 @@ void commands_init(void)
     	ulog("Can't create Usart commands queue\n", ERROR_LEVEL);
     }
     xTaskCreate(prvUsart_1_RX_Handler,(signed char*)"USART RX handler",configMINIMAL_STACK_SIZE,
-                NULL, tskIDLE_PRIORITY + 1, NULL);
+                NULL, tskIDLE_PRIORITY + 1, &xHandleUsartRX);
     xTaskCreate(prvHandleCommands,(signed char*)"Commands handler",configMINIMAL_STACK_SIZE,
-                NULL, tskIDLE_PRIORITY + 1, NULL);
+                NULL, tskIDLE_PRIORITY + 1, &xHandleCommands);
 
+}
+
+void commands_suspend(void)
+{
+	vTaskSuspend(xHandleCommands);
+	vTaskSuspend(xHandleUsartRX);
+}
+
+void commands_resume(void)
+{
+	vTaskResume(xHandleCommands);
+	vTaskResume(xHandleUsartRX);
 }
 
 uint8_t is_version_inside(uint8_t *version){
 	sw_version ver;
-	uint8_t *ver_p = &ver.name;
-	uint8_t i = 0;
-	flash_read_struct(ver_p, sizeof(ver), 0);
-	while(*version){
-		if (*version != *ver_p) return 0;
-		else{
-			version++;
-			ver_p++;
-		}
+
+	get_version(&ver);
+	if(memcmp(ver.name, version, SW_VERSION_SIZE)){
+		return 0;
 	}
 	return 1;
 }
@@ -49,6 +56,7 @@ void get_version(sw_version *to_store)
 
 void store_version(uint8_t *version)
 {
+	flash_erase_page(params_addr);
 	flash_write_struct(version, sizeof(sw_version), 0);
 }
 
@@ -80,14 +88,13 @@ void store_param(conf *my_conf)
 void prvUsart_1_RX_Handler(void *pvParameters) {
 	portBASE_TYPE xStatus=pdPASS;
 	uint8_t a;
-	uint8_t symb[10];
 	uint8_t state=0;
 	uint8_t value[10];
 	parameter param;
-	parameter *param_p = &param;
 	uint8_t i;
 	for (;;) {
 		if (xQueueReceive(xQueueUsart1Rx, &a, portMAX_DELAY) == pdPASS){
+			USART1QueueSendByte(a);
 			switch (state){
 				case 0:
 					i=0;
@@ -107,7 +114,6 @@ void prvUsart_1_RX_Handler(void *pvParameters) {
 						}
 					}
 					else {
-						//param.name_len = i;
 						state = 5;
 						i=0;
 					}
@@ -120,12 +126,12 @@ void prvUsart_1_RX_Handler(void *pvParameters) {
 					}
 					else{
 						param.val = atof(value);
-						xStatus = xQueueSend(xQueueUsartCommands, param_p, portMAX_DELAY);
+						xStatus = xQueueSend(xQueueUsartCommands, &param, portMAX_DELAY);
 						if (xStatus != pdPASS){
 							ulog("Can't put Commands queue", ERROR_LEVEL);
 						}
 						cln_scr();
-						to_video_mem(0, 0, param_p->name);
+						to_video_mem(0, 0, &param.name);
 						state = 0;
 					}
 			}
@@ -150,16 +156,12 @@ void prvHandleCommands(void *pvParameters) {
 
                 if (!memcmp(param.name, "v_def", sizeof("v_def"))){
                 	my_conf.v_def = param.val;
-                	ulog_raw("Parameter ", DEBUG_LEVEL);
-                	ulog_raw(param.name, DEBUG_LEVEL);
-                	ulog_raw(" has changed to ", DEBUG_LEVEL);
-                	float_to_string(param.val, symb);
-                	ulog(symb, DEBUG_LEVEL);
+                	ulog("OK", DEBUG_LEVEL);
 
                 }
                 if (!memcmp(param.name, "save", sizeof("save"))){
                 	store_param(&my_conf);
-                	ulog("saved!", DEBUG_LEVEL);
+                	ulog("OK", DEBUG_LEVEL);
                 }
 			}
 	}

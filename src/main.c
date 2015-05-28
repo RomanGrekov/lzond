@@ -17,7 +17,6 @@
 #include <stdlib.h>
 #include "globs.h"
 
-const uint8_t SW_VERSION[] = "1.0.2";
 
 static void prvStart( void *pvParameters );
 static void prvGetTemp( void *pvParameters );
@@ -57,7 +56,6 @@ int main(void)
 void prvStart(void *pvParameters)
 {
 	sw_version ver;
-	uint8_t symb[5];
 
 	while(1){
 		switch(state){
@@ -91,30 +89,15 @@ void prvStart(void *pvParameters)
                 ulog_raw("Lambds zond v", INFO_LEVEL);
                 get_version(&ver);
                 ulog(ver.name, INFO_LEVEL);
-				//state = 2;
+
+                commands_init();
+                commands_suspend();
                 state = 1;
 
 				break;
 			case 1:
-                ulog("Good day Dmitriy Sergeevich! Please make setup", INFO_LEVEL);
-				cln_scr();
-				to_video_mem(0, 0, "Setting vars...");
-                commands_init();
-                if (is_version_inside(&SW_VERSION) == 0){
-                	store_version(SW_VERSION);
-                	store_def_params();
-                	ulog("First time", DEBUG_LEVEL);
-                }
-                read_def_params(&my_conf);
-                ulog("Current parameters:", INFO_LEVEL);
-                ulog_raw("v_def ", INFO_LEVEL);
-                float_to_string(my_conf.v_def, symb);
-                ulog(symb, INFO_LEVEL);
-                ulog_raw("v_out ", INFO_LEVEL);
-                float_to_string(my_conf.v_out, symb);
-                ulog(symb, INFO_LEVEL);
-
-				state = 2;
+				break;
+			case 2:
 				break;
 		}
 
@@ -153,12 +136,41 @@ void prvGetTemp(void *pvParameters)
 static void prvCheckBtn1( void *pvParameters )
 {
 	uint8_t btn_state = 0, btn_state_old = 0;
+	uint8_t is_on = 0;
+	uint8_t symb[5];
 	while(1){
 		btn_state = GPIO_ReadInputDataBit(GPIOB, GPIO_Pin_8);
 		if (btn_state != btn_state_old){
 			btn_state_old = btn_state;
 			if(btn_state == 0){
-				state = 1;
+				if (is_on == 0){
+					commands_resume();
+                        ulog("Good day Dmitriy Sergeevich!", INFO_LEVEL);
+                                        cln_scr();
+                                        to_video_mem(0, 0, "Setting vars...");
+                        if (is_version_inside(&SW_VERSION) == 0){
+                                store_version(SW_VERSION);
+                                store_def_params();
+                                ulog("First time", DEBUG_LEVEL);
+                        }
+                        read_def_params(&my_conf);
+                        ulog("Current parameters:", INFO_LEVEL);
+                        ulog_raw("v_def ", INFO_LEVEL);
+                        float_to_string(my_conf.v_def, symb);
+                        ulog(symb, INFO_LEVEL);
+                        ulog_raw("v_out ", INFO_LEVEL);
+                        float_to_string(my_conf.v_out, symb);
+                        ulog(symb, INFO_LEVEL);
+
+                    is_on = 1;
+				}
+				else {
+					cln_scr();
+					to_video_mem(0, 0, "Default state");
+					commands_suspend();
+					is_on = 0;
+				}
+
 			}
 		}
 	}

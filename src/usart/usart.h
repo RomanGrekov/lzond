@@ -12,6 +12,7 @@ void USART1SendString(uint8_t *data);
 
 void prvUsart1Transmitter(void *pvParameters);
 void USART1QueueSendString(uint8_t *data);
+void USART1QueueSendByte(uint8_t data);
 
 enum {
     ERROR_LEVEL,

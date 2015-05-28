@@ -44,11 +44,16 @@ conf my_conf;
 
 struct version
 {
-	uint8_t name[8];
+	uint8_t name[SW_VERSION_SIZE];
 };
 typedef struct version sw_version;
 
+TaskHandle_t xHandleUsartRX;
+TaskHandle_t xHandleCommands;
+
 void commands_init(void);
+void commands_suspend(void);
+void commands_resume(void);
 void prvUsart_1_RX_Handler(void *pvParameters);
 void prvHandleCommands(void *pvParameters);
 uint8_t is_version_inside(uint8_t *version);
