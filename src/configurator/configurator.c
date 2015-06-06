@@ -157,7 +157,10 @@ void prvHandleCommands(void *pvParameters) {
                 if (!memcmp(param.name, "v_def", sizeof("v_def"))){
                 	my_conf.v_def = param.val;
                 	ulog("OK", DEBUG_LEVEL);
-
+                }
+                if (!memcmp(param.name, "v_out", sizeof("v_out"))){
+                	my_conf.v_out = param.val;
+                	ulog("OK", DEBUG_LEVEL);
                 }
                 if (!memcmp(param.name, "save", sizeof("save"))){
                 	store_param(&my_conf);
@@ -166,3 +169,33 @@ void prvHandleCommands(void *pvParameters) {
 			}
 	}
 }
+
+void ShowDefaultPatams(void)
+{
+	uint8_t symb[sizeof(float)];
+    ulog("Good day Dmitriy Sergeevich!", INFO_LEVEL);
+                    cln_scr();
+                    to_video_mem(0, 0, "Setting vars...");
+    read_def_params(&my_conf);
+    ulog("Current parameters:", INFO_LEVEL);
+    ulog_raw("v_def ", INFO_LEVEL);
+    float_to_string(my_conf.v_def, symb);
+    ulog(symb, INFO_LEVEL);
+    ulog_raw("v_out ", INFO_LEVEL);
+    float_to_string(my_conf.v_out, symb);
+    ulog(symb, INFO_LEVEL);
+}
+
+void commands_on(void)
+{
+    commands_resume();
+    ShowDefaultPatams();
+}
+
+void commands_off(void)
+{
+	cln_scr();
+	to_video_mem(0, 0, "Default state");
+	commands_suspend();
+}
+

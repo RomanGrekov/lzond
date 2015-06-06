@@ -13,11 +13,13 @@ RM := rm -rf
 -include src/string_lib/subdir.mk
 -include src/led/subdir.mk
 -include src/hd44780/subdir.mk
--include src/hashtable/subdir.mk
 -include src/flash/subdir.mk
 -include src/encoder/subdir.mk
+-include src/dac/subdir.mk
 -include src/configurator/subdir.mk
 -include src/clock/subdir.mk
+-include src/buttons/subdir.mk
+-include src/adc/subdir.mk
 -include src/subdir.mk
 -include libs/freertos/subdir.mk
 -include libs/CMSIS/subdir.mk

@@ -62,6 +62,9 @@ void get_version(sw_version *to_store);
 void store_def_params(void);
 void read_def_params(conf *my_conf);
 void store_param(conf *my_conf);
+void ShowDefaultPatams(void);
+void commands_on(void);
+void commands_off(void);
 
 #define COMMANDS_QUEUE_SIZE 5
 xQueueHandle xQueueUsartCommands;
