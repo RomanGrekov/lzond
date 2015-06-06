@@ -13,14 +13,19 @@
 #include "flash/flash.h"
 #include "string_lib/string_lib.h"
 #include "adc/adc.h"
+#include "buttons/buttons.h"
+#include "cmd_handler/cmd_handler.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include "globs.h"
 
 
-static void prvStart( void *pvParameters );
+void taskStartup(void *pvParameters );
+void Init(void);
 void vApplicationTickHook( void );
-static void prvCheckBtn1( void *pvParameters );
+void prvCheckBtn1( void *pvParameters );
+void commands_on(void);
+void commands_off(void);
 
 
 int main(void)
@@ -33,25 +38,20 @@ int main(void)
     USART1Init(9600, configCPU_CLOCK_HZ);
     USART1InterrInit();
 
-	xLcdMutex = xSemaphoreCreateMutex();
-	xTaskCreate(prvStart,(signed char*)"Start tasks",configMINIMAL_STACK_SIZE,
-	            NULL, tskIDLE_PRIORITY + 1, NULL);
-	xTaskCreate(prvLcdShow,(signed char*)"LcdShow",configMINIMAL_STACK_SIZE,
-				NULL, tskIDLE_PRIORITY + 1, NULL);
-
+    Init();
+    xTaskCreate(taskStartup,(signed char*)"Startup",configMINIMAL_STACK_SIZE,
+                    NULL, tskIDLE_PRIORITY + 1, NULL);
     vTaskStartScheduler();
     while(1);
 
     return 0;
 }
 
-void prvStart(void *pvParameters)
+void Init(void)
 {
-	sw_version ver;
-	uint8_t val[5];
-
-    lcd_clrscr();
-    to_video_mem(0, 0, "FreeRTOS!-v8.0.1\nLambda zond v1.0");
+	xLcdMutex = xSemaphoreCreateMutex();
+	xTaskCreate(prvLcdShow,(signed char*)"LcdShow",configMINIMAL_STACK_SIZE,
+				NULL, tskIDLE_PRIORITY + 1, NULL);
 
     xTaskCreate(blink_tsk,(signed char*)"LED1",configMINIMAL_STACK_SIZE,
                     NULL, tskIDLE_PRIORITY + 1, NULL);
@@ -71,8 +71,17 @@ void prvStart(void *pvParameters)
 
     xQueueUsart1Rx = xQueueCreate(USART1_RX_QUEUE_SIZE, sizeof(unsigned char));
     if (xQueueUsart1Rx == NULL) {
-            ulog("Can't create Usart RX queue\n", ERROR_LEVEL);
+        ulog("Can't create Usart RX queue\n", ERROR_LEVEL);
     }
+
+}
+
+void taskStartup(void *pvParameters )
+{
+	sw_version ver;
+
+    lcd_clrscr();
+    to_video_mem(0, 0, "FreeRTOS!-v8.0.1\nLambda zond v1.0");
 
     if (is_version_inside(&SW_VERSION) == 0){
             store_version(SW_VERSION);
@@ -85,11 +94,25 @@ void prvStart(void *pvParameters)
 
     commands_init();
     commands_suspend();
-	while(1);
+
+    vTaskDelete(NULL);
 
 }
 
-static void prvCheckBtn1( void *pvParameters )
+void commands_on(void)
+{
+    commands_resume();
+    ShowDefaultPatams();
+}
+
+void commands_off(void)
+{
+	cln_scr();
+	to_video_mem(0, 0, "Default state");
+	commands_suspend();
+}
+
+void prvCheckBtn1( void *pvParameters )
 {
 	while(1)btn1_react(commands_on, commands_off);
 }

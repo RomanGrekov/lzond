@@ -8,6 +8,8 @@
 #ifndef STRING_LIB_H_
 #define STRING_LIB_H_
 
+#include <stdlib.h>
+
 void float_to_string(float f, char r[]);
 int n_tu(int number, int count);
 
