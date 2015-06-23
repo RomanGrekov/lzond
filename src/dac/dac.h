@@ -15,5 +15,6 @@ void init_dac(void);
 void dac_enable(void);
 void dac_disable(void);
 void dac(uint8_t val);
+void dac_volts(float val);
 
 #endif /* DAC_H_ */

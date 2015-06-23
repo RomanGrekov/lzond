@@ -30,3 +30,8 @@ void dac(uint8_t val)
 {
 	DAC_SetChannel1Data(DAC_Align_8b_R, val);
 }
+
+void dac_volts(float val)
+{
+	//Should be something
+}

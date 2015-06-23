@@ -16,6 +16,7 @@ struct configuration
 	float v_outref;
 	float v_out;
 	float test;
+	float start_pause;
 };
 
 typedef struct configuration conf;
