@@ -13,11 +13,13 @@
 #include "flash/flash.h"
 #include "string_lib/string_lib.h"
 #include "adc/adc.h"
+#include "dac/dac.h"
 #include "buttons/buttons.h"
 #include "cmd_handler/cmd_handler.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include "globs.h"
+#include "stm32f10x_spi.h"
 
 
 void taskStartup(void *pvParameters );
@@ -33,6 +35,7 @@ int main(void)
 	InitRCC();
 	init_led();
 	adc_init();
+	init_dac();
 	init_buttons();
     lcd_init();
     USART1Init(9600, configCPU_CLOCK_HZ);
@@ -91,6 +94,14 @@ void taskStartup(void *pvParameters )
     ulog_raw("Lambds zond v", INFO_LEVEL);
     get_version(&ver);
     ulog(ver.name, INFO_LEVEL);
+
+    ulog_raw("Sending data to SPI1...", DEBUG_LEVEL);
+    while (SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_TXE) == RESET);
+    GPIO_ResetBits(GPIOA,GPIO_Pin_6);
+    SPI_I2S_SendData(SPI1, 0b0011000111111111);
+    while (SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_TXE) == RESET);
+    GPIO_SetBits(GPIOA,GPIO_Pin_6);
+    ulog("done", DEBUG_LEVEL);
 
     commands_init();
     commands_suspend();
