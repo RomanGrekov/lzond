@@ -26,6 +26,7 @@ void taskStartup(void *pvParameters );
 void Init(void);
 void vApplicationTickHook( void );
 void prvCheckBtn1( void *pvParameters );
+void prvADC( void *pvParameters );
 void commands_on(void);
 void commands_off(void);
 
@@ -72,6 +73,9 @@ void Init(void)
     xTaskCreate(prvUsart1Transmitter,(signed char*)"USART1_transmitter",configMINIMAL_STACK_SIZE,
                 NULL, tskIDLE_PRIORITY + 1, NULL);
 
+    xTaskCreate(prvADC,(signed char*)"ADC-DAC",configMINIMAL_STACK_SIZE,
+                NULL, tskIDLE_PRIORITY + 1, NULL);
+
     xQueueUsart1Rx = xQueueCreate(USART1_RX_QUEUE_SIZE, sizeof(unsigned char));
     if (xQueueUsart1Rx == NULL) {
         ulog("Can't create Usart RX queue\n", ERROR_LEVEL);
@@ -95,19 +99,20 @@ void taskStartup(void *pvParameters )
     get_version(&ver);
     ulog(ver.name, INFO_LEVEL);
 
-    ulog_raw("Sending data to SPI1...", DEBUG_LEVEL);
-    while (SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_TXE) == RESET);
-    GPIO_ResetBits(GPIOA,GPIO_Pin_6);
-    SPI_I2S_SendData(SPI1, 0b0011000111111111);
-    while (SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_TXE) == RESET);
-    GPIO_SetBits(GPIOA,GPIO_Pin_6);
-    ulog("done", DEBUG_LEVEL);
-
     commands_init();
     commands_suspend();
 
     vTaskDelete(NULL);
 
+}
+
+void prvADC(void *pvParameters )
+{
+	float v;
+	while(1){
+		v = get_adc_volts();
+		dac_volts(v);
+	}
 }
 
 void commands_on(void)
