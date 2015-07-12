@@ -110,6 +110,12 @@ to exclude the API function. */
 #define INCLUDE_vTaskDelayUntil			1
 #define INCLUDE_vTaskDelay				1
 
+/*Software timers*/
+#define configUSE_TIMERS 				1
+#define configTIMER_TASK_PRIORITY		1 // can be configMAX_PRIORITIES - 1
+#define configTIMER_QUEUE_LENGTH		5 //was taken form a ceiling
+#define configTIMER_TASK_STACK_DEPTH	configMINIMAL_STACK_SIZE
+
 /* This is the raw value as per the Cortex-M3 NVIC.  Values can be 255
 (lowest) to 0 (1?) (highest). */
 #define configKERNEL_INTERRUPT_PRIORITY 		255

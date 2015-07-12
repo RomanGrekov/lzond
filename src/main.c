@@ -4,6 +4,7 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
+#include "timers.h"
 #include "clock/clock.h"
 #include "hd44780/hd44780.h"
 #include "encoder/encoder.h"

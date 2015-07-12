@@ -10,4 +10,10 @@
 
 void taskDacCicle( void *pvParameters );
 
+struct HalfPeriod {
+	uint8_t retcode;
+	uint32_t period;
+	float cur_adc;
+};
+
 #endif /* DAC_LOGIC_H_ */
