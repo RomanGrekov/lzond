@@ -32,6 +32,8 @@ xSemaphoreHandle xUsart1TxMutex;
 void ulog(uint8_t *data, uint8_t level);
 void ulog_raw(uint8_t *data, uint8_t level);
 void ulog_float_raw(float data, uint8_t level);
-void ulog_float(float data, uint8_t level){
+void ulog_float(float data, uint8_t level);
+void ulog_int_raw(float data, uint8_t level);
+void ulog_int(float data, uint8_t level);
 
 #endif

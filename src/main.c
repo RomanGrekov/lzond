@@ -104,7 +104,8 @@ void taskStartup(void *pvParameters )
     commands_init();
     commands_suspend();
 
-    get_half_period(5000, 1);
+    xTaskCreate(taskDacCicle,(signed char*)"DAC circle",configMINIMAL_STACK_SIZE,
+                NULL, tskIDLE_PRIORITY + 1, NULL);
 
     vTaskDelete(NULL);
 

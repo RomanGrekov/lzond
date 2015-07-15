@@ -1,5 +1,7 @@
 #include "usart.h"
 #include "FreeRTOS.h"
+#include "../string_lib/string_lib.h"
+#include "string.h"
 
 
 void USART1Init(uint16_t boudrate, uint32_t f_cpu){
@@ -119,5 +121,16 @@ void ulog_float_raw(float data, uint8_t level){
 
 void ulog_float(float data, uint8_t level){
 	ulog_float_raw(data, level);
-	ulog_raw("\n", level);
+	ulog("", level);
+}
+
+void ulog_int_raw(float data, uint8_t level){
+	uint8_t chars[16];
+	itoa(data, chars, 10);
+	ulog_raw(chars, level);
+}
+
+void ulog_int(float data, uint8_t level){
+	ulog_int_raw(data, level);
+	ulog("", level);
 }

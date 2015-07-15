@@ -43,6 +43,7 @@ void store_def_params(void)
 	my_conf.v_outref = 0.7;
 	my_conf.test = 1035;
 	my_conf.start_pause = 5000;
+	my_conf.start_timeout = 100000;
 	my_conf.v_r = 0.52;
 	my_conf.v_l = 0.37;
 	store_conf(&my_conf);
@@ -84,6 +85,10 @@ void store_param(uint8_t *name, float val)
     	my_conf.start_pause = val;
     	ulog("OK", DEBUG_LEVEL);
     }
+    if (!memcmp(name, "start_timeout", sizeof("start_timeout"))){
+    	my_conf.start_timeout = val;
+    	ulog("OK", DEBUG_LEVEL);
+    }
     if (!memcmp(name, "v_r", sizeof("v_r"))){
     	my_conf.v_r = val;
     	ulog("OK", DEBUG_LEVEL);
@@ -114,6 +119,8 @@ void ShowDefaultPatams(void)
     ulog_float(my_conf.v_out, WARNING_LEVEL);
     ulog_raw("start_pause ", INFO_LEVEL);
     ulog_float(my_conf.start_pause, WARNING_LEVEL);
+    ulog_raw("start_timeout ", INFO_LEVEL);
+    ulog_float(my_conf.start_timeout, WARNING_LEVEL);
     ulog_raw("v_r ", INFO_LEVEL);
     ulog_float(my_conf.v_r, WARNING_LEVEL);
     ulog_raw("v_l ", INFO_LEVEL);

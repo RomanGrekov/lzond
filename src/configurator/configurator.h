@@ -17,6 +17,7 @@ struct configuration
 	float v_out;
 	float test;
 	float start_pause;
+	float start_timeout;
 	float v_r;
 	float v_l;
 }; // When add new param, do not forget to add in .c file

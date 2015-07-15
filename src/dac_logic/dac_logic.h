@@ -28,6 +28,7 @@ enum {
 };
 
 struct HalfPeriod get_half_period(uint32_t timeout, uint8_t need_period);
-uint8_t get_cur_mix(float cur_adc_v, float v_r, float v_l){
+uint8_t get_cur_mix(float cur_adc_v, float v_r, float v_l);
+const uint8_t* get_mix_text(uint8_t mix_type);
 
 #endif /* DAC_LOGIC_H_ */
