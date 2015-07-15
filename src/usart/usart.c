@@ -111,3 +111,13 @@ void ulog_raw(uint8_t *data, uint8_t level){
     }
 }
 
+void ulog_float_raw(float data, uint8_t level){
+	uint8_t chars[16];
+	float_to_string(data, chars);
+	ulog_raw(chars, level);
+}
+
+void ulog_float(float data, uint8_t level){
+	ulog_float_raw(data, level);
+	ulog_raw("\n", level);
+}

@@ -39,10 +39,12 @@ void store_def_params(void)
 {
 	conf my_conf;
 	my_conf.v_def = 0.45;
-	my_conf.v_out = 124;
+	my_conf.v_out = 0.7;
 	my_conf.v_outref = 0.7;
 	my_conf.test = 1035;
 	my_conf.start_pause = 5000;
+	my_conf.v_r = 0.52;
+	my_conf.v_l = 0.37;
 	store_conf(&my_conf);
 
 }
@@ -82,6 +84,14 @@ void store_param(uint8_t *name, float val)
     	my_conf.start_pause = val;
     	ulog("OK", DEBUG_LEVEL);
     }
+    if (!memcmp(name, "v_r", sizeof("v_r"))){
+    	my_conf.v_r = val;
+    	ulog("OK", DEBUG_LEVEL);
+    }
+    if (!memcmp(name, "v_l", sizeof("v_l"))){
+    	my_conf.v_l = val;
+    	ulog("OK", DEBUG_LEVEL);
+    }
     if (!memcmp(name, "save", sizeof("save"))){
     	store_conf(&my_conf);
     	ulog("OK", DEBUG_LEVEL);
@@ -97,15 +107,16 @@ void ShowDefaultPatams(void)
                     cln_scr();
                     to_video_mem(0, 0, "Setting vars...");
     read_def_params(&my_conf);
-    ulog("Current parameters:", INFO_LEVEL);
+    ulog("Current parameters:", WARNING_LEVEL);
     ulog_raw("v_def ", INFO_LEVEL);
-    float_to_string(my_conf.v_def, symb);
-    ulog(symb, INFO_LEVEL);
+    ulog_float(my_conf.v_def, WARNING_LEVEL);
     ulog_raw("v_out ", INFO_LEVEL);
-    float_to_string(my_conf.v_out, symb);
-    ulog(symb, INFO_LEVEL);
+    ulog_float(my_conf.v_out, WARNING_LEVEL);
     ulog_raw("start_pause ", INFO_LEVEL);
-    float_to_string(my_conf.start_pause, symb);
-    ulog(symb, INFO_LEVEL);
+    ulog_float(my_conf.start_pause, WARNING_LEVEL);
+    ulog_raw("v_r ", INFO_LEVEL);
+    ulog_float(my_conf.v_r, WARNING_LEVEL);
+    ulog_raw("v_l ", INFO_LEVEL);
+    ulog_float(my_conf.v_l, WARNING_LEVEL);
 }
 

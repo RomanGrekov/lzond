@@ -16,6 +16,8 @@ void USART1QueueSendByte(uint8_t data);
 
 enum {
     ERROR_LEVEL,
+    WARNING_LEVEL,
+    NOTICE_LEVEL,
     INFO_LEVEL,
     DEBUG_LEVEL
 };
@@ -29,5 +31,7 @@ xSemaphoreHandle xUsart1TxMutex;
 
 void ulog(uint8_t *data, uint8_t level);
 void ulog_raw(uint8_t *data, uint8_t level);
+void ulog_float_raw(float data, uint8_t level);
+void ulog_float(float data, uint8_t level){
 
 #endif

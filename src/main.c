@@ -1,6 +1,7 @@
 #include "stm32f10x.h"
 #include "stm32f10x_gpio.h"
 #include "stm32f10x_rcc.h"
+#include "stm32f10x_spi.h"
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
@@ -15,12 +16,12 @@
 #include "string_lib/string_lib.h"
 #include "adc/adc.h"
 #include "dac/dac.h"
+#include "dac_logic/dac_logic.h"
 #include "buttons/buttons.h"
 #include "cmd_handler/cmd_handler.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include "globs.h"
-#include "stm32f10x_spi.h"
 
 
 void taskStartup(void *pvParameters );
@@ -102,6 +103,8 @@ void taskStartup(void *pvParameters )
 
     commands_init();
     commands_suspend();
+
+    get_half_period(5000, 1);
 
     vTaskDelete(NULL);
 

@@ -17,7 +17,9 @@ struct configuration
 	float v_out;
 	float test;
 	float start_pause;
-};
+	float v_r;
+	float v_l;
+}; // When add new param, do not forget to add in .c file
 
 typedef struct configuration conf;
 conf my_conf;
