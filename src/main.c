@@ -22,6 +22,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "globs.h"
+#include "xprintf/xprintf.h"
 
 
 void taskStartup(void *pvParameters );
@@ -43,6 +44,9 @@ int main(void)
     lcd_init();
     USART1Init(9600, configCPU_CLOCK_HZ);
     USART1InterrInit();
+
+	xdev_out(USART1QueueSendByte);
+	xdev_in(USART1ReadByte);
 
     Init();
     xTaskCreate(taskStartup,(signed char*)"Startup",configMINIMAL_STACK_SIZE,
@@ -104,6 +108,8 @@ void taskStartup(void *pvParameters )
     commands_init();
     commands_suspend();
 
+    xprintf("Hello world %30d\n", 56);
+    xprintf("Hello world %30f\n", 125.6);
     xTaskCreate(taskDacCicle,(signed char*)"DAC circle",configMINIMAL_STACK_SIZE,
                 NULL, tskIDLE_PRIORITY + 1, NULL);
 
