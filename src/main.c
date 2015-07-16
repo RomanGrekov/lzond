@@ -13,7 +13,6 @@
 #include "led/led.h"
 #include "usart/usart.h"
 #include "flash/flash.h"
-#include "string_lib/string_lib.h"
 #include "adc/adc.h"
 #include "dac/dac.h"
 #include "dac_logic/dac_logic.h"
@@ -100,7 +99,7 @@ void taskStartup(void *pvParameters )
     if (is_version_inside(&SW_VERSION) == 0){
             store_version(SW_VERSION);
             store_def_params();
-            log_notice("First start");
+            log_notice("First start\n");
     }
     get_version(&ver);
     log_info("Lambda zond v%s\n", ver.name);

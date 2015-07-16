@@ -1,6 +1,5 @@
 #include "usart.h"
 #include "FreeRTOS.h"
-#include "../string_lib/string_lib.h"
 #include "string.h"
 
 

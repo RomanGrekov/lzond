@@ -10,7 +10,6 @@
 #include <stdlib.h>
 #include "../usart/usart.h"
 #include "../configurator/configurator.h"
-#include "../string_lib/string_lib.h"
 
 void commands_init(void)
 {

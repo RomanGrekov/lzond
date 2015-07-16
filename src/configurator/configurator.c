@@ -11,7 +11,6 @@
 #include "../flash/flash.h"
 #include "../log/log.h"
 #include "../xprintf/xprintf.h"
-#include "../string_lib/string_lib.h"
 #include <stdlib.h>
 //#include <stdio.h>
 
