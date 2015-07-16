@@ -18,7 +18,7 @@
 #if _USE_XFUNC_OUT
 void (*xfunc_out)(unsigned char);	/* Pointer to the output stream */
 static char *outptr;
-void float_to_string_(float f, char r[]);
+long long int float_to_string_(float f, char r[]);
 int n_tu_(int number, int count);
 
 /*----------------------------------------------*/
@@ -181,10 +181,12 @@ void xvprintf (
 		if(d == 'F')
 		{
 			uint8_t chars[16];
+			long long int i;
 			fv = va_arg(arp, double);
-			if (w >= 2) w -= 2;
+			i = float_to_string_(fv, chars);
+			//if (w >= i) w -= i;
+			if (w >= 2) w = w - 2;
 			for(int i=0; i<w; i++)xputc(' ');
-			float_to_string_(fv, chars);
 			xputs(chars);
 
 			/*
@@ -459,7 +461,7 @@ int n_tu_(int number, int count)
 
 
 /***Convert float to string***/
-void float_to_string_(float f, char r[])
+long long int float_to_string_(float f, char r[])
 {
 long long int length, length2, i, number, position, sign;
 float number2;
@@ -517,6 +519,7 @@ else
  number /=10;
 }
 }
+	return i;
 }
 
 

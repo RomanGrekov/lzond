@@ -17,15 +17,33 @@ uint8_t timer1_callback_flag;
 void taskDacCicle( void *pvParameters )
 {
 	struct HalfPeriod hp;
+	xTimerHandle timer1;
+	portBASE_TYPE xStatus;
 
     read_def_params(&my_conf);
-	log_info("Set def level: %f\n", my_conf.v_def);
-	dac_volts(my_conf.v_def);
-	log_info("Start pause: %f\n", my_conf.start_pause);
-	vTaskDelay(my_conf.start_pause);
-    hp = get_half_period(my_conf.start_timeout, 0);
-    if (hp.retcode == 0) log_info("retcode is 0\n");
+    hp.retcode = 1;
+    while (hp.retcode != 0)
+    {
+       log_info("---Stage 1---");
+       log_info("Set def level: %f\n", my_conf.v_def);
+       dac_volts(my_conf.v_def);
+       log_info("Start pause: %f\n", my_conf.start_pause);
+       vTaskDelay(my_conf.start_pause);
+       hp = get_half_period(my_conf.start_timeout, 0);
+    }
 
+    log_info("---Stage 2---");
+	timer1_callback_flag = 0;
+	timer1 = xTimerCreate("timer1", (hp.period * my_conf.k1) / portTICK_RATE_MS, pdFALSE,
+			(void*) 1, timer1_callback);
+	if (timer1 == NULL) log_error("Can't create software timer 1\n");
+    while (timer1_callback_flag == 0) dac_volts(get_adc_volts());
+    //Delete timer
+    xStatus = xTimerDelete(timer1, 10);
+    if (xStatus == pdFAIL) log_error("Can't delete software timer 1\n");
+
+    log_info("---Stage 3---");
+    hp.retcode = 1;
     while(1)
     {
 
@@ -64,8 +82,8 @@ struct HalfPeriod get_half_period(uint32_t timeout, uint8_t need_period){
 	hp.period = xTaskGetTickCount() * portTICK_RATE_MS - xTimeBefore;
 	//Stop timer
 	if (xTimerIsTimerActive(timer1) == pdTRUE) xTimerStop(timer1, 10);
-	log_info("Cur mix: %s\n", get_mix_text(cur_mix));
-	log_info("Cur adc: %f\n", cur_adc_v);
+	log_info("Cur mix: %20s\n", get_mix_text(cur_mix));
+	log_info("Cur adc: %20f\n", cur_adc_v);
 	//If checking for mix type is successful
     if (cur_mix != undefined_mix){
     	//Check if we need to check for mix change
@@ -88,22 +106,25 @@ struct HalfPeriod get_half_period(uint32_t timeout, uint8_t need_period){
             hp.period = xTaskGetTickCount() * portTICK_RATE_MS - xTimeBefore;
             //Stop timer
             if (xTimerIsTimerActive(timer1) == pdTRUE) xTimerStop(timer1, 10);
-            log_info("Cur mix: %s\n", get_mix_text(cur_mix));
-            log_info("Cur adc: %f\n", cur_adc_v);
+            log_info("Cur mix: %20s\n", get_mix_text(cur_mix));
+            log_info("Cur adc: %20f\n", cur_adc_v);
             //If checking for mix type is successful
             if (cur_mix != old_mix){
             	//Set retcode
                 hp.retcode = 0;
-                log_info("Period: %d\n", hp.period);
+                log_info("Period: %20d\n", hp.period);
             }
         }
     	//If checking for mix type is successful and not needed second check
     	else{
             //Set retcode
     		hp.retcode = 0;
-    		log_info("Period: %d\n", hp.period);
+    		log_info("Period: %20d\n", hp.period);
     	}
     }
+    //Delete timer
+    xStatus = xTimerDelete(timer1, 10);
+    if (xStatus == pdFAIL) log_error("Can't delete software timer 1\n");
     //Store current voltage
     hp.cur_adc = cur_adc_v;
 	return hp;

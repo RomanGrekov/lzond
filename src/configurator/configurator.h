@@ -20,6 +20,7 @@ struct configuration
 	float start_timeout;
 	float v_r;
 	float v_l;
+	float k1;
 }; // When add new param, do not forget to add in .c file
 
 typedef struct configuration conf;

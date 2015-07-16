@@ -46,6 +46,7 @@ void store_def_params(void)
 	my_conf.start_timeout = 100000;
 	my_conf.v_r = 0.52;
 	my_conf.v_l = 0.37;
+	my_conf.k1 = 1.5;
 	store_conf(&my_conf);
 
 }
@@ -90,6 +91,10 @@ void store_param(uint8_t *name, float val)
     }
     if (!memcmp(name, "v_l", sizeof("v_l"))){
     	my_conf.v_l = val;
+    	xprintf("OK");
+    }
+    if (!memcmp(name, "k1", sizeof("k1"))){
+    	my_conf.k1 = val;
     	xprintf("OK");
     }
     if (!memcmp(name, "save", sizeof("save"))){
