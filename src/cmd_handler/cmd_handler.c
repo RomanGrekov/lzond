@@ -16,7 +16,7 @@ void commands_init(void)
 {
     xQueueUsartCommands = xQueueCreate(COMMANDS_QUEUE_SIZE, sizeof(parameter));
     if (xQueueUsartCommands == NULL) {
-    	ulog("Can't create Usart commands queue\n", ERROR_LEVEL);
+    	log_error("Can't create Usart commands queue\n");
     }
     xTaskCreate(prvUsart_1_RX_Handler,(signed char*)"USART RX handler",configMINIMAL_STACK_SIZE,
                 NULL, tskIDLE_PRIORITY + 1, &xHandleUsartRX);
@@ -81,7 +81,7 @@ void prvUsart_1_RX_Handler(void *pvParameters) {
 						param.val = atof(value);
 						xStatus = xQueueSend(xQueueUsartCommands, &param, portMAX_DELAY);
 						if (xStatus != pdPASS){
-							ulog("Can't put Commands queue", ERROR_LEVEL);
+							log_error("Can't put Commands queue");
 						}
 						cln_scr();
 						to_video_mem(0, 0, &param.name);

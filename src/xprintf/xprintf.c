@@ -16,9 +16,10 @@
 
 
 #if _USE_XFUNC_OUT
-#include <stdarg.h>
 void (*xfunc_out)(unsigned char);	/* Pointer to the output stream */
 static char *outptr;
+void float_to_string_(float f, char r[]);
+int n_tu_(int number, int count);
 
 /*----------------------------------------------*/
 /* Put a character                              */
@@ -79,6 +80,23 @@ void int_to_char(unsigned long val, char d, char c, int r, int f, int w)
 	if (f & 8) s[i++] = '-';
 	j = i; d = (f & 1) ? '0' : ' ';
 	while (!(f & 2) && j++ < w) xputc(d);
+	do xputc(s[--i]); while(i);
+	while (j++ < w) xputc(' ');
+}
+
+void int_to_char_after(unsigned long val, char d, char c, int r, int f, int w)
+{
+	char s[16];
+	int i = 0, j;
+
+	do {
+		d = (char)(val % r); val /= r;
+		if (d > 9) d += (c == 'x') ? 0x27 : 0x07;
+		s[i++] = d + '0';
+	} while (val && i < sizeof(s));
+	if (f & 8) s[i++] = '-';
+	j = i; d = (f & 1) ? '0' : ' ';
+	//while (!(f & 2) && j++ < w) xputc(d);
 	do xputc(s[--i]); while(i);
 	while (j++ < w) xputc(' ');
 }
@@ -162,6 +180,14 @@ void xvprintf (
 		/* Get an argument and put it in numeral */
 		if(d == 'F')
 		{
+			uint8_t chars[16];
+			fv = va_arg(arp, double);
+			if (w >= 2) w -= 2;
+			for(int i=0; i<w; i++)xputc(' ');
+			float_to_string_(fv, chars);
+			xputs(chars);
+
+			/*
 			fv = va_arg(arp, double);
 			integral = fv;
 			fractional = (fv - integral)*100000 + 1;
@@ -169,8 +195,8 @@ void xvprintf (
 				fractional = fractional/10;
 			int_to_char(integral, d, c, r, f, w);
 			xputc('.');
-			int_to_char(fractional, d, c, r, f, w);
-
+			int_to_char_after(fractional, d, c, r, f, w);
+			*/
 		}
 		else
 		{
@@ -196,6 +222,14 @@ void xprintf (			/* Put a formatted string to the default device */
 	va_start(arp, fmt);
 	xvprintf(fmt, arp);
 	va_end(arp);
+}
+
+void xprintf_for_log (
+	const char*	fmt,	/* Pointer to the format string */
+	va_list arp			/* Pointer to arguments */
+)
+{
+	xvprintf(fmt, arp);
 }
 
 
@@ -413,5 +447,77 @@ int xatoi (			/* 0:Failed, 1:Successful */
 	*res = val;
 	return 1;
 }
+
+int n_tu_(int number, int count)
+{
+ int result=1;
+ while(count-- > 0)
+ result *=number;
+
+ return result;
+ }
+
+
+/***Convert float to string***/
+void float_to_string_(float f, char r[])
+{
+long long int length, length2, i, number, position, sign;
+float number2;
+
+sign=-1;   // -1 == positive number
+if (f <0)
+{
+sign='-';
+f *= -1;
+}
+
+
+number2=f;
+number=f;
+length=0;  // size of decimal part
+length2=0; //  size of tenth
+
+
+/* calculate length2 tenth part*/
+while( (number2 - (float)number) != 0.0 && !((number2 - (float)number) < 0.0) )
+{
+
+number2= f * (n_tu_(10.0,length2+1));
+number=number2;
+
+length2++;
+
+}
+
+/* calculate length decimal part*/
+for(length=(f>= 1) ? 0 : 1; f >= 1; length++)
+ f /= 10;
+
+
+position=length;
+if (length2 > 0) length=length+1+length2;
+number=number2;
+if(sign=='-')
+{
+length++;
+position++;
+}
+
+for(i=length; i >= 0 ; i--)
+{
+if(i== (length))
+ r[i]='\0';
+else if(i==(position))
+ r[i]='.';
+else if(sign=='-' && i==0)
+ r[i]='-';
+else
+{
+ r[i]= (number % 10)+'0';
+ number /=10;
+}
+}
+}
+
 
 #endif /* _USE_XFUNC_IN */

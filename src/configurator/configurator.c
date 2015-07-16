@@ -9,7 +9,8 @@
 #include "configurator.h"
 #include "../cmd_handler/cmd_handler.h"
 #include "../flash/flash.h"
-#include "../usart/usart.h"
+#include "../log/log.h"
+#include "../xprintf/xprintf.h"
 #include "../string_lib/string_lib.h"
 #include <stdlib.h>
 //#include <stdio.h>
@@ -66,40 +67,35 @@ void store_conf(conf *my_conf)
 
 void store_param(uint8_t *name, float val)
 {
-	uint8_t symb[5];
-	ulog_raw("\n\r", DEBUG_LEVEL);
-	ulog_raw(name, DEBUG_LEVEL);
-	ulog_raw("=", DEBUG_LEVEL);
-    float_to_string(val, symb);
-    ulog(symb, DEBUG_LEVEL);
+	xprintf("\n\r%s=%f", name, val);
 
     if (!memcmp(name, "v_def", sizeof("v_def"))){
     	my_conf.v_def = val;
-    	ulog("OK", DEBUG_LEVEL);
+    	xprintf("OK");
     }
     if (!memcmp(name, "v_out", sizeof("v_out"))){
     	my_conf.v_out = val;
-    	ulog("OK", DEBUG_LEVEL);
+    	xprintf("OK");
     }
     if (!memcmp(name, "start_pause", sizeof("start_pause"))){
     	my_conf.start_pause = val;
-    	ulog("OK", DEBUG_LEVEL);
+    	xprintf("OK");
     }
     if (!memcmp(name, "start_timeout", sizeof("start_timeout"))){
     	my_conf.start_timeout = val;
-    	ulog("OK", DEBUG_LEVEL);
+    	xprintf("OK");
     }
     if (!memcmp(name, "v_r", sizeof("v_r"))){
     	my_conf.v_r = val;
-    	ulog("OK", DEBUG_LEVEL);
+    	xprintf("OK");
     }
     if (!memcmp(name, "v_l", sizeof("v_l"))){
     	my_conf.v_l = val;
-    	ulog("OK", DEBUG_LEVEL);
+    	xprintf("OK");
     }
     if (!memcmp(name, "save", sizeof("save"))){
     	store_conf(&my_conf);
-    	ulog("OK", DEBUG_LEVEL);
+    	xprintf("OK");
     }
 
 }
@@ -108,22 +104,18 @@ void store_param(uint8_t *name, float val)
 void ShowDefaultPatams(void)
 {
 	uint8_t symb[sizeof(float)];
-    ulog("Good day Dmitriy Sergeevich!", INFO_LEVEL);
-                    cln_scr();
-                    to_video_mem(0, 0, "Setting vars...");
+    xprintf("Good day Dmitriy Sergeevich!\n");
+
+    cln_scr();
+    to_video_mem(0, 0, "Setting vars...");
+
     read_def_params(&my_conf);
-    ulog("Current parameters:", WARNING_LEVEL);
-    ulog_raw("v_def ", INFO_LEVEL);
-    ulog_float(my_conf.v_def, WARNING_LEVEL);
-    ulog_raw("v_out ", INFO_LEVEL);
-    ulog_float(my_conf.v_out, WARNING_LEVEL);
-    ulog_raw("start_pause ", INFO_LEVEL);
-    ulog_float(my_conf.start_pause, WARNING_LEVEL);
-    ulog_raw("start_timeout ", INFO_LEVEL);
-    ulog_float(my_conf.start_timeout, WARNING_LEVEL);
-    ulog_raw("v_r ", INFO_LEVEL);
-    ulog_float(my_conf.v_r, WARNING_LEVEL);
-    ulog_raw("v_l ", INFO_LEVEL);
-    ulog_float(my_conf.v_l, WARNING_LEVEL);
+    xprintf("Current parameters:\n");
+    xprintf("v_def: %f\n", my_conf.v_def);
+    xprintf("v_out: %f\n", my_conf.v_out);
+    xprintf("start_pause: %f\n", my_conf.start_pause);
+    xprintf("start_timeout: %f\n", my_conf.start_timeout);
+    xprintf("v_r: %f\n", my_conf.v_r);
+    xprintf("v_l: %f\n", my_conf.v_l);
 }
 

@@ -19,12 +19,12 @@ void taskDacCicle( void *pvParameters )
 	struct HalfPeriod hp;
 
     read_def_params(&my_conf);
-	ulog_raw("Set def level: ", INFO_LEVEL); ulog_float(my_conf.v_def, INFO_LEVEL);
+	log_info("Set def level: %f\n", my_conf.v_def);
 	dac_volts(my_conf.v_def);
-	ulog_raw("Start pause: ", INFO_LEVEL); ulog_float(my_conf.start_pause, INFO_LEVEL);
+	log_info("Start pause: %f\n", my_conf.start_pause);
 	vTaskDelay(my_conf.start_pause);
     hp = get_half_period(my_conf.start_timeout, 0);
-    if (hp.retcode == 0)ulog("retcode is 0", INFO_LEVEL);
+    if (hp.retcode == 0) log_info("retcode is 0\n");
 
     while(1)
     {
@@ -41,7 +41,7 @@ struct HalfPeriod get_half_period(uint32_t timeout, uint8_t need_period){
 	uint8_t old_mix;
 	TickType_t xTimeBefore;
 
-	ulog("---Get half period---", INFO_LEVEL);
+	log_info("---Get half period---\n");
 	//Set default retcode to 1
 	hp.retcode = 1;
 	//Reset callback flag
@@ -49,9 +49,9 @@ struct HalfPeriod get_half_period(uint32_t timeout, uint8_t need_period){
 	//Create software timer
 	timer1 = xTimerCreate("timer1", timeout / portTICK_RATE_MS, pdFALSE,
 			(void*) 1, timer1_callback);
-	if (timer1 == NULL) ulog("Can't create software timer 1", ERROR_LEVEL);
+	if (timer1 == NULL) log_error("Can't create software timer 1\n");
 	xStatus = xTimerStart(timer1, 10);
-	if (xStatus == pdFAIL) ulog("Can't start software timer 1", ERROR_LEVEL);
+	if (xStatus == pdFAIL) log_error("Can't start software timer 1\n");
 
 	//Save time stamp before waiting for mix type
 	xTimeBefore = xTaskGetTickCount() * portTICK_RATE_MS;
@@ -64,20 +64,20 @@ struct HalfPeriod get_half_period(uint32_t timeout, uint8_t need_period){
 	hp.period = xTaskGetTickCount() * portTICK_RATE_MS - xTimeBefore;
 	//Stop timer
 	if (xTimerIsTimerActive(timer1) == pdTRUE) xTimerStop(timer1, 10);
-	ulog_raw("Cur mix: ", INFO_LEVEL); ulog(get_mix_text(cur_mix), INFO_LEVEL);
-	ulog_raw("Cur adc: ", INFO_LEVEL); ulog_float(cur_adc_v, INFO_LEVEL);
+	log_info("Cur mix: %s\n", get_mix_text(cur_mix));
+	log_info("Cur adc: %f\n", cur_adc_v);
 	//If checking for mix type is successful
     if (cur_mix != undefined_mix){
     	//Check if we need to check for mix change
     	if (need_period == 1){
-    		ulog("---period is needed---", INFO_LEVEL);
+    		log_info("---period is needed---\n");
     		//Save old mix type
             old_mix = cur_mix;
             //Reset callback flag
             timer1_callback_flag = 0;
             //Reset timer
             xStatus = xTimerReset(timer1, 10);
-            if (xStatus == pdFAIL) ulog("Can't reset software timer 1", ERROR_LEVEL);
+            if (xStatus == pdFAIL) log_error("Can't reset software timer 1\n");
             //Save time stamp before waiting for mix type
             xTimeBefore = xTaskGetTickCount() * portTICK_RATE_MS;
             while (timer1_callback_flag == 0 && cur_mix == old_mix){
@@ -88,20 +88,20 @@ struct HalfPeriod get_half_period(uint32_t timeout, uint8_t need_period){
             hp.period = xTaskGetTickCount() * portTICK_RATE_MS - xTimeBefore;
             //Stop timer
             if (xTimerIsTimerActive(timer1) == pdTRUE) xTimerStop(timer1, 10);
-            ulog_raw("Cur mix: ", INFO_LEVEL); ulog(get_mix_text(cur_mix), INFO_LEVEL);
-            ulog_raw("Cur adc: ", INFO_LEVEL); ulog_float(cur_adc_v, INFO_LEVEL);
+            log_info("Cur mix: %s\n", get_mix_text(cur_mix));
+            log_info("Cur adc: %f\n", cur_adc_v);
             //If checking for mix type is successful
             if (cur_mix != old_mix){
             	//Set retcode
                 hp.retcode = 0;
-                ulog_raw("Period: ", INFO_LEVEL); ulog_int(hp.period, INFO_LEVEL);
+                log_info("Period: %d\n", hp.period);
             }
         }
     	//If checking for mix type is successful and not needed second check
     	else{
             //Set retcode
     		hp.retcode = 0;
-    		ulog_raw("Period: ", INFO_LEVEL); ulog_int(hp.period, INFO_LEVEL);
+    		log_info("Period: %d\n", hp.period);
     	}
     }
     //Store current voltage

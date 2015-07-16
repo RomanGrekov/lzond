@@ -60,7 +60,7 @@ void USART1_IRQHandler(void){
 		a = USART1ReadByte();
 		xStatus = xQueueSendFromISR(xQueueUsart1Rx, &a, xHigherPriorityTaskWoken);
 		if(xStatus != pdTRUE){
-			ulog("Can't write USART RX byte to queue", ERROR_LEVEL);
+			//Do something
 		}
 		if( xHigherPriorityTaskWoken == pdTRUE ){
 			taskYIELD();
@@ -100,37 +100,4 @@ void prvUsart1Transmitter(void *pvParameters) {
 			USART1WriteByte(a);
 		}
 	}
-}
-
-void ulog(uint8_t *data, uint8_t level){
-	ulog_raw(data, level);
-	ulog_raw("\n\r", level);
-}
-
-void ulog_raw(uint8_t *data, uint8_t level){
-    if(level <= DEBUG_LEVEL){
-        USART1QueueSendString(data);
-    }
-}
-
-void ulog_float_raw(float data, uint8_t level){
-	uint8_t chars[16];
-	float_to_string(data, chars);
-	ulog_raw(chars, level);
-}
-
-void ulog_float(float data, uint8_t level){
-	ulog_float_raw(data, level);
-	ulog("", level);
-}
-
-void ulog_int_raw(float data, uint8_t level){
-	uint8_t chars[16];
-	itoa(data, chars, 10);
-	ulog_raw(chars, level);
-}
-
-void ulog_int(float data, uint8_t level){
-	ulog_int_raw(data, level);
-	ulog("", level);
 }

@@ -23,6 +23,7 @@
 #include <stdlib.h>
 #include "globs.h"
 #include "xprintf/xprintf.h"
+#include "log/log.h"
 
 
 void taskStartup(void *pvParameters );
@@ -84,7 +85,7 @@ void Init(void)
 
     xQueueUsart1Rx = xQueueCreate(USART1_RX_QUEUE_SIZE, sizeof(unsigned char));
     if (xQueueUsart1Rx == NULL) {
-        ulog("Can't create Usart RX queue\n", ERROR_LEVEL);
+        log_error("Can't create Usart RX queue\n");
     }
 
 }
@@ -99,17 +100,14 @@ void taskStartup(void *pvParameters )
     if (is_version_inside(&SW_VERSION) == 0){
             store_version(SW_VERSION);
             store_def_params();
-            ulog("First start", DEBUG_LEVEL);
+            log_notice("First start");
     }
-    ulog_raw("Lambds zond v", INFO_LEVEL);
     get_version(&ver);
-    ulog(ver.name, INFO_LEVEL);
+    log_info("Lambda zond v%s\n", ver.name);
 
     commands_init();
     commands_suspend();
 
-    xprintf("Hello world %30d\n", 56);
-    xprintf("Hello world %30f\n", 125.6);
     xTaskCreate(taskDacCicle,(signed char*)"DAC circle",configMINIMAL_STACK_SIZE,
                 NULL, tskIDLE_PRIORITY + 1, NULL);
 

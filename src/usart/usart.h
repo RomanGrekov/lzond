@@ -14,13 +14,6 @@ void prvUsart1Transmitter(void *pvParameters);
 void USART1QueueSendString(uint8_t *data);
 void USART1QueueSendByte(uint8_t data);
 
-enum {
-    ERROR_LEVEL,
-    WARNING_LEVEL,
-    NOTICE_LEVEL,
-    INFO_LEVEL,
-    DEBUG_LEVEL
-};
 
 #define USART1_RX_QUEUE_SIZE 32
 #define USART1_TX_QUEUE_SIZE 32
@@ -29,11 +22,5 @@ xQueueHandle xQueueUsart1Rx;
 xQueueHandle xQueueUsart1Tx;
 xSemaphoreHandle xUsart1TxMutex;
 
-void ulog(uint8_t *data, uint8_t level);
-void ulog_raw(uint8_t *data, uint8_t level);
-void ulog_float_raw(float data, uint8_t level);
-void ulog_float(float data, uint8_t level);
-void ulog_int_raw(float data, uint8_t level);
-void ulog_int(float data, uint8_t level);
 
 #endif
