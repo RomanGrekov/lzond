@@ -12,6 +12,7 @@
 #include "FreeRTOS.h"
 #include "timers.h"
 
+void prvLCDshowparams(void *pvParameters);
 void taskDacCicle( void *pvParameters );
 void timer1_callback(xTimerHandle xTimer);
 

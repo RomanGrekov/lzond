@@ -149,8 +149,8 @@ void ShowDefaultPatams(void)
 	uint8_t symb[sizeof(float)];
     xprintf("Good day Dmitriy Sergeevich!\n");
 
-    cln_scr();
-    to_video_mem(0, 0, "Setting vars...");
+    //cln_scr();
+    //to_video_mem(0, 0, "Setting vars...");
 
     read_def_params(&my_conf);
     xprintf("Current parameters:\n");

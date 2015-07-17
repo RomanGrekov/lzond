@@ -8,8 +8,10 @@
 #include "dac_logic.h"
 #include "../dac/dac.h"
 #include "../configurator/configurator.h"
-#include "../usart/usart.h"
+#include "../log/log.h"
 #include "../adc/adc.h"
+#include "../xprintf/xprintf.h"
+#include "../hd44780/hd44780.h"
 #include "task.h"
 
 enum {
@@ -26,7 +28,9 @@ enum {
 
 uint8_t timer1_callback_flag;
 xTimerHandle timer1;
+uint8_t current_mix;
 void prvDACRepeater( void *pvParameters );
+const uint8_t* get_mix_text_short(uint8_t mix_type);
 
 void taskDacCicle( void *pvParameters )
 {
@@ -41,9 +45,9 @@ void taskDacCicle( void *pvParameters )
     };
 	uint8_t mix_defined = not_defined;
 
-    read_def_params(&my_conf);
-    log_info("Set DAC to default V: %f\n", my_conf.v_def);
-    dac_volts(my_conf.v_def);
+    my_conf.v_out = my_conf.v_def;
+    log_info("Set DAC to default V: %f\n", my_conf.v_out);
+    dac_volts(my_conf.v_out);
     vTaskDelay((int)my_conf.start_pause / portTICK_RATE_MS);
 
     hp.retcode = retcode_timeout;
@@ -90,6 +94,11 @@ void taskDacCicle( void *pvParameters )
     	//if (hp.retcode == retcode_ok) break;
     	log_notice("---Get duty circle - OK---\n");
     	mix_defined = defined;
+    	if (xHandle != NULL)
+    	{
+    		vTaskDelete(xHandle);
+    		xHandle = NULL;
+    	}
 
     	if (t_lean <= my_conf.cut_off){
     		log_notice("---Make correction---\n");
@@ -117,25 +126,41 @@ void taskDacCicle( void *pvParameters )
     	}
     	log_notice("---DAC set v_out: %f---\n", my_conf.v_out);
     	//vTaskSuspend(xHandle);
-    	if (xHandle != NULL)
-    	{
-    		vTaskDelete(xHandle);
-    		xHandle = NULL;
-    	}
     	dac_volts(my_conf.v_out);
     	vTaskDelay((int)my_conf.pause_inc / portTICK_RATE_MS);
     }
 
-    while(1)
-    {
-
-    }
+    while(1);
 }
 
 void prvDACRepeater( void *pvParameters )
 {
-	dac_volts(get_adc_volts());
-	while(1);
+	while(1){
+		my_conf.v_out = get_adc_volts();
+		dac_volts(my_conf.v_out);
+        vTaskDelay(10 / portTICK_RATE_MS);
+	}
+}
+
+void prvLCDshowparams(void *pvParameters)
+{
+	uint8_t chars[16];
+	float v_out_old;
+	uint8_t current_mix_old;
+	portBASE_TYPE xStatus;
+
+	while(1){
+		if (v_out_old != my_conf.v_out || current_mix_old != current_mix){
+			cln_scr();
+			xStatus = to_video_mem(0, 0, "out:"); float_to_string_(my_conf.v_out, chars); chars[4]=0; to_video_mem(4, 0, chars);
+			xStatus = to_video_mem(9, 0, "mix: "); to_video_mem(13, 0, get_mix_text_short(current_mix));
+			if (xStatus == pdFAIL) log_error("Can't put data to video mem\n");
+			v_out_old = my_conf.v_out;
+			current_mix_old = current_mix;
+			vTaskDelay(500 / portTICK_RATE_MS);
+		}
+	}
+
 }
 
 
@@ -163,6 +188,7 @@ struct HalfPeriod get_half_period(uint32_t timeout, uint8_t need_period){
 		cur_adc_v = get_adc_volts();
 		cur_mix = get_cur_mix(cur_adc_v, my_conf.v_r, my_conf.v_l);
 	}
+	current_mix = cur_mix;
 	//Define time period for checking mix type
 	hp.period = xTaskGetTickCount() * portTICK_RATE_MS - xTimeBefore;
 	stop_t1();
@@ -185,6 +211,7 @@ struct HalfPeriod get_half_period(uint32_t timeout, uint8_t need_period){
                 cur_adc_v = get_adc_volts();
                 cur_mix = get_cur_mix(cur_adc_v, my_conf.v_r, my_conf.v_l);
             }
+            current_mix = cur_mix;
             //Define time period for checking mix type
             hp.period = xTaskGetTickCount() * portTICK_RATE_MS - xTimeBefore;
             stop_t1();
@@ -239,6 +266,13 @@ const uint8_t* get_mix_text(uint8_t mix_type){
         default: return "undefined at all";
     };
 	return "none";
+}
+
+const uint8_t* get_mix_text_short(uint8_t mix_type){
+	uint8_t resp[2];
+	resp[0] = get_mix_text(mix_type)[0];
+	resp[1]=0;
+	return resp;
 }
 
 void create_t1(uint32_t ms)

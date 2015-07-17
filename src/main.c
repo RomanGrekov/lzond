@@ -107,7 +107,11 @@ void taskStartup(void *pvParameters )
     commands_init();
     commands_suspend();
 
+    read_def_params(&my_conf);
+	cln_scr();
     xTaskCreate(taskDacCicle,(signed char*)"DAC circle",configMINIMAL_STACK_SIZE,
+                NULL, tskIDLE_PRIORITY + 1, NULL);
+    xTaskCreate(prvLCDshowparams,(signed char*)"LCD show params",configMINIMAL_STACK_SIZE,
                 NULL, tskIDLE_PRIORITY + 1, NULL);
 
     vTaskDelete(NULL);
@@ -131,8 +135,8 @@ void commands_on(void)
 
 void commands_off(void)
 {
-	cln_scr();
-	to_video_mem(0, 0, "Default state");
+	//cln_scr();
+	//to_video_mem(0, 0, "Default state");
 	commands_suspend();
 }
 

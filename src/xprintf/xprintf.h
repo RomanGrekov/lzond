@@ -37,4 +37,6 @@ int xfgets (unsigned char (*func)(void), char* buff, int len);
 int xatoi (char** str, long* res);
 #endif
 
+long long int float_to_string_(float f, char r[]);
+
 #endif
