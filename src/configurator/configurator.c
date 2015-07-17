@@ -47,6 +47,13 @@ void store_def_params(void)
 	my_conf.v_r = 0.52;
 	my_conf.v_l = 0.37;
 	my_conf.k1 = 1.5;
+	my_conf.period_timeout = 10000;
+	my_conf.v_outlim_inc = 0.9;
+	my_conf.v_outlim_dec = 0.05;
+	my_conf.v_out_inc_step = 0.01;
+	my_conf.v_out_dec_step = 0.05;
+	my_conf.pause_inc = 50;
+	my_conf.cut_off = 50;
 	store_conf(&my_conf);
 
 }
@@ -77,6 +84,10 @@ void store_param(uint8_t *name, float val)
     	my_conf.v_out = val;
     	xprintf("OK");
     }
+    if (!memcmp(name, "v_outref", sizeof("v_outref"))){
+    	my_conf.v_outref = val;
+    	xprintf("OK");
+    }
     if (!memcmp(name, "start_pause", sizeof("start_pause"))){
     	my_conf.start_pause = val;
     	xprintf("OK");
@@ -95,6 +106,34 @@ void store_param(uint8_t *name, float val)
     }
     if (!memcmp(name, "k1", sizeof("k1"))){
     	my_conf.k1 = val;
+    	xprintf("OK");
+    }
+    if (!memcmp(name, "period_timeout", sizeof("period_timeout"))){
+    	my_conf.period_timeout = val;
+    	xprintf("OK");
+    }
+    if (!memcmp(name, "v_outlim_inc", sizeof("v_outlim_inc"))){
+    	my_conf.v_outlim_inc = val;
+    	xprintf("OK");
+    }
+    if (!memcmp(name, "v_outlim_dec", sizeof("v_outlim_dec"))){
+    	my_conf.v_outlim_dec = val;
+    	xprintf("OK");
+    }
+    if (!memcmp(name, "v_out_inc_step", sizeof("v_out_inc_step"))){
+    	my_conf.v_out_inc_step = val;
+    	xprintf("OK");
+    }
+    if (!memcmp(name, "v_out_dec_step", sizeof("v_out_dec_step"))){
+    	my_conf.v_out_dec_step = val;
+    	xprintf("OK");
+    }
+    if (!memcmp(name, "pause_inc", sizeof("pause_inc"))){
+    	my_conf.pause_inc = val;
+    	xprintf("OK");
+    }
+    if (!memcmp(name, "cut_off", sizeof("cut_off"))){
+    	my_conf.cut_off = val;
     	xprintf("OK");
     }
     if (!memcmp(name, "save", sizeof("save"))){
@@ -117,9 +156,18 @@ void ShowDefaultPatams(void)
     xprintf("Current parameters:\n");
     xprintf("v_def: %f\n", my_conf.v_def);
     xprintf("v_out: %f\n", my_conf.v_out);
+    xprintf("v_outref: %f\n", my_conf.v_outref);
     xprintf("start_pause: %f\n", my_conf.start_pause);
     xprintf("start_timeout: %f\n", my_conf.start_timeout);
     xprintf("v_r: %f\n", my_conf.v_r);
     xprintf("v_l: %f\n", my_conf.v_l);
+    xprintf("k1: %f\n", my_conf.k1);
+    xprintf("period_timeout: %f\n", my_conf.period_timeout);
+    xprintf("v_outlim_inc: %f\n", my_conf.v_outlim_inc);
+    xprintf("v_outlim_dec: %f\n", my_conf.v_outlim_dec);
+    xprintf("v_out_inc_step: %f\n", my_conf.v_out_inc_step);
+    xprintf("v_out_dec_step: %f\n", my_conf.v_out_dec_step);
+    xprintf("pause_inc: %f\n", my_conf.pause_inc);
+    xprintf("cut_off: %f\n", my_conf.cut_off);
 }
 

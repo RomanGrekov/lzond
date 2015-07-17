@@ -19,12 +19,7 @@ struct HalfPeriod {
 	uint8_t retcode;
 	uint32_t period;
 	float cur_adc;
-};
-
-enum {
-	undefined_mix,
-	lean_mix,
-	rich_mix
+	uint8_t cur_mix;
 };
 
 struct HalfPeriod get_half_period(uint32_t timeout, uint8_t need_period);

@@ -21,6 +21,13 @@ struct configuration
 	float v_r;
 	float v_l;
 	float k1;
+	float period_timeout;
+	float v_outlim_inc;
+	float v_outlim_dec;
+	float v_out_inc_step;
+	float v_out_dec_step;
+	float pause_inc;
+	float cut_off;
 }; // When add new param, do not forget to add in .c file
 
 typedef struct configuration conf;
