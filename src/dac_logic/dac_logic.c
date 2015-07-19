@@ -29,6 +29,7 @@ enum {
 uint8_t timer1_callback_flag;
 xTimerHandle timer1;
 uint8_t current_mix;
+float v_out;
 void prvDACRepeater( void *pvParameters );
 const uint8_t* get_mix_text_short(uint8_t mix_type);
 
@@ -45,9 +46,9 @@ void taskDacCicle( void *pvParameters )
     };
 	uint8_t mix_defined = not_defined;
 
-    my_conf.v_out = my_conf.v_def;
-    log_info("Set DAC to default V: %f\n", my_conf.v_out);
-    dac_volts(my_conf.v_out);
+    v_out = my_conf.v_def;
+    log_info("Set DAC to default V: %f\n", v_out);
+    dac_volts(v_out);
     vTaskDelay((int)my_conf.start_pause / portTICK_RATE_MS);
 
     hp.retcode = retcode_timeout;
@@ -103,7 +104,7 @@ void taskDacCicle( void *pvParameters )
     	if (t_lean <= my_conf.cut_off){
     		log_notice("---Make correction---\n");
     		t_period = t_lean + t_rich;
-    		t_rel = t_rich / t_period;
+    		t_rel = (float)t_rich / (float)t_period;
     		mix_connection = 0.7 * 2.0 * t_rel;
     		log_info("t_lean: %d\n", t_lean);
     		log_info("t_rich: %d\n", t_rich);
@@ -112,21 +113,21 @@ void taskDacCicle( void *pvParameters )
     		log_info("mix_connection: %f\n", mix_connection);
     		if (mix_connection > my_conf.v_outref)
     		{
-    			if (my_conf.v_out < my_conf.v_outlim_inc) my_conf.v_out = my_conf.v_out + my_conf.v_out_inc_step;
+    			if (v_out < my_conf.v_outlim_inc) v_out = v_out + my_conf.v_out_inc_step;
     		}
     		if (mix_connection <= my_conf.v_outref)
     		{
-    			if (my_conf.v_out > my_conf.v_outlim_dec) my_conf.v_out = my_conf.v_out - my_conf.v_out_dec_step;
+    			if (v_out > my_conf.v_outlim_dec) v_out = v_out - my_conf.v_out_dec_step;
     		}
     	}
     	else
     	{
     		log_notice("---Cut off mode---\n");
-    		my_conf.v_out = my_conf.v_outlim_dec;
+    		v_out = my_conf.v_outlim_dec;
     	}
-    	log_notice("---DAC set v_out: %f---\n", my_conf.v_out);
+    	log_notice("---DAC set v_out: %f---\n", v_out);
     	//vTaskSuspend(xHandle);
-    	dac_volts(my_conf.v_out);
+    	dac_volts(v_out);
     	vTaskDelay((int)my_conf.pause_inc / portTICK_RATE_MS);
     }
 
@@ -136,9 +137,9 @@ void taskDacCicle( void *pvParameters )
 void prvDACRepeater( void *pvParameters )
 {
 	while(1){
-		my_conf.v_out = get_adc_volts();
-		dac_volts(my_conf.v_out);
-        vTaskDelay(10 / portTICK_RATE_MS);
+		v_out = get_adc_volts();
+		dac_volts(v_out);
+        vTaskDelay(10 / portTICK_RATE_MS);//              Delay!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	}
 }
 
@@ -150,12 +151,12 @@ void prvLCDshowparams(void *pvParameters)
 	portBASE_TYPE xStatus;
 
 	while(1){
-		if (v_out_old != my_conf.v_out || current_mix_old != current_mix){
+		if (v_out_old != v_out || current_mix_old != current_mix){
 			cln_scr();
-			xStatus = to_video_mem(0, 0, "out:"); float_to_string_(my_conf.v_out, chars); chars[4]=0; to_video_mem(4, 0, chars);
+			xStatus = to_video_mem(0, 0, "out:"); float_to_string_(v_out, chars); chars[4]=0; to_video_mem(4, 0, chars);
 			xStatus = to_video_mem(9, 0, "mix: "); to_video_mem(13, 0, get_mix_text_short(current_mix));
 			if (xStatus == pdFAIL) log_error("Can't put data to video mem\n");
-			v_out_old = my_conf.v_out;
+			v_out_old = v_out;
 			current_mix_old = current_mix;
 			vTaskDelay(500 / portTICK_RATE_MS);
 		}
@@ -171,7 +172,7 @@ struct HalfPeriod get_half_period(uint32_t timeout, uint8_t need_period){
 	float cur_adc_v;
 	uint8_t cur_mix = undefined_mix;
 	uint8_t old_mix;
-	TickType_t xTimeBefore;
+	TickType_t xTimeBefore, xTimeAfter;
 
 	log_debug("------Get half period------\n");
 	//Set default retcode to 1
@@ -182,15 +183,16 @@ struct HalfPeriod get_half_period(uint32_t timeout, uint8_t need_period){
 	create_t1(timeout);
 	start_t1();
 	//Save time stamp before waiting for mix type
-	xTimeBefore = xTaskGetTickCount() * portTICK_RATE_MS;
+	xTimeBefore = xTaskGetTickCount();
 	//Start checking for mix type
 	while (timer1_callback_flag == 0 && cur_mix == undefined_mix){
 		cur_adc_v = get_adc_volts();
 		cur_mix = get_cur_mix(cur_adc_v, my_conf.v_r, my_conf.v_l);
 	}
 	current_mix = cur_mix;
+	xTimeAfter = xTaskGetTickCount();
 	//Define time period for checking mix type
-	hp.period = xTaskGetTickCount() * portTICK_RATE_MS - xTimeBefore;
+	hp.period = ((xTimeAfter - xTimeBefore) * portTICK_RATE_MS);
 	stop_t1();
 	log_debug("        Cur mix: %20s\n", get_mix_text(cur_mix));
 	log_debug("        Cur adc: %20f\n", cur_adc_v);
@@ -206,14 +208,15 @@ struct HalfPeriod get_half_period(uint32_t timeout, uint8_t need_period){
             //Reset timer
             reset_t1();
             //Save time stamp before waiting for mix type
-            xTimeBefore = xTaskGetTickCount() * portTICK_RATE_MS;
+            xTimeBefore = xTaskGetTickCount();
             while (timer1_callback_flag == 0 && cur_mix == old_mix){
                 cur_adc_v = get_adc_volts();
                 cur_mix = get_cur_mix(cur_adc_v, my_conf.v_r, my_conf.v_l);
             }
             current_mix = cur_mix;
+            xTimeAfter = xTaskGetTickCount();
             //Define time period for checking mix type
-            hp.period = xTaskGetTickCount() * portTICK_RATE_MS - xTimeBefore;
+            hp.period = ((xTimeAfter - xTimeBefore) * portTICK_RATE_MS);
             stop_t1();
             log_debug("        Cur mix: %20s\n", get_mix_text(cur_mix));
             log_debug("        Cur adc: %20f\n", cur_adc_v);

@@ -14,7 +14,6 @@ struct configuration
 {
 	float v_def;
 	float v_outref;
-	float v_out;
 	float test;
 	float start_pause;
 	float start_timeout;

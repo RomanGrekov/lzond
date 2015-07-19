@@ -39,7 +39,6 @@ void store_def_params(void)
 {
 	conf my_conf;
 	my_conf.v_def = 0.45;
-	my_conf.v_out = 0.7;
 	my_conf.v_outref = 0.7;
 	my_conf.test = 1035;
 	my_conf.start_pause = 5000;
@@ -53,7 +52,7 @@ void store_def_params(void)
 	my_conf.v_out_inc_step = 0.01;
 	my_conf.v_out_dec_step = 0.05;
 	my_conf.pause_inc = 50;
-	my_conf.cut_off = 50;
+	my_conf.cut_off = 1000;
 	store_conf(&my_conf);
 
 }
@@ -78,10 +77,6 @@ void store_param(uint8_t *name, float val)
 
     if (!memcmp(name, "v_def", sizeof("v_def"))){
     	my_conf.v_def = val;
-    	xprintf("OK");
-    }
-    if (!memcmp(name, "v_out", sizeof("v_out"))){
-    	my_conf.v_out = val;
     	xprintf("OK");
     }
     if (!memcmp(name, "v_outref", sizeof("v_outref"))){
@@ -155,7 +150,6 @@ void ShowDefaultPatams(void)
     read_def_params(&my_conf);
     xprintf("Current parameters:\n");
     xprintf("v_def: %f\n", my_conf.v_def);
-    xprintf("v_out: %f\n", my_conf.v_out);
     xprintf("v_outref: %f\n", my_conf.v_outref);
     xprintf("start_pause: %f\n", my_conf.start_pause);
     xprintf("start_timeout: %f\n", my_conf.start_timeout);
