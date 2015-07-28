@@ -52,7 +52,7 @@ void store_def_params(void)
 	my_conf.v_out_inc_step = 0.01;
 	my_conf.v_out_dec_step = 0.05;
 	my_conf.pause_inc = 50;
-	my_conf.cut_off = 1000;
+	my_conf.cut_off = 2000;
 	store_conf(&my_conf);
 
 }
