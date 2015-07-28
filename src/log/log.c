@@ -2,10 +2,9 @@
 #include <stdarg.h>
 #include "../xprintf/xprintf.h"
 
-
-void log_debug (			/* Put a formatted string to the default device */
-	const char*	fmt,	/* Pointer to the format string */
-	...					/* Optional arguments */
+void log_debug (	    //Put a formatted string to the default device
+	const char*	fmt,	// Pointer to the format string
+	...					// Optional arguments
 )
 {
     va_list arp;

@@ -29,7 +29,7 @@ enum {
 uint8_t timer1_callback_flag;
 xTimerHandle timer1;
 uint8_t current_mix;
-float v_out;
+float v_out, v_in;
 void prvDACRepeater( void *pvParameters );
 const uint8_t* get_mix_text_short(uint8_t mix_type);
 
@@ -138,6 +138,7 @@ void prvDACRepeater( void *pvParameters )
 {
 	while(1){
 		v_out = get_adc_volts();
+		v_in = v_out;
 		dac_volts(v_out);
         vTaskDelay(10 / portTICK_RATE_MS);//              Delay!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	}
@@ -146,18 +147,20 @@ void prvDACRepeater( void *pvParameters )
 void prvLCDshowparams(void *pvParameters)
 {
 	uint8_t chars[16];
-	float v_out_old;
+	float v_out_old, v_in_old;
 	uint8_t current_mix_old;
 	portBASE_TYPE xStatus;
 
 	while(1){
-		if (v_out_old != v_out || current_mix_old != current_mix){
+		if (v_out_old != v_out || current_mix_old != current_mix || v_in_old != v_in){
 			cln_scr();
 			xStatus = to_video_mem(0, 0, "out:"); float_to_string_(v_out, chars); chars[4]=0; to_video_mem(4, 0, chars);
 			xStatus = to_video_mem(9, 0, "mix: "); to_video_mem(13, 0, get_mix_text_short(current_mix));
+			xStatus = to_video_mem(0, 1, "in:"); float_to_string_(v_in, chars); chars[4]=0; to_video_mem(3, 1, chars);
 			if (xStatus == pdFAIL) log_error("Can't put data to video mem\n");
 			v_out_old = v_out;
 			current_mix_old = current_mix;
+			v_in_old = v_in;
 			vTaskDelay(500 / portTICK_RATE_MS);
 		}
 	}
@@ -187,6 +190,7 @@ struct HalfPeriod get_half_period(uint32_t timeout, uint8_t need_period){
 	//Start checking for mix type
 	while (timer1_callback_flag == 0 && cur_mix == undefined_mix){
 		cur_adc_v = get_adc_volts();
+		v_in = cur_adc_v;
 		cur_mix = get_cur_mix(cur_adc_v, my_conf.v_r, my_conf.v_l);
 	}
 	current_mix = cur_mix;
@@ -211,6 +215,7 @@ struct HalfPeriod get_half_period(uint32_t timeout, uint8_t need_period){
             xTimeBefore = xTaskGetTickCount();
             while (timer1_callback_flag == 0 && cur_mix == old_mix){
                 cur_adc_v = get_adc_volts();
+                v_in = cur_adc_v;
                 cur_mix = get_cur_mix(cur_adc_v, my_conf.v_r, my_conf.v_l);
             }
             current_mix = cur_mix;
@@ -254,7 +259,7 @@ uint8_t get_cur_mix(float cur_adc_v, float v_r, float v_l){
 		return rich_mix;
 	}
 	else{
-		if (cur_adc_v >= v_l){
+		if (cur_adc_v <= v_l){
 			return lean_mix;
 		}
 	}

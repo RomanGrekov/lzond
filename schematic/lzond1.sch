@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1.27" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.254" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
@@ -17830,7 +17830,7 @@ Source: www.kingbright.com</description>
 <instance part="SV2" gate="1" x="78.74" y="38.1"/>
 <instance part="S1" gate="1" x="66.04" y="80.01" rot="R270"/>
 <instance part="U$2" gate="G$1" x="35.56" y="-8.89"/>
-<instance part="C1" gate="G$1" x="-7.62" y="-12.7"/>
+<instance part="C1" gate="G$1" x="-5.08" y="-12.7"/>
 <instance part="C2" gate="G$1" x="69.85" y="-15.24"/>
 <instance part="C3" gate="G$1" x="69.85" y="-3.81"/>
 <instance part="SV3" gate="1" x="-11.43" y="38.1"/>
@@ -17853,7 +17853,7 @@ Source: www.kingbright.com</description>
 <wire x1="30.48" y1="-7.62" x2="30.48" y2="-11.43" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="VDD"/>
 <pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="-7.62" y1="-10.16" x2="-1.27" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="-10.16" x2="-1.27" y2="-10.16" width="0.1524" layer="91"/>
 <wire x1="-1.27" y1="-10.16" x2="-1.27" y2="-11.43" width="0.1524" layer="91"/>
 <wire x1="-1.27" y1="-11.43" x2="8.89" y2="-11.43" width="0.1524" layer="91"/>
 <wire x1="8.89" y1="-11.43" x2="16.51" y2="-11.43" width="0.1524" layer="91"/>
@@ -18052,13 +18052,12 @@ Source: www.kingbright.com</description>
 <wire x1="-20.32" y1="1.27" x2="-12.7" y2="1.27" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="1.27" x2="-12.7" y2="-17.78" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="GND"/>
-<wire x1="16.51" y1="-13.97" x2="16.51" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="10.16" y1="-16.51" x2="16.51" y2="-16.51" width="0.1524" layer="91"/>
-<wire x1="16.51" y1="-16.51" x2="16.51" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="-19.05" x2="16.51" y2="-19.05" width="0.1524" layer="91"/>
+<wire x1="16.51" y1="-19.05" x2="16.51" y2="-15.24" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="2"/>
-<wire x1="-7.62" y1="-17.78" x2="5.08" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-5.08" y1="-17.78" x2="5.08" y2="-17.78" width="0.1524" layer="91"/>
 <wire x1="5.08" y1="-17.78" x2="10.16" y2="-17.78" width="0.1524" layer="91"/>
-<wire x1="10.16" y1="-17.78" x2="10.16" y2="-16.51" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="-17.78" x2="15.24" y2="-19.05" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="2"/>
 <wire x1="69.85" y1="-8.89" x2="76.2" y2="-8.89" width="0.1524" layer="91"/>
 <wire x1="76.2" y1="-8.89" x2="76.2" y2="-20.32" width="0.1524" layer="91"/>
@@ -18067,7 +18066,7 @@ Source: www.kingbright.com</description>
 <wire x1="69.85" y1="-20.32" x2="64.77" y2="-20.32" width="0.1524" layer="91"/>
 <wire x1="64.77" y1="-20.32" x2="64.77" y2="-25.4" width="0.1524" layer="91"/>
 <wire x1="64.77" y1="-25.4" x2="16.51" y2="-25.4" width="0.1524" layer="91"/>
-<wire x1="16.51" y1="-25.4" x2="16.51" y2="-16.51" width="0.1524" layer="91"/>
+<wire x1="16.51" y1="-25.4" x2="16.51" y2="-19.05" width="0.1524" layer="91"/>
 <wire x1="5.08" y1="-17.78" x2="5.08" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="SV3" gate="1" pin="20"/>
 <wire x1="-3.81" y1="63.5" x2="31.75" y2="63.5" width="0.1524" layer="91"/>
@@ -18098,7 +18097,7 @@ Source: www.kingbright.com</description>
 <wire x1="139.7" y1="7.62" x2="139.7" y2="19.05" width="0.1524" layer="91"/>
 <pinref part="SV5" gate="1" pin="18"/>
 <wire x1="139.7" y1="19.05" x2="140.97" y2="19.05" width="0.1524" layer="91"/>
-<wire x1="-12.7" y1="-17.78" x2="-7.62" y2="-17.78" width="0.1524" layer="91"/>
+<wire x1="-12.7" y1="-17.78" x2="-5.08" y2="-17.78" width="0.1524" layer="91"/>
 <pinref part="LED1" gate="G$1" pin="C"/>
 <wire x1="101.6" y1="15.24" x2="101.6" y2="7.62" width="0.1524" layer="91"/>
 </segment>
