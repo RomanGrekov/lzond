@@ -16,6 +16,18 @@
 #include "FreeRTOS.h"
 #include "timers.h"
 
+static struct HalfPeriod get_half_period(uint32_t timeout);
+void get_period(uint32_t timeout);
+static uint8_t get_cur_mix(float cur_adc_v, float v_r, float v_l);
+static const uint8_t* get_mix_text(uint8_t mix_type);
+static void create_t1(uint32_t ms);
+static void start_t1(void);
+static void stop_t1(void);
+static void delete_t1(void);
+void timer1_callback(xTimerHandle xTimer);
+void task_adc_repeater( void *pvParameters );
+void task_mix_correction( void *pvParameters );
+
 const enum {
 	retcode_ok,
 	retcode_timeout,
@@ -38,25 +50,15 @@ static struct Period {
 	uint32_t t_r;
 };
 
-struct HalfPeriod get_half_period(uint32_t timeout);
-struct Period get_period(uint32_t timeout);
-uint8_t get_cur_mix(float cur_adc_v, float v_r, float v_l);
-const uint8_t* get_mix_text(uint8_t mix_type);
-void timer1_callback(xTimerHandle xTimer);
-
 uint8_t timer1_callback_flag;
 xTimerHandle timer1;
 uint8_t current_mix;
 static struct Period p;
 float v_out, v_in;
-void prvDACRepeater( void *pvParameters );
-const uint8_t* get_mix_text_short(uint8_t mix_type);
-void taskMixCorrenction( void *pvParameters );
 
 void taskDacCicle( void *pvParameters )
 {
 	struct HalfPeriod hp;
-	xTimerHandle timer2;
 	TaskHandle_t dac_repeater_h = NULL;
 	TaskHandle_t mix_corrector_h = NULL;
     enum {
@@ -82,7 +84,7 @@ void taskDacCicle( void *pvParameters )
     		log_notice("---Start repeat ADC input to DAC---\n");
     		if( dac_repeater_h == NULL )
     		{
-    			xTaskCreate(prvDACRepeater,(signed char*)"DAC repeater",configMINIMAL_STACK_SIZE,
+    			xTaskCreate(task_adc_repeater,(signed char*)"DAC repeater",configMINIMAL_STACK_SIZE,
     			            NULL, tskIDLE_PRIORITY + 1, &dac_repeater_h);
     			vTaskDelay((int)(hp.period * my_conf.k1));
     		}
@@ -90,18 +92,19 @@ void taskDacCicle( void *pvParameters )
     	}
 
     	log_notice("---Get duty circle---\n");
-    	p = get_period(my_conf.period_timeout);
-    	log_notice("---Get duty circle - OK---\n");
+    	get_period(my_conf.period_timeout);
 
     	mix_defined = defined;
     	if (dac_repeater_h != NULL)
     	{
+    		log_notice("---Stop DAC repeating---\n");
     		vTaskDelete(dac_repeater_h);
     		dac_repeater_h = NULL;
     	}
 
     	if (mix_corrector_h == NULL){
-    		xTaskCreate(taskMixCorrenction,(signed char*)"MIX corrector",configMINIMAL_STACK_SIZE,
+    		log_notice("---Start mix correction task---\n");
+    		xTaskCreate(task_mix_correction,(signed char*)"MIX corrector",configMINIMAL_STACK_SIZE,
     	            	NULL, tskIDLE_PRIORITY + 1, &mix_corrector_h);
     	}
 
@@ -109,7 +112,7 @@ void taskDacCicle( void *pvParameters )
 }
 
 
-void taskMixCorrenction( void *pvParameters )
+void task_mix_correction( void *pvParameters )
 {
 	uint32_t t_period;
 	float t_rel, mix_connection;
@@ -144,13 +147,12 @@ void taskMixCorrenction( void *pvParameters )
 	}
 }
 
-void prvDACRepeater( void *pvParameters )
+void task_adc_repeater( void *pvParameters )
 {
 	while(1){
 		v_out = get_adc_volts();
 		v_in = v_out;
 		dac_volts(v_out);
-        //vTaskDelay(10 / portTICK_RATE_MS);//              Delay!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	}
 }
 
@@ -164,9 +166,9 @@ void prvLCDshowparams(void *pvParameters)
 	while(1){
 		if (v_out_old != v_out || current_mix_old != current_mix || v_in_old != v_in){
 			cln_scr();
-			xStatus = to_video_mem(0, 0, "out:"); float_to_string_(v_out, chars); chars[4]=0; to_video_mem(4, 0, chars);
-			xStatus = to_video_mem(9, 0, "mix: "); to_video_mem(13, 0, get_mix_text_short(current_mix));
-			xStatus = to_video_mem(0, 1, "in:"); float_to_string_(v_in, chars); chars[4]=0; to_video_mem(3, 1, chars);
+			xStatus = to_video_mem(0, 0, "in:"); float_to_string_(v_in, chars); chars[4]=0; to_video_mem(3, 0, chars);
+			xStatus = to_video_mem(8, 0, "out:"); float_to_string_(v_out, chars); chars[4]=0; to_video_mem(12, 0, chars);
+			xStatus = to_video_mem(0, 1, "mix:"); to_video_mem(5, 1, get_mix_text(current_mix));
 			if (xStatus == pdFAIL) log_error("Can't put data to video mem\n");
 			v_out_old = v_out;
 			current_mix_old = current_mix;
@@ -214,8 +216,7 @@ struct HalfPeriod get_half_period(uint32_t timeout){
 	return hp;
 }
 
-struct Period get_period(uint32_t timeout){
-	struct Period p;
+void get_period(uint32_t timeout){
 	struct HalfPeriod hp;
 	float cur_adc_v;
 	uint8_t old_mix;
@@ -275,7 +276,7 @@ struct Period get_period(uint32_t timeout){
         if (current_mix == lean_mix) p.t_l = (t3 - t2) * portTICK_RATE_MS;
         if (current_mix == rich_mix) p.t_r = (t3 - t2) * portTICK_RATE_MS;
 
-        return p;
+        break;
 	}
 }
 
@@ -283,7 +284,7 @@ void timer1_callback(xTimerHandle xTimer){
 	timer1_callback_flag = 1;
 }
 
-uint8_t get_cur_mix(float cur_adc_v, float v_r, float v_l){
+static uint8_t get_cur_mix(float cur_adc_v, float v_r, float v_l){
 	if (cur_adc_v >= v_r){
 		return rich_mix;
 	}
@@ -305,14 +306,7 @@ const uint8_t* get_mix_text(uint8_t mix_type){
 	return "none";
 }
 
-const uint8_t* get_mix_text_short(uint8_t mix_type){
-	uint8_t resp[2];
-	resp[0] = get_mix_text(mix_type)[0];
-	resp[1]=0;
-	return resp;
-}
-
-void create_t1(uint32_t ms)
+static void create_t1(uint32_t ms)
 {
 	if (ms <= 0) ms = 1;
 	timer1_callback_flag = 0;
@@ -321,7 +315,7 @@ void create_t1(uint32_t ms)
 	if (timer1 == NULL) log_error("Can't create software timer 1\n");
 }
 
-void start_t1(void)
+static void start_t1(void)
 {
 	timer1_callback_flag = 0;
 	portBASE_TYPE xStatus;
@@ -329,7 +323,7 @@ void start_t1(void)
 	if (xStatus == pdFAIL) log_error("Can't start software timer 1\n");
 }
 
-void stop_t1(void)
+static void stop_t1(void)
 {
 	portBASE_TYPE xStatus;
 	if (xTimerIsTimerActive(timer1) == pdTRUE){
@@ -338,15 +332,7 @@ void stop_t1(void)
 	}
 }
 
-void reset_t1(void)
-{
-	timer1_callback_flag = 0;
-	portBASE_TYPE xStatus;
-    xStatus = xTimerReset(timer1, 10);
-    if (xStatus == pdFAIL) log_error("Can't reset software timer 1\n");
-}
-
-void delete_t1(void)
+static void delete_t1(void)
 {
 	portBASE_TYPE xStatus;
 	if (xTimerIsTimerActive(timer1) == pdTRUE){

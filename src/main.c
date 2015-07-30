@@ -116,14 +116,14 @@ void taskStartup(void *pvParameters )
 
 void commands_on(void)
 {
+	log_disable();
     commands_resume();
     ShowDefaultPatams();
 }
 
 void commands_off(void)
 {
-	//cln_scr();
-	//to_video_mem(0, 0, "Default state");
+	log_enable();
 	commands_suspend();
 }
 

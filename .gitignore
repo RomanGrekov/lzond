@@ -4,4 +4,6 @@ Debug
 .project
 *.b#*
 *.s#*
+*.pyc
+.idea
 

@@ -23,5 +23,7 @@ void log_info (const char* fmt, ...);
 void log_notice (const char* fmt, ...);
 void log_warning (const char* fmt, ...);
 void log_error (const char* fmt, ...);
+void log_enable(void);
+void log_disable(void);
 
 #endif /* LOG_H_ */

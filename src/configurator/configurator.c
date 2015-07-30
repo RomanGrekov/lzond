@@ -12,7 +12,6 @@
 #include "../log/log.h"
 #include "../xprintf/xprintf.h"
 #include <stdlib.h>
-//#include <stdio.h>
 
 uint8_t is_version_inside(uint8_t *version){
 	sw_version ver;
@@ -73,67 +72,67 @@ void store_conf(conf *my_conf)
 
 void store_param(uint8_t *name, float val)
 {
-	xprintf("\n\r%s=%f", name, val);
+	xprintf("\n\r%s=%f\n", name, val);
 
     if (!memcmp(name, "v_def", sizeof("v_def"))){
     	my_conf.v_def = val;
-    	xprintf("OK");
+    	xprintf("OK\n");
     }
     if (!memcmp(name, "v_outref", sizeof("v_outref"))){
     	my_conf.v_outref = val;
-    	xprintf("OK");
+    	xprintf("OK\n");
     }
     if (!memcmp(name, "start_pause", sizeof("start_pause"))){
     	my_conf.start_pause = val;
-    	xprintf("OK");
+    	xprintf("OK\n");
     }
     if (!memcmp(name, "start_timeout", sizeof("start_timeout"))){
     	my_conf.start_timeout = val;
-    	xprintf("OK");
+    	xprintf("OK\n");
     }
     if (!memcmp(name, "v_r", sizeof("v_r"))){
     	my_conf.v_r = val;
-    	xprintf("OK");
+    	xprintf("OK\n");
     }
     if (!memcmp(name, "v_l", sizeof("v_l"))){
     	my_conf.v_l = val;
-    	xprintf("OK");
+    	xprintf("OK\n");
     }
     if (!memcmp(name, "k1", sizeof("k1"))){
     	my_conf.k1 = val;
-    	xprintf("OK");
+    	xprintf("OK\n");
     }
     if (!memcmp(name, "period_timeout", sizeof("period_timeout"))){
     	my_conf.period_timeout = val;
-    	xprintf("OK");
+    	xprintf("OK\n");
     }
     if (!memcmp(name, "v_outlim_inc", sizeof("v_outlim_inc"))){
     	my_conf.v_outlim_inc = val;
-    	xprintf("OK");
+    	xprintf("OK\n");
     }
     if (!memcmp(name, "v_outlim_dec", sizeof("v_outlim_dec"))){
     	my_conf.v_outlim_dec = val;
-    	xprintf("OK");
+    	xprintf("OK\n");
     }
     if (!memcmp(name, "v_out_inc_step", sizeof("v_out_inc_step"))){
     	my_conf.v_out_inc_step = val;
-    	xprintf("OK");
+    	xprintf("OK\n");
     }
     if (!memcmp(name, "v_out_dec_step", sizeof("v_out_dec_step"))){
     	my_conf.v_out_dec_step = val;
-    	xprintf("OK");
+    	xprintf("OK\n");
     }
     if (!memcmp(name, "pause_inc", sizeof("pause_inc"))){
     	my_conf.pause_inc = val;
-    	xprintf("OK");
+    	xprintf("OK\n");
     }
     if (!memcmp(name, "cut_off", sizeof("cut_off"))){
     	my_conf.cut_off = val;
-    	xprintf("OK");
+    	xprintf("OK\n");
     }
     if (!memcmp(name, "save", sizeof("save"))){
     	store_conf(&my_conf);
-    	xprintf("OK");
+    	xprintf("OK\n");
     }
 
 }
@@ -142,7 +141,7 @@ void store_param(uint8_t *name, float val)
 void ShowDefaultPatams(void)
 {
 	uint8_t symb[sizeof(float)];
-    xprintf("Good day Dmitriy Sergeevich!\n");
+    xprintf("\nGood day Dmitriy Sergeevich!\n");
 
     //cln_scr();
     //to_video_mem(0, 0, "Setting vars...");
