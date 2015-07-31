@@ -26,7 +26,15 @@ struct configuration
 	float v_out_inc_step;
 	float v_out_dec_step;
 	float pause_inc;
+	float pause_dec;
+	float pause_mid;
 	float cut_off;
+	float v_rm1;
+	float v_rm2;
+	float q_ref;
+	float q_ref1;
+	float q_ref2;
+	float q_ref3;
 }; // When add new param, do not forget to add in .c file
 
 typedef struct configuration conf;

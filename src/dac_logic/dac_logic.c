@@ -40,6 +40,16 @@ const enum {
 	rich_mix
 };
 
+const enum {
+	ref_out,
+	in_out,
+	cat_off,
+	inc,
+	dec,
+	mid,
+	nop
+};
+
 static struct HalfPeriod {
 	uint8_t retcode;
 	uint32_t period;
@@ -109,6 +119,57 @@ void taskDacCicle( void *pvParameters )
     	}
 
     }
+}
+
+void dac_handler(void *pvParameters)
+{
+	while(1){
+        v_in = get_adc_volts();
+
+        if (v_rm == 1) v_max = my_conf.v_rm1;
+        if (v_rm == 2) v_max = my_conf.v_rm2;
+
+        switch (cm){
+        case ref_out:
+                v_out = my_conf.v_def;
+                dac_volts(v_out);
+                break;
+        case in_out:
+                if (v_in <= my_conf.v_outlim_inc) v_out = v_in;
+                else v_out = my_conf.v_outlim_inc;
+                dac_volts(v_out);
+                break;
+        case inc:
+                if (v_out <= (my_conf.v_outlim_inc - my_conf.v_out_inc_step)) v_out += my_conf.v_out_inc_step;
+                dac_volts(v_out);
+                vTaskDelay(my_conf.pause_inc / portTICK_RATE_MS);
+                break;
+        case dec:
+                if (v_out >= (my_conf.v_outlim_dec + my_conf.v_out_dec_step)) v_out -= my_conf.v_out_dec_step;
+                dac_volts(v_out);
+                vTaskDelay(my_conf.pause_dec / portTICK_RATE_MS);
+                break;
+        case mid:
+                if (v_out > my_conf.v_def) v_out -= my_conf.v_out_dec_step;
+                if (v_out <= my_conf.v_def) v_out += my_conf.v_out_inc_step;
+                vTaskDelay(my_conf.pause_mid / portTICK_RATE_MS);
+                break;
+        case nop:
+                break;
+        }
+	}
+}
+
+void calc_q(void)
+{
+	if ((check_p1() != 0 && check_p2() != 0) || (check_p1() == 0 && check_p2() == 0)) q_ref = my_conf.q_ref1;
+	if (check_p1() == 0 && check_p2() != 0) q_ref = my_conf.q_ref2;
+	if (check_p1() != 0 && check_p2() == 0) q_ref = my_conf.q_ref3;
+
+	q = (t_r/((t_r + t_l)/100))/100;
+
+	if (q >= my_conf.q_ref) cm = inc;
+	else cm = dec;
 }
 
 
