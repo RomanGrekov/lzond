@@ -10,6 +10,7 @@
 
 #include "stm32f10x.h"
 
+#define TIMER_STEP 10
 void taskDacCicle( void *pvParameters );
 void prvLCDshowparams(void *pvParameters);
 

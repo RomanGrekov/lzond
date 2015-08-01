@@ -11,6 +11,15 @@
 #include "../usart/usart.h"
 #include "../configurator/configurator.h"
 
+static TaskHandle_t xHandleUsartRX;
+static TaskHandle_t xHandleCommands;
+static struct command_parameter
+{
+	uint8_t name[COMMAND_NAME_SIZE];
+	float val;
+};
+typedef struct command_parameter parameter;
+
 void commands_init(void)
 {
     xQueueUsartCommands = xQueueCreate(COMMANDS_QUEUE_SIZE, sizeof(parameter));

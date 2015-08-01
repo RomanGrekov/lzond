@@ -16,23 +16,15 @@
 #include "FreeRTOS.h"
 #include "timers.h"
 
-static struct HalfPeriod get_half_period(uint32_t timeout);
-void get_period(uint32_t timeout);
 static uint8_t get_cur_mix(float cur_adc_v, float v_r, float v_l);
 static const uint8_t* get_mix_text(uint8_t mix_type);
-static void create_t1(uint32_t ms);
+static void calc_q(void);
+static void create_t1(void);
 static void start_t1(void);
 static void stop_t1(void);
 static void delete_t1(void);
-void timer1_callback(xTimerHandle xTimer);
-void task_adc_repeater( void *pvParameters );
-void task_mix_correction( void *pvParameters );
-
-const enum {
-	retcode_ok,
-	retcode_timeout,
-	retcode_mix_undefined
-};
+static void timer1_callback(xTimerHandle xTimer);
+static void task_dac_handler(void *pvParameters);
 
 const enum {
 	undefined_mix,
@@ -50,79 +42,134 @@ const enum {
 	nop
 };
 
-static struct HalfPeriod {
-	uint8_t retcode;
-	uint32_t period;
-};
-
-static struct Period {
-	uint32_t t_l;
-	uint32_t t_r;
-};
-
-uint8_t timer1_callback_flag;
-xTimerHandle timer1;
-uint8_t current_mix;
-static struct Period p;
-float v_out, v_in;
+static xTimerHandle timer1;
+static uint8_t current_mix;
+static float v_out, v_in;
+static uint8_t cm, v_rm;
+static uint32_t t_l, t_r;
+static uint32_t timer1_val=0;
 
 void taskDacCicle( void *pvParameters )
 {
-	struct HalfPeriod hp;
-	TaskHandle_t dac_repeater_h = NULL;
-	TaskHandle_t mix_corrector_h = NULL;
-    enum {
-            not_defined,
-            defined
-    };
-	uint8_t mix_defined = not_defined;
-	current_mix = undefined_mix;
+	uint8_t state;
+	enum {
+		state1_u,
+		state1_l,
+		state1_r,
+		state2,
+		state3,
+		state3_tp,
+		state4,
+		state5
+	};
+	t_l = my_conf.v_l;
+	t_r = my_conf.v_r;
+	cm = ref_out;
+	state = state1_u;
+	create_t1();
+    xTaskCreate(task_dac_handler,(signed char*)"DAC handler",configMINIMAL_STACK_SIZE,
+                NULL, tskIDLE_PRIORITY + 1, NULL);
+    vTaskDelay((int)my_conf.pause_start / portTICK_RATE_MS);
 
-    v_out = my_conf.v_def;
-    log_info("Set DAC to default V: %f\n", v_out);
-    dac_volts(v_out);
-    vTaskDelay((int)my_conf.start_pause / portTICK_RATE_MS);
+    cm = in_out;
 
-    hp.retcode = retcode_timeout;
-    log_notice("---Waiting for mix become lean or rich---\n");
-    while (hp.retcode != retcode_ok) hp = get_half_period(my_conf.start_timeout);
-
-    while (1)
-    {
-    	if (mix_defined == not_defined)
-    	{
-    		log_notice("---Start repeat ADC input to DAC---\n");
-    		if( dac_repeater_h == NULL )
-    		{
-    			xTaskCreate(task_adc_repeater,(signed char*)"DAC repeater",configMINIMAL_STACK_SIZE,
-    			            NULL, tskIDLE_PRIORITY + 1, &dac_repeater_h);
-    			vTaskDelay((int)(hp.period * my_conf.k1));
-    		}
-    		//else xTaskResume(xHandle);
-    	}
-
-    	log_notice("---Get duty circle---\n");
-    	get_period(my_conf.period_timeout);
-
-    	mix_defined = defined;
-    	if (dac_repeater_h != NULL)
-    	{
-    		log_notice("---Stop DAC repeating---\n");
-    		vTaskDelete(dac_repeater_h);
-    		dac_repeater_h = NULL;
-    	}
-
-    	if (mix_corrector_h == NULL){
-    		log_notice("---Start mix correction task---\n");
-    		xTaskCreate(task_mix_correction,(signed char*)"MIX corrector",configMINIMAL_STACK_SIZE,
-    	            	NULL, tskIDLE_PRIORITY + 1, &mix_corrector_h);
-    	}
-
+    while(1){
+       switch (state){
+       case state1_u:
+           current_mix = get_cur_mix(v_in, my_conf.v_r, my_conf.v_l);
+           if (current_mix == undefined_mix) state = state1_u;
+           else{
+               if (current_mix == lean_mix) state = state1_l;
+               if (current_mix == rich_mix) state = state1_r;
+           }
+           break;
+       case state1_l:
+    	   start_t1();
+    	   state = state2;
+    	   break;
+       case state1_r:
+    	   state = state3;
+    	   break;
+       case state2:
+    	   if (timer1_val > my_conf.cat_off){
+    		   stop_t1();
+    		   cm = cat_off;
+    		   state = state1_u;
+    	   }
+    	   else{
+               current_mix = get_cur_mix(v_in, my_conf.v_r, my_conf.v_l);
+               if (current_mix == lean_mix) state = state2;
+               if (current_mix == undefined_mix){
+            	   stop_t1();
+            	   t_l = timer1_val;
+            	   cm = mid;
+            	   calc_q();
+            	   state = state1_u;
+               }
+               if (current_mix == rich_mix){
+            	   stop_t1();
+            	   t_l = timer1_val;
+            	   v_rm = 1;
+            	   calc_q();
+            	   state = state3;
+               }
+    	   }
+    	   break;
+       case state3:
+    	   start_t1();
+    	   state = state3_tp;
+    	   break;
+       case state3_tp:
+    	   if (timer1_val > my_conf.t_power) state = state4;
+    	   else{
+               current_mix = get_cur_mix(v_in, my_conf.v_r, my_conf.v_l);
+               if (current_mix == rich_mix) state = state3_tp;
+               if (current_mix == undefined_mix){
+            	   stop_t1();
+            	   t_r = timer1_val;
+            	   v_rm = 1;
+            	   calc_q();
+            	   state = state1_u;
+               }
+               if (current_mix == lean_mix){
+            	   stop_t1();
+            	   t_r = timer1_val;
+            	   v_rm = 1;
+            	   calc_q();
+            	   state = state1_l;
+               }
+    	   }
+    	   break;
+       case state4:
+    	   stop_t1();
+    	   t_r = timer1_val;
+    	   v_rm = 2;
+    	   cm = inc;
+    	   state = state5;
+    	   break;
+       case state5:
+           current_mix = get_cur_mix(v_in, my_conf.v_r, my_conf.v_l);
+           if (current_mix == lean_mix){
+        	   cm = dec;
+        	   v_rm = 1;
+        	   state = state1_l;
+           }
+           if (current_mix == undefined_mix){
+        	   cm = mid;
+        	   state = state5;
+           }
+           if (current_mix == rich_mix){
+        	   cm = inc;
+        	   state = state5;
+           }
+           break;
+       }
     }
 }
 
-void dac_handler(void *pvParameters)
+static void task_dac_handler(void *pvParameters)
 {
+	float v_max;
 	while(1){
         v_in = get_adc_volts();
 
@@ -135,23 +182,23 @@ void dac_handler(void *pvParameters)
                 dac_volts(v_out);
                 break;
         case in_out:
-                if (v_in <= my_conf.v_outlim_inc) v_out = v_in;
-                else v_out = my_conf.v_outlim_inc;
+                if (v_in <= v_max) v_out = v_in;
+                else v_out = v_max;
                 dac_volts(v_out);
                 break;
         case inc:
-                if (v_out <= (my_conf.v_outlim_inc - my_conf.v_out_inc_step)) v_out += my_conf.v_out_inc_step;
+                if (v_out <= (v_max - my_conf.v_out_inc_step)) v_out += my_conf.v_out_inc_step;
                 dac_volts(v_out);
                 vTaskDelay(my_conf.pause_inc / portTICK_RATE_MS);
                 break;
         case dec:
-                if (v_out >= (my_conf.v_outlim_dec + my_conf.v_out_dec_step)) v_out -= my_conf.v_out_dec_step;
+                if (v_out >= (my_conf.v_min + my_conf.v_out_dec_step)) v_out -= my_conf.v_out_dec_step;
                 dac_volts(v_out);
                 vTaskDelay(my_conf.pause_dec / portTICK_RATE_MS);
                 break;
         case mid:
-                if (v_out > my_conf.v_def) v_out -= my_conf.v_out_dec_step;
-                if (v_out <= my_conf.v_def) v_out += my_conf.v_out_inc_step;
+                if (v_out > my_conf.v_def) v_out -= my_conf.v_out_mid_step;
+                if (v_out <= my_conf.v_def) v_out += my_conf.v_out_mid_step;
                 vTaskDelay(my_conf.pause_mid / portTICK_RATE_MS);
                 break;
         case nop:
@@ -160,61 +207,18 @@ void dac_handler(void *pvParameters)
 	}
 }
 
-void calc_q(void)
+static void calc_q(void)
 {
+	float q;
+	float q_ref;
 	if ((check_p1() != 0 && check_p2() != 0) || (check_p1() == 0 && check_p2() == 0)) q_ref = my_conf.q_ref1;
 	if (check_p1() == 0 && check_p2() != 0) q_ref = my_conf.q_ref2;
 	if (check_p1() != 0 && check_p2() == 0) q_ref = my_conf.q_ref3;
 
 	q = (t_r/((t_r + t_l)/100))/100;
 
-	if (q >= my_conf.q_ref) cm = inc;
+	if (q >= q_ref) cm = inc;
 	else cm = dec;
-}
-
-
-void task_mix_correction( void *pvParameters )
-{
-	uint32_t t_period;
-	float t_rel, mix_connection;
-	while(1){
-    	if (p.t_l <= my_conf.cut_off){
-    		log_notice("---Make correction---\n");
-    		t_period = p.t_l + p.t_r;
-    		t_rel = (float)p.t_r / (float)t_period;
-    		mix_connection = 0.7 * 2.0 * t_rel;
-    		log_info("t_lean: %d\n", p.t_l);
-    		log_info("t_rich: %d\n", p.t_r);
-    		log_info("period: %d\n", t_period);
-    		log_info("t_rel: %f\n", t_rel);
-    		log_info("mix_connection: %f\n", mix_connection);
-    		if (mix_connection > my_conf.v_outref)
-    		{
-    			if (v_out < my_conf.v_outlim_inc) v_out = v_out + my_conf.v_out_inc_step;
-    		}
-    		if (mix_connection <= my_conf.v_outref)
-    		{
-    			if (v_out > my_conf.v_outlim_dec) v_out = v_out - my_conf.v_out_dec_step;
-    		}
-    	}
-    	else
-    	{
-    		log_notice("---Cut off mode---\n");
-    		v_out = my_conf.v_outlim_dec;
-    	}
-    	log_notice("---DAC set v_out: %f---\n", v_out);
-    	dac_volts(v_out);
-    	vTaskDelay((int)my_conf.pause_inc / portTICK_RATE_MS);
-	}
-}
-
-void task_adc_repeater( void *pvParameters )
-{
-	while(1){
-		v_out = get_adc_volts();
-		v_in = v_out;
-		dac_volts(v_out);
-	}
 }
 
 void prvLCDshowparams(void *pvParameters)
@@ -237,112 +241,6 @@ void prvLCDshowparams(void *pvParameters)
 			vTaskDelay(500 / portTICK_RATE_MS);
 		}
 	}
-
-}
-
-struct HalfPeriod get_half_period(uint32_t timeout){
-	struct HalfPeriod hp;
-	float cur_adc_v;
-	TickType_t xTimeBefore, xTimeAfter;
-
-	hp.retcode = retcode_timeout;
-
-	cur_adc_v = get_adc_volts();
-	v_in = cur_adc_v;
-	current_mix = get_cur_mix(cur_adc_v, my_conf.v_r, my_conf.v_l);
-	hp.period = 0;
-
-	if (current_mix == undefined_mix){
-       create_t1(timeout);
-       start_t1();
-
-       xTimeBefore = xTaskGetTickCount();
-
-       while (timer1_callback_flag == 0 && current_mix == undefined_mix){
-               cur_adc_v = get_adc_volts();
-               v_in = cur_adc_v;
-               current_mix = get_cur_mix(cur_adc_v, my_conf.v_r, my_conf.v_l);
-       }
-       xTimeAfter = xTaskGetTickCount();
-       //Define time period for checking mix type
-       hp.period = ((xTimeAfter - xTimeBefore) * portTICK_RATE_MS);
-       stop_t1();
-       delete_t1();
-	}
-	log_debug("        Cur mix: %20s\n", get_mix_text(current_mix));
-	log_debug("        Cur adc: %20f\n", cur_adc_v);
-	//If checking for mix type is successful
-    if (current_mix != undefined_mix)	hp.retcode = retcode_ok;
-    //Store current voltage
-	return hp;
-}
-
-void get_period(uint32_t timeout){
-	struct HalfPeriod hp;
-	float cur_adc_v;
-	uint8_t old_mix;
-	TickType_t t1, t2, t3;
-
-	while(1){
-		old_mix = current_mix;
-        hp.retcode = retcode_timeout;
-        while (hp.retcode != retcode_ok){
-                hp = get_half_period(my_conf.start_timeout);
-                if (hp.retcode != retcode_ok){
-                        log_error("Can't define mix type!");
-                }
-        }
-
-        create_t1(timeout);
-        start_t1();
-        while (timer1_callback_flag == 0 && (current_mix == old_mix || current_mix == undefined_mix)){
-            cur_adc_v = get_adc_volts();
-            v_in = cur_adc_v;
-            current_mix = get_cur_mix(cur_adc_v, my_conf.v_r, my_conf.v_l);
-        }
-        t1 = xTaskGetTickCount();
-        stop_t1();
-        delete_t1();
-        if (timer1_callback_flag == 1) continue;
-
-		old_mix = current_mix;
-        create_t1(timeout);
-        start_t1();
-        while (timer1_callback_flag == 0 && (current_mix == old_mix || current_mix == undefined_mix)){
-            cur_adc_v = get_adc_volts();
-            v_in = cur_adc_v;
-            current_mix = get_cur_mix(cur_adc_v, my_conf.v_r, my_conf.v_l);
-        }
-        t2 = xTaskGetTickCount();
-        stop_t1();
-        delete_t1();
-        if (timer1_callback_flag == 1) continue;
-
-        if (current_mix == lean_mix) p.t_l = (t2 - t1) * portTICK_RATE_MS;
-        if (current_mix == rich_mix) p.t_r = (t2 - t1) * portTICK_RATE_MS;
-
-		old_mix = current_mix;
-        create_t1(timeout);
-        start_t1();
-        while (timer1_callback_flag == 0 && (current_mix == old_mix || current_mix == undefined_mix)){
-            cur_adc_v = get_adc_volts();
-            v_in = cur_adc_v;
-            current_mix = get_cur_mix(cur_adc_v, my_conf.v_r, my_conf.v_l);
-        }
-        t3 = xTaskGetTickCount();
-        stop_t1();
-        delete_t1();
-        if (timer1_callback_flag == 1) continue;
-
-        if (current_mix == lean_mix) p.t_l = (t3 - t2) * portTICK_RATE_MS;
-        if (current_mix == rich_mix) p.t_r = (t3 - t2) * portTICK_RATE_MS;
-
-        break;
-	}
-}
-
-void timer1_callback(xTimerHandle xTimer){
-	timer1_callback_flag = 1;
 }
 
 static uint8_t get_cur_mix(float cur_adc_v, float v_r, float v_l){
@@ -357,7 +255,7 @@ static uint8_t get_cur_mix(float cur_adc_v, float v_r, float v_l){
 	return undefined_mix;
 }
 
-const uint8_t* get_mix_text(uint8_t mix_type){
+static const uint8_t* get_mix_text(uint8_t mix_type){
     switch(mix_type){
         case undefined_mix: return "undefined";
         case lean_mix: return "lean";
@@ -367,18 +265,22 @@ const uint8_t* get_mix_text(uint8_t mix_type){
 	return "none";
 }
 
-static void create_t1(uint32_t ms)
+static void timer1_callback(xTimerHandle xTimer){
+	if (timer1 < 4294967295) timer1_val += TIMER_STEP;
+	else log_error("Timer 1 is overloaded!\n");
+}
+
+static void create_t1(void)
 {
-	if (ms <= 0) ms = 1;
-	timer1_callback_flag = 0;
-	timer1 = xTimerCreate("timer1", ms / portTICK_RATE_MS, pdFALSE,
+	timer1_val = 0;
+	timer1 = xTimerCreate("timer1", TIMER_STEP / portTICK_RATE_MS, pdTRUE,
 			(void*) 1, timer1_callback);
 	if (timer1 == NULL) log_error("Can't create software timer 1\n");
 }
 
 static void start_t1(void)
 {
-	timer1_callback_flag = 0;
+	timer1_val = 0;
 	portBASE_TYPE xStatus;
 	xStatus = xTimerStart(timer1, 10);
 	if (xStatus == pdFAIL) log_error("Can't start software timer 1\n");

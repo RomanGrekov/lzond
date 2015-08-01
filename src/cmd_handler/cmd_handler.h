@@ -16,15 +16,7 @@
 #define COMMAND_NAME_SIZE 20
 #define COMMANDS_QUEUE_SIZE 5
 
-struct command_parameter
-{
-	uint8_t name[COMMAND_NAME_SIZE];
-	float val;
-};
-typedef struct command_parameter parameter;
 
-TaskHandle_t xHandleUsartRX;
-TaskHandle_t xHandleCommands;
 xQueueHandle xQueueUsartCommands;
 
 void prvUsart_1_RX_Handler(void *pvParameters);

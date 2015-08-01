@@ -13,6 +13,7 @@
 #include "../xprintf/xprintf.h"
 #include <stdlib.h>
 
+
 uint8_t is_version_inside(uint8_t *version){
 	sw_version ver;
 
@@ -38,20 +39,23 @@ void store_def_params(void)
 {
 	conf my_conf;
 	my_conf.v_def = 0.45;
-	my_conf.v_outref = 0.7;
-	my_conf.test = 1035;
-	my_conf.start_pause = 5000;
-	my_conf.start_timeout = 100000;
 	my_conf.v_r = 0.52;
 	my_conf.v_l = 0.37;
-	my_conf.k1 = 1.5;
-	my_conf.period_timeout = 10000;
-	my_conf.v_outlim_inc = 0.9;
-	my_conf.v_outlim_dec = 0.05;
+	my_conf.v_min = 0.05;
 	my_conf.v_out_inc_step = 0.01;
-	my_conf.v_out_dec_step = 0.05;
-	my_conf.pause_inc = 50;
-	my_conf.cut_off = 2000;
+	my_conf.v_out_dec_step = 0.01;
+	my_conf.v_out_mid_step = 0.005;
+	my_conf.v_rm1 = 0.7;
+	my_conf.v_rm2 = 0.88;
+	my_conf.q_ref1 = 0.4;
+	my_conf.q_ref2 = 0.5;
+	my_conf.q_ref3 = 0.6;
+	my_conf.pause_inc = 20;
+	my_conf.pause_dec = 20;
+	my_conf.pause_mid = 20;
+	my_conf.pause_start = 5000;
+	my_conf.cat_off = 1200;
+	my_conf.t_power = 3000;
 	store_conf(&my_conf);
 
 }
@@ -78,18 +82,6 @@ void store_param(uint8_t *name, float val)
     	my_conf.v_def = val;
     	xprintf("OK\n");
     }
-    if (!memcmp(name, "v_outref", sizeof("v_outref"))){
-    	my_conf.v_outref = val;
-    	xprintf("OK\n");
-    }
-    if (!memcmp(name, "start_pause", sizeof("start_pause"))){
-    	my_conf.start_pause = val;
-    	xprintf("OK\n");
-    }
-    if (!memcmp(name, "start_timeout", sizeof("start_timeout"))){
-    	my_conf.start_timeout = val;
-    	xprintf("OK\n");
-    }
     if (!memcmp(name, "v_r", sizeof("v_r"))){
     	my_conf.v_r = val;
     	xprintf("OK\n");
@@ -98,20 +90,8 @@ void store_param(uint8_t *name, float val)
     	my_conf.v_l = val;
     	xprintf("OK\n");
     }
-    if (!memcmp(name, "k1", sizeof("k1"))){
-    	my_conf.k1 = val;
-    	xprintf("OK\n");
-    }
-    if (!memcmp(name, "period_timeout", sizeof("period_timeout"))){
-    	my_conf.period_timeout = val;
-    	xprintf("OK\n");
-    }
-    if (!memcmp(name, "v_outlim_inc", sizeof("v_outlim_inc"))){
-    	my_conf.v_outlim_inc = val;
-    	xprintf("OK\n");
-    }
-    if (!memcmp(name, "v_outlim_dec", sizeof("v_outlim_dec"))){
-    	my_conf.v_outlim_dec = val;
+    if (!memcmp(name, "v_min", sizeof("v_min"))){
+    	my_conf.v_min = val;
     	xprintf("OK\n");
     }
     if (!memcmp(name, "v_out_inc_step", sizeof("v_out_inc_step"))){
@@ -122,12 +102,52 @@ void store_param(uint8_t *name, float val)
     	my_conf.v_out_dec_step = val;
     	xprintf("OK\n");
     }
-    if (!memcmp(name, "pause_inc", sizeof("pause_inc"))){
-    	my_conf.pause_inc = val;
+    if (!memcmp(name, "v_out_mid_step", sizeof("v_out_mid_step"))){
+    	my_conf.v_out_mid_step = val;
     	xprintf("OK\n");
     }
-    if (!memcmp(name, "cut_off", sizeof("cut_off"))){
-    	my_conf.cut_off = val;
+    if (!memcmp(name, "v_rm1", sizeof("v_rm1"))){
+    	my_conf.v_rm1 = val;
+    	xprintf("OK\n");
+    }
+    if (!memcmp(name, "v_rm2", sizeof("v_rm2"))){
+    	my_conf.v_rm2 = val;
+    	xprintf("OK\n");
+    }
+    if (!memcmp(name, "q_ref1", sizeof("q_ref1"))){
+    	my_conf.q_ref1 = val;
+    	xprintf("OK\n");
+    }
+    if (!memcmp(name, "q_ref2", sizeof("q_ref2"))){
+    	my_conf.q_ref2 = val;
+    	xprintf("OK\n");
+    }
+    if (!memcmp(name, "q_ref3", sizeof("q_ref3"))){
+    	my_conf.q_ref3 = val;
+    	xprintf("OK\n");
+    }
+    if (!memcmp(name, "pause_inc", sizeof("pause_inc"))){
+    	my_conf.pause_inc = (int)val;
+    	xprintf("OK\n");
+    }
+    if (!memcmp(name, "pause_dec", sizeof("pause_dec"))){
+    	my_conf.pause_dec = (int)val;
+    	xprintf("OK\n");
+    }
+    if (!memcmp(name, "pause_mid", sizeof("pause_mid"))){
+    	my_conf.pause_mid = (int)val;
+    	xprintf("OK\n");
+    }
+    if (!memcmp(name, "cat_off", sizeof("cat_off"))){
+    	my_conf.cat_off = (int)val;
+    	xprintf("OK\n");
+    }
+    if (!memcmp(name, "pause_start", sizeof("pause_start"))){
+    	my_conf.pause_start = (int)val;
+    	xprintf("OK\n");
+    }
+    if (!memcmp(name, "t_power", sizeof("t_power"))){
+    	my_conf.t_power = (int)val;
     	xprintf("OK\n");
     }
     if (!memcmp(name, "save", sizeof("save"))){
@@ -149,18 +169,22 @@ void ShowDefaultPatams(void)
     read_def_params(&my_conf);
     xprintf("Current parameters:\n");
     xprintf("v_def: %f\n", my_conf.v_def);
-    xprintf("v_outref: %f\n", my_conf.v_outref);
-    xprintf("start_pause: %f\n", my_conf.start_pause);
-    xprintf("start_timeout: %f\n", my_conf.start_timeout);
     xprintf("v_r: %f\n", my_conf.v_r);
     xprintf("v_l: %f\n", my_conf.v_l);
-    xprintf("k1: %f\n", my_conf.k1);
-    xprintf("period_timeout: %f\n", my_conf.period_timeout);
-    xprintf("v_outlim_inc: %f\n", my_conf.v_outlim_inc);
-    xprintf("v_outlim_dec: %f\n", my_conf.v_outlim_dec);
+    xprintf("v_min: %f\n", my_conf.v_min);
     xprintf("v_out_inc_step: %f\n", my_conf.v_out_inc_step);
     xprintf("v_out_dec_step: %f\n", my_conf.v_out_dec_step);
-    xprintf("pause_inc: %f\n", my_conf.pause_inc);
-    xprintf("cut_off: %f\n", my_conf.cut_off);
+    xprintf("v_out_mid_step: %f\n", my_conf.v_out_mid_step);
+    xprintf("v_rm1: %f\n", my_conf.v_rm1);
+    xprintf("v_rm2: %f\n", my_conf.v_rm2);
+    xprintf("q_ref1: %f\n", my_conf.q_ref1);
+    xprintf("q_ref2: %f\n", my_conf.q_ref2);
+    xprintf("q_ref3: %f\n", my_conf.q_ref3);
+    xprintf("pause_inc: %u\n", my_conf.pause_inc);
+    xprintf("pause_dec: %u\n", my_conf.pause_dec);
+    xprintf("pause_mid: %u\n", my_conf.pause_mid);
+    xprintf("pause_start: %u\n", my_conf.pause_start);
+    xprintf("cat_off: %u\n", my_conf.cat_off);
+    xprintf("t_power: %u\n", my_conf.t_power);
 }
 
