@@ -1,13 +1,7 @@
-from Queue import Queue
+def hello(data):
+    print data
 
-q = Queue(5)
+a = {"1": lambda : hello("hello"), "2": lambda :hello("world")}
 
-for i in xrange(5):
-    q.put(i)
-
-print q.get()
-
-q.put(9)
-
-for i in xrange(5):
-    print q.get()
+a["1"]()
+a["2"]()

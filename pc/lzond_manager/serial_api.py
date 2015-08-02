@@ -103,7 +103,7 @@ class MySerial():
         self.ser.write(data)
 
     def send_cmd(self, cmd, val):
-        self.send_data("CMD_%s=%s\r" % (cmd, val))
+        self.send_data("CMD_%s=%s\r" % (cmd, str(val)))
 
     def __del__(self):
         self.ser.close_port()
