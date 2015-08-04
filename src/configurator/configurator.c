@@ -161,7 +161,7 @@ void store_param(uint8_t *name, float val)
 void ShowDefaultPatams(void)
 {
 	uint8_t symb[sizeof(float)];
-    xprintf("\nGood day Dmitriy Sergeevich!\n");
+    xprintf("\nSystem configuration\n");
 
     //cln_scr();
     //to_video_mem(0, 0, "Setting vars...");

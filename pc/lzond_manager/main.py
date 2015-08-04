@@ -9,6 +9,7 @@ import sys
 from Queue import Queue
 from serial_api import MySerial
 from parameters import params
+import wx
 
 def open_port_handler(ser, stdout_processor):
     data = ser.get_serials()
@@ -71,10 +72,50 @@ class ShowUsartData():
     def stop_stdout(self):
         self.thread._Thread__stop()
 
+class Window(wx.Frame):
+
+    def __init__(self, serial, parent, title, size):
+        mainframe = wx.Frame.__init__(self, parent, title=title, size=size)
+        self.ser = serial
+
+        bar = wx.MenuBar()
+        file_menu = wx.Menu()
+        menu_about = file_menu.Append(wx.ID_ABOUT, "About", "Push the button to get an information about this application")
+        menu_exit = file_menu.Append(wx.ID_EXIT, "Exit", "Push the button to leave this application")
+        port_menu = wx.Menu()
+        port_menu.Append(wx.ID_APPLY, "Refresh", "Refresh ports")
+        port_menu.AppendSeparator()
+        bar.Append(file_menu, "File")
+        bar.Append(port_menu, "Port")
+        self.SetMenuBar(bar)
+
+        ports = self.ser.get_serials()
+        ports_listbox = wx.ListBox(parent=self, id=-1, choices=ports, style=wx.LB_NEEDED_SB, name="Ports")
+
+        self.Bind(wx.EVT_MENU, self.OnAbout, menu_about)
+        self.Bind(wx.EVT_MENU, self.OnExit, menu_exit)
+
+        self.Show()
+
+    def OnAbout(self, event):
+        # A message dialog box with an OK button. wx.OK is a standard ID in wxWidgets.
+        dlg = wx.MessageDialog( self, "Lambda zond manager", "Info",  wx.OK)
+        dlg.ShowModal() # Show it
+        dlg.Destroy() # finally destroy it when finished.
+
+    def OnExit(self, e):
+        self.Close(True)  # Close the frame.
+
 if __name__ == "__main__":
     q = Queue(100)
     ser = MySerial(log, q)
 
+
+    app = wx.App()
+    wnd = Window(ser, None, "Lambda zond emulator manager v1.0", size=(1024,768))
+    wnd.Show(True)
+    app.MainLoop()
+    """
     root = Tk()
     root.title("Lambda zond emulator manager v1.0")
     if sys.platform.startswith('win'):
@@ -83,7 +124,12 @@ if __name__ == "__main__":
         img = PhotoImage(file='lambda.png')
         root.tk.call('wm', 'iconphoto', root._w, img)
     #root.attributes('-fullscreen', True)
-    mainFrame = Frame(root, height = 500, width = 640, bd=1)
+
+    scrollbar = Scrollbar(root, orient=VERTICAL).grid(row=0, column=1)
+    serialsbox = Listbox(root, selectmode=SINGLE, height=3, yscrollcommand=scrollbar.set).grid(row=0, column=0)
+    scrollbar.config(command=serialsbox.yview)
+
+    mainFrame = Frame(root, height = 400, width = 640, bd=1)
     mainFrame.pack()
 
     panelFrame = Frame(mainFrame, bd=2, relief=SUNKEN)
@@ -102,7 +148,7 @@ if __name__ == "__main__":
     stdoutFrame.pack(side="left", expand=1, fill = 'x', pady=10, padx=5)
 
     scrollbar1 = Scrollbar(stdoutFrame, orient=VERTICAL)
-    text_stdout=Text(stdoutFrame,height=30,width=100,font='Arial 14',wrap=WORD, yscrollcommand=scrollbar1.set)
+    text_stdout=Text(stdoutFrame,height=30,width=50,font='Arial 14',wrap=WORD, yscrollcommand=scrollbar1.set)
     scrollbar1.config(command=text_stdout.yview)
     scrollbar1.pack(side=RIGHT, fill=Y)
     text_stdout.pack(fill=BOTH, expand=1)
@@ -133,7 +179,7 @@ if __name__ == "__main__":
     paramsFrame.pack(expand=1, fill = 'x', pady=10, padx=5)
     for param in params.keys():
         params[param]["frame"] = Frame(paramsFrame, bd=2, relief=SUNKEN)
-        params[param]["frame"].pack(expand=1, fill = 'x', pady=2, padx=5)
+        params[param]["frame"].pack(expand=1, fill = 'x', pady=1, padx=5)
         params[param]["label"]= Label(params[param]["frame"], text=param, width=20)
         params[param]["label"].pack(side="left", padx=5)
         params[param]["text"]= Text(params[param]["frame"], height=1, width=10, font='Arial 14', wrap=WORD)
@@ -141,13 +187,14 @@ if __name__ == "__main__":
         params[param]["btn"]= Button(params[param]["frame"], text = 'Send', command=BtnCall(param, params).send)
         params[param]["btn"].pack(side="left", padx=5)
 
-    t_btn = Button(mainFrame, text = 'SAVE PARAMETERS TO FLASH', command=lambda: send_params(ser, "save", "1"), bd=5, fg="red")
+    t_btn = Button(panelFrame, text = 'SAVE PARAMETERS TO FLASH', command=lambda: send_params(ser, "save", "1"), bd=5, fg="red")
     t_btn.pack(side="right", padx=5)
 
     designer = Label(root, text="Designed by RomanG", width=50)
     designer.pack(side="bottom", padx=5)
 
     refresh_ports(ser)
-
     root.mainloop()
+
+    """
     #main()

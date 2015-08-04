@@ -226,13 +226,14 @@ static void calc_q(void)
 
 void prvLCDshowparams(void *pvParameters)
 {
-	uint8_t chars[16];
-	float v_out_old, v_in_old;
-	uint8_t current_mix_old;
-	portBASE_TYPE xStatus;
+	static uint8_t chars[16];
+	static float v_out_old, v_in_old, q_old;
+	static uint8_t current_mix_old, cm_old;
+	static portBASE_TYPE xStatus;
 
 	while(1){
-		if (v_out_old != v_out || current_mix_old != current_mix || v_in_old != v_in){
+		if (v_out_old != v_out || current_mix_old != current_mix || v_in_old != v_in || q_old != q || cm_old != cm){
+			log_debug("v_in: %f | mix: %u | cm: %u | q: %f | v_out: %f\n", v_in, current_mix, cm, q, v_out);
 			cln_scr();
 			xStatus = to_video_mem(0, 0, "in:"); float_to_string_(v_in, chars); chars[4]=0; to_video_mem(3, 0, chars);
 			xStatus = to_video_mem(8, 0, "out:"); float_to_string_(v_out, chars); chars[4]=0; to_video_mem(12, 0, chars);
@@ -241,10 +242,10 @@ void prvLCDshowparams(void *pvParameters)
 			v_out_old = v_out;
 			current_mix_old = current_mix;
 			v_in_old = v_in;
+			q_old = q;
+			cm_old = cm;
 
-			log_debug("cm: %u q: %f\n", cm, q);
-
-			vTaskDelay(500 / portTICK_RATE_MS);
+			vTaskDelay(200 / portTICK_RATE_MS);
 		}
 	}
 }
