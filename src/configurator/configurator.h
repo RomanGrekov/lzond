@@ -24,6 +24,7 @@ struct configuration
 	float q_ref1;
 	float q_ref2;
 	float q_ref3;
+	float kq;
 	uint32_t pause_inc;
 	uint32_t pause_dec;
 	uint32_t pause_mid;

@@ -39,6 +39,8 @@ const enum {
 	inc,
 	dec,
 	mid,
+	inc_q,
+	dec_q,
 	nop
 };
 
@@ -48,6 +50,8 @@ static float v_out, v_in, q;
 static uint8_t cm, v_rm;
 static uint32_t t_l, t_r;
 static uint32_t timer1_val=0;
+static float v_inc_step_q;
+static float v_dec_step_q;
 
 void taskDacCicle( void *pvParameters )
 {
@@ -64,10 +68,14 @@ void taskDacCicle( void *pvParameters )
 	};
 	t_l = 500;
 	t_r = 500;
+
 	cm = ref_out;
 	state = state1_u;
 	v_in = 0;
 	v_rm = 1;
+	v_inc_step_q = 0.5;
+	v_dec_step_q = 0.5;
+
 	create_t1();
     xTaskCreate(task_dac_handler,(signed char*)"DAC handler",configMINIMAL_STACK_SIZE,
                 NULL, tskIDLE_PRIORITY + 1, NULL);
@@ -205,6 +213,17 @@ static void task_dac_handler(void *pvParameters)
         		v_out = my_conf.v_min;
         		dac_volts(v_out);
                 break;
+        case inc_q:
+                if (v_out <= (v_max - v_inc_step_q)) v_out += v_inc_step_q;
+                dac_volts(v_out);
+                vTaskDelay(my_conf.pause_inc / portTICK_RATE_MS);
+                break;
+        case dec_q:
+                if (v_out >= (my_conf.v_min + v_dec_step_q)) v_out -= v_dec_step_q;
+                dac_volts(v_out);
+                vTaskDelay(my_conf.pause_dec / portTICK_RATE_MS);
+                break;
+
         case nop:
                 break;
         }
@@ -220,8 +239,14 @@ static void calc_q(void)
 
 	q = ((float)t_r/((float)(t_r + t_l)/100.0))/100.0;
 
-	if (q >= q_ref) cm = inc;
-	else cm = dec;
+	if (q >= q_ref){
+		v_inc_step_q = my_conf.v_out_inc_step * (q - q_ref) * my_conf.kq;
+		cm = inc_q;
+	}
+	else{
+		v_dec_step_q = my_conf.v_out_dec_step * (q_ref - q) * my_conf.kq;
+		cm = dec_q;
+	}
 }
 
 void prvLCDshowparams(void *pvParameters)

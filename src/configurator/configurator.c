@@ -50,6 +50,7 @@ void store_def_params(void)
 	my_conf.q_ref1 = 0.4;
 	my_conf.q_ref2 = 0.5;
 	my_conf.q_ref3 = 0.6;
+	my_conf.kq = 1;
 	my_conf.pause_inc = 20;
 	my_conf.pause_dec = 20;
 	my_conf.pause_mid = 20;
@@ -126,6 +127,10 @@ void store_param(uint8_t *name, float val)
     	my_conf.q_ref3 = val;
     	xprintf("OK\n");
     }
+    if (!memcmp(name, "kq", sizeof("kq"))){
+    	my_conf.kq = val;
+    	xprintf("OK\n");
+    }
     if (!memcmp(name, "pause_inc", sizeof("pause_inc"))){
     	my_conf.pause_inc = (int)val;
     	xprintf("OK\n");
@@ -180,6 +185,7 @@ void ShowDefaultPatams(void)
     xprintf("q_ref1: %f\n", my_conf.q_ref1);
     xprintf("q_ref2: %f\n", my_conf.q_ref2);
     xprintf("q_ref3: %f\n", my_conf.q_ref3);
+    xprintf("kq: %f\n", my_conf.kq);
     xprintf("pause_inc: %u\n", my_conf.pause_inc);
     xprintf("pause_dec: %u\n", my_conf.pause_dec);
     xprintf("pause_mid: %u\n", my_conf.pause_mid);

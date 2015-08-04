@@ -17,6 +17,6 @@
 
 
 #define SW_VERSION_SIZE 8
-#define SW_VERSION "1.12.0"
+#define SW_VERSION "1.13.0"
 
 #endif /* GLOBS_H_ */
